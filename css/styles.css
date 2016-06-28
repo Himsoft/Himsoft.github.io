@@ -245,7 +245,7 @@ textarea:-moz-placeholder { /* Internet Explorer 10-11 */
 .nav-tabs>li.active>a,
 .nav-tabs>li.active>a:hover,
 .nav-tabs>li.active>a:focus{border: 1px solid #006742;color:#1a7655;background: none;font-weight: normal;}
-#call-back-collapse{position: absolute;z-index: 999;background: rgb(245, 245, 245) none repeat scroll 0% 0%;padding: 20px;width: 300px;margin-top: 20px;right: 0;}
+#call-back-collapse{position: absolute;z-index: 999;background: rgb(245, 245, 245) none repeat scroll 0% 0%;padding: 20px;width: 300px;margin-top: 20px;right: 0;max-height: 150px;}
 #call-back-collapse input[type="text"]{height: 50px;padding: 0 5px;width: 100%;}
 #call-back-collapse input[type="submit"]{background: transparent none repeat scroll 0% 0%;font-size: 13.96px;border: 3px solid rgb(240, 181, 184);text-transform: uppercase;letter-spacing: 2px;padding: 10px 30px;margin-top: 10px;width: 100%;}
 .video-content{background: url('../images/top_video_bg.jpg') center center no-repeat;text-align: center;min-height: 576px;}
