@@ -27,6 +27,11 @@
                          var img_w=$(this).width();
                          $(this).css('width',(img_w*k)+'px');
                    });
+                    $('.project-item .image-item img').each(function(){
+                        $(this).css('width','');
+                         var img_w=$(this).width();
+                         $(this).css('width',(img_w*k)+'px');
+                   });
                 }
             }
         }
