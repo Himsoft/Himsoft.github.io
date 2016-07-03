@@ -9,7 +9,6 @@
                 $(this).prepend($img);
             });
             
-            
             $('.project-item:odd').each(function(){
                 var $img=$(this).children('.image-item');
                 $img.addClass('righted');
@@ -17,6 +16,30 @@
                 $(this).children('.image-item').remove();
                 $(this).append($img);
             });
+                        
+            $('.secret-item:odd').each(function(){
+                var $img=$(this).children('.image-item');
+                $img.addClass('lefted');
+                $(this).children('.caption-item').addClass('righted');
+                $(this).children('.image-item').remove();
+                $(this).prepend($img);
+            });
+
+            $('.reviews-item:even').each(function(){
+                var $img=$(this).children('.caption-item').children('img');
+                $(this).prepend('<div class="image-item lefted"></div>');                
+                $(this).children('.caption-item').addClass('righted');
+                $(this).children('.caption-item').children('img').remove();      
+                $(this).children('.image-item').append($img);;         
+            });
+                        
+            $('.reviews-item:odd').each(function(){
+                var $img=$(this).children('.caption-item').children('img');
+                $(this).append('<div class="image-item"></div>');                
+                $(this).children('.caption-item').children('img').remove();      
+                $(this).children('.image-item').append($img);;         
+            });
+                        
             if($(window).width()<1920){
                 if($(window).width()>767){
                     var k=1;
@@ -34,6 +57,19 @@
                    });
                 }
             }
+        }else{
+            $('.why-we-item:odd').each(function(){
+                var $img=$(this).children('.image-item');
+                $(this).children('.image-item').remove();
+                $(this).append($img);
+            });
+            $('.project-item:odd').each(function(){
+                var $img=$(this).children('.image-item');
+                $(this).children('.image-item').remove();
+                $(this).prepend($img);
+            });
+            
+            $('img').css('width','');
         }
         var h=$('footer').height();
         $('#content-wrapper').css('padding-bottom',h+'px').css('margin-bottom','-'+h+'px');
@@ -69,6 +105,16 @@
 
 $(document).ready(function(){/* jQuery toggle layout */
     permutation();
+    $('.owl-carousel').owlCarousel({
+        //loop: true,
+        nav: true,
+        navText:["",""],
+        items: 1,
+        thumbs: true,
+        thumbImage: true,
+        thumbContainerClass: 'owl-thumbs',
+        thumbItemClass: 'owl-thumb-item',
+    });
         // Инициалиация
         var video = $("#main-video");
 
