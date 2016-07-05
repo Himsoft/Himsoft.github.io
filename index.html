@@ -40,17 +40,25 @@
 
                       <div class="call-block">
                           <div class="phone">+38 (044) 56-17-474</div>
-                          <a class="call-back" data-toggle="collapse" data-target="#call-back-collapse" href="#"><span>Заказать звонок</span></a>
-                          <div class="collapse" id="call-back-collapse">
+                          <a class="call-back" href="#"><span>Заказать звонок</span></a>
+                          <div id="call-back-popup">
+                            <a class="fa fa-close close"></a>
                             <form action="/" method="POST">
-                                <input type="text" placeholder="Введите номер телефона" />
-                                <input type="submit" value="ok" />
+                                <div class="head-form text-center">
+                                    <h2 class="upper">Заказать звонок</h2>
+                                    <div>Заполните форму и мы обязательно Вам перезвоним</div>
+                                </div>
+                                <input type="text" name="name" placeholder="Ваше имя" />
+                                <input type="text" name="phone" placeholder="Телефон" />
+                                <input class="upper" type="submit" value="отправить" />
                             </form>
                           </div>
+                          <div id="call-back-popup-mask"></div>
                       </div>
 
                     </div>
                     <div class="collapse navbar-collapse" id="navbar-collapse1">
+                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse1"><span class="icon-bar"></span><span class="icon-bar"></span></button>
                        <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
                           <li><a href="#">Об агенстве</a></li>
                           <li><a href="#">Что мы можем</a></li>
