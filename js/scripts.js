@@ -77,16 +77,18 @@
 
 $(document).ready(function(){/* jQuery toggle layout */
     permutation();
-    $('.owl-carousel').owlCarousel({
-        //loop: true,
-        nav: true,
-        navText:["",""],
-        items: 1,
-        thumbs: true,
-        thumbImage: true,
-        thumbContainerClass: 'owl-thumbs',
-        thumbItemClass: 'owl-thumb-item',
-    });
+    if($('.owl-carousel').length){
+        $('.owl-carousel').owlCarousel({
+            //loop: true,
+            nav: true,
+            navText:["",""],
+            items: 1,
+            thumbs: true,
+            thumbImage: true,
+            thumbContainerClass: 'owl-thumbs',
+            thumbItemClass: 'owl-thumb-item',
+        });
+    }
         // Инициалиация
         var video = $("#main-video");
 
