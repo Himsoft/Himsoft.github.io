@@ -1,15 +1,27 @@
 
 $(document).ready(function(){/* jQuery toggle layout */
-    $('.owl-carousel').owlCarousel({
-        //loop: true,
-        nav: true,
-        navText:["",""],
-        items: 1,
-        thumbs: true,
-        thumbImage: true,
-        thumbContainerClass: 'owl-thumbs',
-        thumbItemClass: 'owl-thumb-item',
-    });
+    if($('.owl-carousel').length){
+        $('.owl-carousel').owlCarousel({
+            //loop: true,
+            nav: true,
+            navText:["",""],
+            items: 1,
+            thumbs: true,
+            thumbImage: true,
+            thumbContainerClass: 'owl-thumbs',
+            thumbItemClass: 'owl-thumb-item',
+        });
+    }
+    if($('.owl-carousel-no-thumb').length){
+        $('.owl-carousel-no-thumb').owlCarousel({
+            //loop: true,
+            nav: true,
+            navText:["",""],
+            items: 1,
+            thumbs: false,
+            thumbImage: false,
+         });
+    }
         // Инициалиация
         var video = $("#main-video");
 

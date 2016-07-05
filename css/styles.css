@@ -128,31 +128,36 @@ video#top-video{display: none;}
 .caption-item h1>span{font: italic 100px 'Aizel-Accent',arial,sans-serif;color: #f0b5b8;margin-top: -5px;}
 .caption-item h4{font: normal 24px 'Aizel-Accent',arial,sans-serif;color: #39363f;padding-bottom: 6px;}
 .caption-item .text{font: 300 12px 'HelveticaNeueCyr',arial,sans-serif;color: #878392;margin-top: 10px;line-height: 18px;height: 70px;overflow: hidden;padding-right: 25px;}
-.caption-item .btn,.caption-item .btn:hover,.caption-item .btn:focus,.carousel-caption .btn,.carousel-caption .btn:hover,.carousel-caption .btn:focus{font: 800 10.34px 'HelveticaNeueCyr',arial,sans-serif;color: #39363f!important;display: inline-block;border: 3px solid #8ecea5;background: none!important;margin-top: 25px;padding: 10px 26px 10px 28px;float: right;}
+.caption-item .btn,.caption-item .btn:hover,.caption-item .btn:focus{font: 800 10.34px 'HelveticaNeueCyr',arial,sans-serif;color: #39363f!important;display: inline-block;border: 3px solid #8ecea5;background: none!important;margin-top: 25px;padding: 10px 26px 10px 28px;float: right;}
 /*==============================end-why-we-bloc==================================================*/
 
 /*================================main-blk-3====================================================*/
-.main-blk-3 .carousel-inner .item{background-size: cover; background-repeat: no-repeat;padding: 157px 0 16px 0;}
-.main-blk-3 .carousel-inner .item>.container{position: relative;padding: 0px 35px;}
-.carousel .container.title{position: absolute!important;width: 100%!important;text-align: center;z-index: 1;padding: 0;}
+.main-blk-3 .owl-carousel-no-thumb .item{background-size: cover; background-repeat: no-repeat;padding: 157px 0 16px 0;}
+.main-blk-3 .owl-carousel-no-thumb .item>.container{position: relative;padding: 0px 35px;}
+.main-blk-3 .container.title{position: absolute!important;width: 100%!important;text-align: center;z-index: 10;padding: 0;}
 .carousel h2{padding-top: 30px;}
 .carousel h2:after{margin-top: 16px;}
 .carousel-image{display: table-cell;vertical-align: middle;-webkit-filter: grayscale(100%); filter: grayscale(100%);position: absolute;left: 0;top: 0;width: 100%;height: 100%;overflow: hidden;}
-.carousel-image>.podl{background: rgba(255, 255, 255, 0.5);background: linear-gradient(to top, rgba(255, 255, 255, 0.5), #ffffff);position: absolute;width: 100%;height: 100%;}
+.carousel-image>.podl{background: rgba(255, 255, 255, 0.5);background: linear-gradient(to top, rgba(255, 255, 255, 0.5), #ffffff);position: absolute;width: 100%;height: 100%;z-index: 1;}
 .carousel-image img{min-width: 100%;}
 .carousel-caption{color: #39363f;text-shadow: none;text-align: left;position: relative;display: table-cell;right: 0;left: 0;padding: 0;vertical-align: middle;}
+.carousel-caption .btn,.carousel-caption .btn:hover,.carousel-caption .btn:focus{font: 800 10.34px 'HelveticaNeueCyr',arial,sans-serif;color: #39363f !important;display: inline-block;border: 3px solid #8ecea5;background: none !important;margin-top: 21px;padding: 12px 26px 11px 28px;float: right;text-transform: uppercase;}
 .carousel-caption .titles-blk{display: inline-block;}
 .carousel-caption h3{font: normal 37.39px 'Aizel-Accent',arial,sans-serif;margin: 0;line-height: 30px;padding-bottom: 3px;}
 .carousel-caption h5{font: italic 29.6px 'Aizel-Accent',arial,sans-serif;color: #f0b5b8;text-align: right;margin: 0;}
 .carousel-caption .bot{float: right;margin-right: -15px;}
-.carousel-caption .descr{font: 300 12px 'HelveticaNeueCyr',arial,sans-serif;color: #878392;line-height: 18px;margin-top: 0;margin-bottom: 130px;}
+.carousel-caption .descr{font: 300 12px 'HelveticaNeueCyr',arial,sans-serif;color: #878392;line-height: 18px;margin-top: 8px;margin-bottom: 133px;}
 .carousel-caption .discont{font: 800 19px 'HelveticaNeueCyr',arial,sans-serif;color: #f0b5b8;margin-bottom: 5px;}
 .carousel-caption label{font: normal 14px 'HelveticaNeueCyr',arial,sans-serif;color: #c4c2c7;display: block;margin-bottom: -8px;}
 .carousel-caption .old-price{font: normal 32.06px 'Aizel-Accent',arial,sans-serif;color: #c4c2c7;text-decoration: line-through;display: inline-block;vertical-align: bottom;}
 .carousel-caption .new-price{font: normal 43.03px 'Aizel-Accent',arial,sans-serif;color: #39363f;display: inline-block;vertical-align: bottom;padding-left: 20px;}
 .carousel-caption .new-price>span{color: #f0b5b8;}
-.carousel-controls{position: absolute;top: 50%;left: 50%;transform: translate(-50%, 0);width: calc(100% - 25px);z-index: 99;margin-top: 44px;}
-.carousel-control{background: #8ecea5!important ;width: 44px;height: 44px;line-height: 44px;border-radius: 28px;top: 50%;transform: translateY(-50%);opacity: 1!important;font-size: 25px;text-shadow: none;}
+.owl-carousel-no-thumb{padding: 0!important;}
+.owl-carousel-no-thumb .owl-item img{width: auto;}
+.owl-carousel-no-thumb .owl-controls{position: absolute;top: 50%;left: 50%;transform: translate(-50%, 0);width: calc(100% - 21px);z-index: 99;margin-top: 43px;}
+.owl-carousel-no-thumb .owl-controls .owl-nav >div{background: #8ecea5!important;width: 44px;height: 44px;font: normal 25px/44px FontAwesome;border-radius: 28px;top: 50%;transform: translateY(-50%);text-align: center;margin: 0;}
+.owl-carousel-no-thumb .owl-controls .owl-nav .owl-prev:after{content: "\f104";}
+.owl-carousel-no-thumb .owl-controls .owl-nav .owl-next:after{content: "\f105";}
 /*==============================end-main-blk-3==================================================*/
 
 /*================================main-blk-4====================================================*/
@@ -295,18 +300,18 @@ video#top-video{display: none;}
 /*==============================end-why-we-bloc==================================================*/
 
 /*================================main-blk-3====================================================*/
-    .main-blk-3 .carousel-inner .item > .container {padding: 0px 50px;max-width: 675px;}
-    .main-blk-3 .carousel-inner .item{padding: 157px 0 42px 0;}
+    .main-blk-3 .owl-carousel-no-thumb .item > .container {padding: 0px 50px;max-width: 675px;}
+    .main-blk-3 .owl-carousel-no-thumb .item{padding: 157px 0 42px 0;background-position: 64% bottom;}
     .carousel h2 {padding-top: 66px;}
     .carousel h2::after {margin-top: 9px;}
     .carousel-image > .podl{display: none;}
-    .carousel-image img{width: 100%;}
+    .owl-carousel-no-thumb .owl-item img{width: 100%;}
     .carousel-image{position: relative;-webkit-filter: none;filter: none;width: auto;height: auto;}
     .carousel-caption{width: 45%;padding-top: 65px;padding-left: 26px;}
-    .carousel-caption .descr {font-size: 14px;line-height: 24px;margin-top: 17px;margin-bottom: 14px;height: 70px;overflow: hidden;}
+    .carousel-caption .descr {font-size: 14px;line-height: 24px;margin-top: 27px;margin-bottom: 14px;height: 70px;overflow: hidden;}
     .carousel-caption .discont {font-size: 21px;margin-bottom: 17px;}
     .carousel-caption .bot{float: none;margin: 0;}
-    .carousel-controls {width: 705px;margin-top: 85px;margin-left: -3px;}
+    .owl-carousel-no-thumb .owl-controls {width: 705px;margin-top: 85px;margin-left: -3px;}
 /*==============================end-main-blk-3==================================================*/
 
 /*================================main-blk-4====================================================*/
@@ -363,7 +368,7 @@ video#top-video{display: none;}
 .happypairs-block{overflow: hidden;}
 .happypairs-block h2{font-size: 48px;padding-top: 52px;margin-bottom: 53px;}
 .happypairs-items{display: block;padding: 0 23px;}
-.owl-carousel{display: none!important;}
+.hidden-carousel{display: none!important;}
 .happypairs-block .happypairs-item{position: relative;}
 .happypairs-block .happypairs-item img{width: 100%;}
 .happypairs-block .carousel{display: none!important;}
@@ -454,15 +459,15 @@ video#top-video{display: none;}
     .carousel-caption h5{font-size: 38px;}
     .carousel-caption .old-price{font-size: 38px;}
     .carousel-caption .new-price{font-size: 51px;}
-    .main-blk-3 .carousel-inner .item > .container {padding: 0px 45px 25px 75px;max-width: 980px;}
+    .main-blk-3 .owl-carousel-no-thumb .item > .container {padding: 0px 45px 25px 75px;max-width: 980px;}
     .carousel-caption{padding: 76px 0 0 35px;}
     .carousel-caption h3{padding-bottom: 10px;}
-    .carousel-caption .descr{margin-bottom: 32px;margin-top: 13px;}
-    .main-blk-3 .carousel-inner .item {padding: 157px 0 71px 0;}
+    .carousel-caption .descr{margin-bottom: 32px;margin-top: 24px;}
+    .main-blk-3 .owl-carousel-no-thumb .item {padding: 157px 0 71px 0;}
     .carousel-caption label{margin-bottom: -13px;letter-spacing: 0;}
     .carousel-caption .discont{margin-bottom: 27px;}
     .carousel-caption .btn,.carousel-caption .btn:hover,.carousel-caption .btn:focus{margin-top: 60px;margin-left: 8px;}
-    .carousel-controls{max-width: 960px;margin-left: 0px;margin-top: 66px;}
+    .owl-carousel-no-thumb .owl-controls{width: 960px;margin-left: 0px;margin-top: 54px;}
     .carousel h2 {padding-top: 40px;}
     .carousel h2::after {margin-top: 6px;}
     .carousel-image{width: 54%;}
@@ -599,16 +604,16 @@ video#top-video{display: none;}
 /*==============================end-why-we-bloc==================================================*/
 
 /*================================main-blk-3====================================================*/
-    .main-blk-3 .carousel-inner .item {padding: 175px 0 70px 0;}
-    .main-blk-3 .carousel-inner .item > .container {padding: 0px 45px 0px 61px;max-width: 1024px;}
+    .main-blk-3 .owl-carousel-no-thumb .item {padding: 175px 0 70px 0;}
+    .main-blk-3 .owl-carousel-no-thumb .item > .container {padding: 0px 45px 0px 52px;max-width: 1024px;}
     .carousel-caption{padding: 30px 0 0 40px;}
     .carousel-caption label{margin-bottom: -13px;letter-spacing: 0;}
     .carousel-caption .discont{margin-bottom: 27px;}
     .carousel-caption .btn,.carousel-caption .btn:hover,.carousel-caption .btn:focus{margin-top: 60px;margin-left: -4px;}
-    .carousel-controls{max-width: 1052px;margin-left: 8px;margin-top: 53px;}
+    .owl-carousel-no-thumb .owl-controls{width: 1052px;margin-top: 54px;}
     .carousel h2 {padding-top: 40px;}
     .carousel h2::after {margin-top: 6px;}
-    .carousel-image {width: auto;}
+    .carousel-image {width: 56%;}
     .carousel-image img{width: auto;}
     .project-item .caption-item h1.big-title {margin-top: -30px;margin-bottom: -2px;}
     .project-item .caption-item h4 {padding-left: 0px;}
@@ -710,13 +715,14 @@ video#top-video{display: none;}
     .caption-item .text {margin-top: 40px;}
 /*==============================end-why-we-bloc==================================================*/
 /*================================main-blk-3====================================================*/
-    .main-blk-3 .carousel-inner .item > .container {padding: 0px 45px 0px 61px;max-width: 1024px;}
-    .carousel-caption{padding: 30px 0 0 40px;}
+    .main-blk-3 .owl-carousel-no-thumb .item > .container {padding: 0px 45px 0px 61px;max-width: 1024px;}
+    .carousel-image,.owl-carousel-no-thumb .owl-item .carousel-image img{width: auto;}
+    .carousel-caption{padding: 28px 0 0 40px;}
     .carousel-caption label{margin-bottom: -13px;letter-spacing: 0;}
     .carousel-caption .discont{margin-bottom: 27px;}
     .carousel-caption .btn,.carousel-caption .btn:hover,.carousel-caption .btn:focus{margin-top: 60px;}
     .carousel h2 {padding-top: 37px;}
-    .carousel-controls{max-width: 1050px;}
+    .owl-carousel-no-thumb .owl-controls{width: 1050px;}
 /*==============================end-main-blk-3==================================================*/
 /*================================main-blk-4====================================================*/
     .main-blk-4 {padding-bottom: 61px;}

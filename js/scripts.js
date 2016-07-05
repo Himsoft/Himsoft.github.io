@@ -89,6 +89,16 @@ $(document).ready(function(){/* jQuery toggle layout */
             thumbItemClass: 'owl-thumb-item',
         });
     }
+    if($('.owl-carousel-no-thumb').length){
+        $('.owl-carousel-no-thumb').owlCarousel({
+            //loop: true,
+            nav: true,
+            navText:["",""],
+            items: 1,
+            thumbs: false,
+            thumbImage: false,
+         });
+    }
         // Инициалиация
         var video = $("#main-video");
 
