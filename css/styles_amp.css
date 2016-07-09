@@ -55,7 +55,7 @@ a,a:hover,a:focus{color: #39363f;}
 .navbar-collapse .navbar-toggle .icon-bar+.icon-bar{transform: rotate(-45deg);}
 .navbar-collapse .navbar-nav{margin-top: 170px;padding: 100px 0;}
 .header .navbar-collapse .navbar-nav > li > a,.header .navbar-collapse .navbar-nav > li > a:hover,.header .navbar-collapse .navbar-nav > li > a:focus{color: #ffffff;background: none;font-weight: 300;}
-.navbar.header{margin-bottom: 0;background: transparent none repeat scroll 0% 0%;position: absolute;z-index: 999;width: 100%;}
+.navbar.header{margin-bottom: 0;background: transparent none repeat scroll 0% 0%;position: absolute;z-index: 999;width: 100%;max-width: 800px;}
 .navbar.header .container{position: relative;}
 .navbar-brand{height: auto;padding: 5px 0 3px 0;display: inline-block;margin-top: 120px;z-index: 999;position: relative;}
 .navbar-toggle .icon-bar{background: #ffffff;}
@@ -242,3 +242,10 @@ video#top-video{display: none;}
 
 /*==================================end-reviews-block===================================================*/
 /*==================================end-about-page===================================================*/
+
+/*==================================our-projects-page===================================================*/
+/*==============================our-projects-top-block==================================================*/
+.our-projects-top-block{background: url('../images/top_our_proj_bg.jpg') 86% bottom no-repeat;height: 400px;background-size: cover;}
+.our-projects-top-block h1{margin-top: 123px;}
+/*==============================end-our-projects-top-block==================================================*/
+/*==================================end-our-projects-page===================================================*/
