@@ -55,6 +55,7 @@ a,a:hover,a:focus{color: #39363f;}
 .navbar-collapse .navbar-nav{margin-top: 170px;padding: 100px 0;}
 .header .navbar-collapse .navbar-nav > li > a,.header .navbar-collapse .navbar-nav > li > a:hover,.header .navbar-collapse .navbar-nav > li > a:focus{color: #ffffff;background: none;font-weight: 300;}
 .navbar.header{margin-bottom: 0;background: transparent none repeat scroll 0% 0%;position: absolute;z-index: 999;width: 100%;}
+.navbar.header .col-md-12{padding: 0;}
 .navbar.header .container{position: relative;}
 .navbar-brand{height: auto;padding: 5px 0 3px 0;display: inline-block;margin-top: 120px;z-index: 999;position: relative;}
 .navbar-toggle .icon-bar{background: #ffffff;}
@@ -160,10 +161,10 @@ video#top-video{display: none;}
 .owl-carousel-no-thumb .owl-controls .owl-nav .owl-next:after{content: "\f105";}
 /*==============================end-main-blk-3==================================================*/
 
-/*================================main-blk-4====================================================*/
-.main-blk-4{padding-top: 14px;padding-bottom: 75px;}
-.main-blk-4 h2{margin-bottom: 25px;padding-top: 0px;}
-.main-blk-4 h2:after{margin-top: 11px;}
+/*================================our-projects-block====================================================*/
+.our-projects-block{padding-top: 14px;padding-bottom: 75px;}
+.our-projects-block h2{margin-bottom: 25px;padding-top: 0px;}
+.our-projects-block h2:after{margin-top: 11px;}
 .project-item{padding: 0 10px;}
 .project-item:not(:first-of-type){margin-top: 32px;}
 .project-item .caption-item{position: relative;display: inline-block;vertical-align: middle;width: 100%;z-index: 1;padding-left: 15px;padding-right: 15px;}
@@ -175,7 +176,7 @@ video#top-video{display: none;}
 .project-item .caption-item .btn,.project-item .caption-item .btn:hover,.project-item .caption-item .btn:focus{margin-top: 26px;float: none;}
 .project-item .caption-item.lefted{padding-left: 0;}
 .project-item .image-item.righted img{float: right;margin-right: 4px;}
-/*==============================end-main-blk-4==================================================*/
+/*==============================end-our-projects-block==================================================*/
 
 
 /*==================================end-front-page===================================================*/
@@ -241,6 +242,13 @@ video#top-video{display: none;}
 
 /*==================================end-reviews-block===================================================*/
 /*==================================end-about-page===================================================*/
+
+/*==================================our-projects-page===================================================*/
+/*==============================our-projects-top-block==================================================*/
+.our-projects-top-block{background: url('../images/top_our_proj_bg.jpg') 86% bottom no-repeat;height: 400px;background-size: cover;}
+.our-projects-top-block h1{margin-top: 123px;}
+/*==============================end-our-projects-top-block==================================================*/
+/*==================================end-our-projects-page===================================================*/
 
 @media (min-width: 768px){
     h2{font-size: 48px;padding-top: 45px;margin-bottom: 60px;}
@@ -314,8 +322,8 @@ video#top-video{display: none;}
     .owl-carousel-no-thumb .owl-controls {width: 705px;margin-top: 85px;margin-left: -3px;}
 /*==============================end-main-blk-3==================================================*/
 
-/*================================main-blk-4====================================================*/
-    .main-blk-4 h2 {margin-bottom: 67px;padding-top: 33px;}
+/*================================our-projects-block====================================================*/
+    .our-projects-block h2 {margin-bottom: 67px;padding-top: 33px;}
     .project-item .image-item {width: calc(55% - 6px);}
     .project-item .caption-item {width: calc(45% - 6px);padding-left: 34px;padding-right: 0;margin-top: 0;}
     .project-item .caption-item h4 {margin: 8px 0px 0px;font-size: 48px;}
@@ -325,8 +333,8 @@ video#top-video{display: none;}
     .project-item .caption-item .btn, .project-item .caption-item .btn:hover, .project-item .caption-item .btn:focus {margin-top: 64px;float: none;}
     .project-item:not(:first-of-type) {margin-top: 52px;}
     .project-item .image-item.righted{padding-left: 4px;padding-right: 4px;}
-    .main-blk-4{padding-bottom: 42px;}
-/*==============================end-main-blk-4==================================================*/
+    .our-projects-block{padding-bottom: 42px;}
+/*==============================end-our-projects-block==================================================*/
 
 /*==================================end-front-page===================================================*/
 
@@ -395,6 +403,13 @@ video#top-video{display: none;}
 
 /*==================================end-reviews-block===================================================*/
 /*==================================end-about-page===================================================*/
+
+/*==================================our-projects-page===================================================*/
+/*==============================our-projects-top-block==================================================*/
+.our-projects-top-block{background-position: center bottom ;}
+.our-projects-top-block h1{margin-top: 123px;}
+/*==============================end-our-projects-top-block==================================================*/
+/*==================================end-our-projects-page===================================================*/
 }
 
 @media (min-width: 992px) {
@@ -474,10 +489,10 @@ video#top-video{display: none;}
     .carousel-image img{width: 100%;}
 /*==============================end-main-blk-3==================================================*/
 
-/*================================main-blk-4====================================================*/
-    .main-blk-4 {padding-bottom: 73px;}
-    .main-blk-4 h2::after {margin-top: 5px;}
-    .main-blk-4 h2 {margin-bottom: 33px;padding-top: 56px;letter-spacing: 0;}
+/*================================our-projects-block====================================================*/
+    .our-projects-block {padding-bottom: 73px;}
+    .our-projects-block h2::after {margin-top: 5px;}
+    .our-projects-block h2 {margin-bottom: 33px;padding-top: 56px;letter-spacing: 0;}
     .project-item{padding: 0;}
     .project-item .image-item{padding-left: 22px;width: calc(52% - 6px);}
     .project-item .image-item img{width: 100%;}
@@ -491,7 +506,7 @@ video#top-video{display: none;}
     .project-item .caption-item.lefted {padding-left: 5px;}
     .project-item .caption-item.lefted .text {margin-top: 28px;padding-left: 3px;}
     .project-item:not(:first-of-type) {margin-top: 48px;}
-/*==============================end-main-blk-4==================================================*/
+/*==============================end-our-projects-block==================================================*/
 
 /*==================================end-front-page===================================================*/
 /*=====================================about-page====================================================*/
@@ -549,9 +564,15 @@ video#top-video{display: none;}
 .reviews-item .quotes-txt .text{height: 121px;width: 100%;margin-top: 22px;}
 .reviews-item .read-moore {text-align: left;padding-left: 20px;}
 .reviews-item .read-moore .btn{margin-top: 47px;}
-
 /*==================================end-reviews-block===================================================*/
 /*==================================end-about-page===================================================*/
+
+/*==================================our-projects-page===================================================*/
+/*==============================our-projects-top-block==================================================*/
+.our-projects-top-block{height: 500px;background-position: center right;}
+.our-projects-top-block h1{margin-top: 123px;}
+/*==============================end-our-projects-top-block==================================================*/
+/*==================================end-our-projects-page===================================================*/
 }
 @media (min-width: 1200px){
     .container {width: 1180px;}
@@ -622,16 +643,16 @@ video#top-video{display: none;}
     .project-item:not(:first-of-type) {margin-top: 92px;}
 /*==============================end-main-blk-3==================================================*/
 
-/*================================main-blk-4====================================================*/
-    .main-blk-4 {padding-bottom: 59px;}
-    .main-blk-4 h2 {margin-bottom: 43px;padding-top: 56px;letter-spacing: 0;}
+/*================================our-projects-block====================================================*/
+    .our-projects-block {padding-bottom: 59px;}
+    .our-projects-block h2 {margin-bottom: 43px;padding-top: 56px;letter-spacing: 0;}
     .project-item .image-item{padding-left: 19px;width: calc(55% - 6px);}
     .project-item .caption-item{padding-left: 19px;width: calc(45% - 6px);}
     .project-item .caption-item h4 {padding-left: 0px;}
     .project-item .image-item img {width: auto;}
     .project-item .image-item.righted img{margin-right: 0;}
     .project-item .caption-item.lefted {padding-left: 16px;}
-/*==============================end-main-blk-4==================================================*/
+/*==============================end-our-projects-block==================================================*/
 
 /*==================================end-front-page===================================================*/
 /*=====================================about-page====================================================*/
@@ -687,6 +708,13 @@ video#top-video{display: none;}
 
 /*==================================end-reviews-block===================================================*/
 /*==================================end-about-page===================================================*/
+
+/*==================================our-projects-page===================================================*/
+/*==============================our-projects-top-block==================================================*/
+.our-projects-top-block{height: 600px;}
+.our-projects-top-block h1{margin-top: 123px;}
+/*==============================end-our-projects-top-block==================================================*/
+/*==================================end-our-projects-page===================================================*/
 }
 @media (min-width: 1920px){
     .container {width: 1180px;}
@@ -724,9 +752,9 @@ video#top-video{display: none;}
     .carousel h2 {padding-top: 37px;}
     .owl-carousel-no-thumb .owl-controls{width: 1050px;}
 /*==============================end-main-blk-3==================================================*/
-/*================================main-blk-4====================================================*/
-    .main-blk-4 {padding-bottom: 61px;}
-    .main-blk-4 h2 {margin-bottom: 64px;padding-top: 56px;letter-spacing: 0;}
+/*================================our-projects-block====================================================*/
+    .our-projects-block {padding-bottom: 61px;}
+    .our-projects-block h2 {margin-bottom: 64px;padding-top: 56px;letter-spacing: 0;}
     .project-item .image-item{padding-left: 0;}
     .project-item .caption-item{padding-left: 0;}
     .project-item .image-item.righted img{margin-right: 14px;}
@@ -736,7 +764,7 @@ video#top-video{display: none;}
     .project-item .caption-item h1.big-title {margin-top: -29px;}
     .project-item .caption-item .text{margin-top: 33px;}
     .project-item .caption-item .btn, .project-item .caption-item .btn:hover, .project-item .caption-item .btn:focus {margin-top: 60px;}
-/*==============================end-main-blk-4==================================================*/
+/*==============================end-our-projects-block==================================================*/
 /*==================================end-front-page===================================================*/
 /*==================================about-page===================================================*/
 /*==================================end-about-page===================================================*/
@@ -784,5 +812,11 @@ video#top-video{display: none;}
 /*==================================end-reviews-block===================================================*/
 /*==================================end-about-page===================================================*/
 
+/*==================================our-projects-page===================================================*/
+/*==============================our-projects-top-block==================================================*/
+.our-projects-top-block{height: 820px;background-position: center bottom;background-size: auto;}
+.our-projects-top-block h1{margin-top: 123px;}
+/*==============================end-our-projects-top-block==================================================*/
+/*==================================end-our-projects-page===================================================*/
 }
  

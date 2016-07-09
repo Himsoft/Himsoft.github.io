@@ -1,6 +1,7 @@
 
     var permutation=function(){
-        if($(window).width()>767){
+        console.log($(window).width());
+        if($(window).width()>=751){
             $('.why-we-item:odd').each(function(){
                 var $img=$(this).children('.image-item');
                 $img.addClass('lefted');
@@ -41,7 +42,7 @@
             });
                         
             if($(window).width()<1920){
-                if($(window).width()>767){
+                if($(window).width()>=751){
                     var k=1;
                     if($(window).width()<1200) k=0.855;
                     if($(window).width()<992) k=0.702;
@@ -50,11 +51,11 @@
                          var img_w=$(this).width();
                          $(this).css('width',(img_w*k)+'px');
                    });
-                    $('.project-item .image-item img').each(function(){
-                        $(this).css('width','');
-                         var img_w=$(this).width();
-                         $(this).css('width',(img_w*k)+'px');
-                   });
+                    //$('.project-item .image-item img').each(function(){
+//                        $(this).css('width','');
+//                         var img_w=$(this).width();
+//                         $(this).css('width',(img_w*k)+'px');
+//                   });
                 }
             }
         }else{

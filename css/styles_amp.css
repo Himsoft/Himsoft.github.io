@@ -162,10 +162,10 @@ video#top-video{display: none;}
 .owl-carousel-no-thumb .owl-controls .owl-nav .owl-next:after{content: "\f105";}
 /*==============================end-main-blk-3==================================================*/
 
-/*================================main-blk-4====================================================*/
-.main-blk-4{padding-top: 14px;padding-bottom: 75px;}
-.main-blk-4 h2{margin-bottom: 25px;padding-top: 0px;}
-.main-blk-4 h2:after{margin-top: 11px;}
+/*================================our-projects-block====================================================*/
+.our-projects-block{padding-top: 14px;padding-bottom: 75px;}
+.our-projects-block h2{margin-bottom: 25px;padding-top: 0px;}
+.our-projects-block h2:after{margin-top: 11px;}
 .project-item{padding: 0 10px;}
 .project-item:not(:first-of-type){margin-top: 32px;}
 .project-item .caption-item{position: relative;display: inline-block;vertical-align: middle;width: 100%;z-index: 1;padding-left: 15px;padding-right: 15px;}
@@ -177,7 +177,7 @@ video#top-video{display: none;}
 .project-item .caption-item .btn,.project-item .caption-item .btn:hover,.project-item .caption-item .btn:focus{margin-top: 26px;float: none;}
 .project-item .caption-item.lefted{padding-left: 0;}
 .project-item .image-item.righted img{float: right;margin-right: 4px;}
-/*==============================end-main-blk-4==================================================*/
+/*==============================end-our-projects-block==================================================*/
 
 
 /*==================================end-front-page===================================================*/
