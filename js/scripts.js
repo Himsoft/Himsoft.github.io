@@ -2,15 +2,15 @@
     var permutation=function(){
         console.log($(window).width());
         if($(window).width()>=751){
-            $('.why-we-item:odd').each(function(){
-                var $img=$(this).children('.image-item');
-                $img.addClass('lefted');
-                $(this).children('.caption-item').addClass('righted');
-                $(this).children('.image-item').remove();
-                $(this).prepend($img);
-            });
+//            $('.why-we-item:odd').each(function(){
+//                var $img=$(this).children('.image-item');
+//                $img.addClass('lefted');
+//                $(this).children('.caption-item').addClass('righted');
+//                $(this).children('.image-item').remove();
+//                $(this).prepend($img);
+//            });
             
-            $('.project-item:odd').each(function(){
+            $('.project-item:not(.destinations-item):not(.tours-item):odd,.project-item.destinations-item:not(.tours-item):even,.project-item.tours-item:even,.secret-item:odd').each(function(){
                 var $img=$(this).children('.image-item');
                 $img.addClass('righted');
                 $(this).children('.caption-item').addClass('lefted');
@@ -18,13 +18,21 @@
                 $(this).append($img);
             });
                         
-            $('.secret-item:odd').each(function(){
+            $('.why-we-item:odd').each(function(){
                 var $img=$(this).children('.image-item');
                 $img.addClass('lefted');
                 $(this).children('.caption-item').addClass('righted');
                 $(this).children('.image-item').remove();
                 $(this).prepend($img);
             });
+                        
+//            $('.secret-item:odd').each(function(){
+//                var $img=$(this).children('.image-item');
+//                $img.addClass('lefted');
+//                $(this).children('.caption-item').addClass('righted');
+//                $(this).children('.image-item').remove();
+//                $(this).prepend($img);
+//            });
 
             $('.reviews-item:even').each(function(){
                 var $img=$(this).children('.caption-item').children('img');
@@ -64,12 +72,11 @@
                 $(this).children('.image-item').remove();
                 $(this).append($img);
             });
-            $('.project-item:odd').each(function(){
+            $('.project-item').each(function(){
                 var $img=$(this).children('.image-item');
                 $(this).children('.image-item').remove();
                 $(this).prepend($img);
             });
-            
             $('img').css('width','');
         }
         var h=$('footer').height();

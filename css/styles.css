@@ -13,7 +13,7 @@ author: bootply.com
 @import url(helvetica-neue-cyr.css);
 @import url(aizel-accent.css);
 
-html{height: 100%;min-width: 300px;}
+html{height: 100%;min-width: 320px;}
 body {height: 100%;background-color:#ffffff;-webkit-font-smoothing: antialiased;font: 300 13px HelveticaNeueCyr,arial,sans-serif;line-height: 25px;letter-spacing: 1px;color: #39363f;}
 #content-wrapper{min-height: 100%;padding-bottom: 595px;margin-bottom: -595px;}
 h1{font-size: 93.39px;border: none!important;font-weight: 800;}
@@ -39,11 +39,11 @@ a,a:hover,a:focus{color: #39363f;}
 .quotes-txt .text{height: 90px;padding: 0px;}
 .quotes-txt:before{content: '“';font: normal 60px 'Aizel-Accent',arial,sans-serif;color: #878392;position: absolute;left: -25px;top: -20px;opacity: 0.3;}
 .quotes-txt:after{content: '”';font: normal 60px 'Aizel-Accent',arial,sans-serif;color: #878392;position: absolute;bottom: -50px;right: -20px;opacity: 0.3;}
-.breadcrump {padding: 6px 0 8px 3px;margin: 0;}
+.breadcrump {padding: 5px 0 8px 3px;margin: 0;}
 .breadcrump li{list-style: none;display: inline-block;color: #9c9e9f;font-size: 14px;font-weight: 300;}
-.breadcrump li:not(:last-child):after {content: '/';padding: 0 3px 0 6px;}
-.breadcrump li a{color: #b8b0c8;}
-.breadcrump li span{color: #39363f;}
+.breadcrump li:not(:last-child):after {content: '/';padding: 0 0px 0 3px;}
+.breadcrump li a{color: #b8b0c8;letter-spacing: 0.4px;}
+.breadcrump li span{color: #39363f;letter-spacing: 0.5px;}
 .btn,.btn:hover,.btn:focus{font: 800 10.34px 'HelveticaNeueCyr',arial,sans-serif;color: #39363f!important;display: inline-block;border: 3px solid #8ecea5;background: none!important;padding: 10px 26px 10px 28px;border-radius: 0;}
 
 /*====================================header=========================================================*/
@@ -69,12 +69,15 @@ a,a:hover,a:focus{color: #39363f;}
 .navbar-toggle{float: left;padding-left: 17px;position: absolute;left: 0;}
 .navbar-toggle .icon-bar {display: block;width: 24px;height: 4px;border-radius: 1px;}
 .nav-menu>li{display: inline-block;}
-.nav.nav-menu>li>a {padding: 2px 0px;margin: 0 8px;color: #39363f;font-size: 13px;border-top: 2px solid transparent;border-bottom: 2px solid transparent;font-weight: 600;letter-spacing: 2px;}
+.nav.nav-menu>li>a {padding: 2px 0px;margin: 0 8px;color: #39363f;font-size: 13px;border-top: 2px solid transparent;border-bottom: 2px solid transparent;font-weight: 600;letter-spacing: 1px;}
 .nav li{position: relative;}
 #subnav{background: #8ecea5;padding-bottom: 7px;}
 .nav.nav-menu.sub-menu{padding-left: 13px;padding-top: 5px;}
 .nav.nav-menu.sub-menu>li>a{border: none!important;text-transform: none!important;color: #ffffff;font-size: 15px!important;margin: 0 5px;}
 .nav.nav-menu.sub-menu>li>a.active,.nav.nav-menu.sub-menu>li>a:hover,.nav.nav-menu.sub-menu>li>a:focus{font-size: 15px!important;text-decoration: underline!important;}
+.nav.nav-menu.sub-menu.part-menu{padding-left: 19px;}
+.nav.nav-menu.sub-menu.part-menu > li>a{display: inline-block; letter-spacing: 0.45px;margin: 0;}
+.nav.nav-menu.sub-menu.part-menu > li:not(:last-child):after{content: "|";display: inline-block;color: #ffffff;padding: 0 0 0 4px;}
 #call-back-popup-mask{display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: #000000;opacity: 0.5;z-index: 9999;}
 #call-back-popup{display: none;position: fixed;left: 50%;transform: translatex(-50%);z-index: 999999;background: url('../images/popup_bg.jpg') center center no-repeat;padding: 30px 0 45px 0;min-width: 300px;width: calc(100% - 50px);max-width: 545px;margin-top: 20px;right: 0;top: 80px;text-align: center;}
 #call-back-popup input[type="text"]{background: transparent;height: 52px;padding: 16px 21px;width: 69%;margin-bottom: 25px;min-width: 280px;box-shadow: none;border: 1px solid #bea67c;border-radius: 3px;line-height: 50px;}
@@ -159,11 +162,11 @@ video#top-video{display: none;}
 .carousel-caption h5{font: italic 29.6px 'Aizel-Accent',arial,sans-serif;color: #f0b5b8;text-align: right;margin: 0;}
 .carousel-caption .bot{float: right;margin-right: -15px;}
 .carousel-caption .descr{font: 300 12px 'HelveticaNeueCyr',arial,sans-serif;color: #878392;line-height: 18px;margin-top: 8px;margin-bottom: 133px;}
-.carousel-caption .discont{font: 800 19px 'HelveticaNeueCyr',arial,sans-serif;color: #f0b5b8;margin-bottom: 5px;}
+.discont{font: 800 19px 'HelveticaNeueCyr',arial,sans-serif;color: #f0b5b8;margin-bottom: 5px;}
 .carousel-caption label{font: 600 14px 'HelveticaNeueCyr',arial,sans-serif;color: #c4c2c7;display: block;margin-bottom: -8px;}
-.carousel-caption .old-price{font: normal 32.06px 'Aizel-Accent',arial,sans-serif;color: #c4c2c7;text-decoration: line-through;display: inline-block;vertical-align: bottom;}
-.carousel-caption .new-price{font: normal 43.03px 'Aizel-Accent',arial,sans-serif;color: #39363f;display: inline-block;vertical-align: bottom;padding-left: 20px;}
-.carousel-caption .new-price>span{color: #f0b5b8;}
+.old-price{font: normal 32.06px 'Aizel-Accent',arial,sans-serif;color: #c4c2c7;text-decoration: line-through;display: inline-block;vertical-align: bottom;}
+.new-price{font: normal 43.03px 'Aizel-Accent',arial,sans-serif;color: #39363f;display: inline-block;vertical-align: bottom;padding-left: 20px;}
+.new-price>span{color: #f0b5b8;}
 .owl-carousel-no-thumb{padding: 0!important;}
 .owl-carousel-no-thumb .owl-item img{width: auto;}
 .owl-carousel-no-thumb .owl-controls{position: absolute;top: 50%;left: 50%;transform: translate(-50%, 0);width: calc(100% - 21px);z-index: 99;margin-top: 43px;}
@@ -312,6 +315,49 @@ video#top-video{display: none;}
 /*==============================end-part-world-block==================================================*/
 /*==================================end-part-world-page===================================================*/
 
+/*==================================part-world-afrika-page===================================================*/
+/*==============================part-world-afrika.top-block==================================================*/
+.part-world-afrika.top-block{background: url('../images/africa_top_bg.jpg') center bottom no-repeat;height: 305px;background-size: cover;position: relative;}
+.part-world-afrika.top-block:before{content: "";background: rgba(255, 255, 255, 0.65);height: 100%;width: 100%;position: absolute;top: 0;left: 0;}
+.part-world-afrika.top-block>.container{position: relative;}
+.part-world-afrika.top-block h1:after{border-color: #c1cbe2;}
+.part-world-afrika.top-block .text {font: italic 24px 'Aizel-Accent',arial,sans-serif;}
+/*==============================part-world-afrika.top-block==================================================*/
+/*==============================p-destinations-block==================================================*/
+.p-destinations-block{padding-bottom: 96px;}
+.p-destinations-block h2{font-size: 20px;margin-bottom: 30px;}
+.destinations-item.project-item:not(:first-of-type){margin-top: 80px;}
+.destinations-item.project-item .caption-item .btn, .destinations-item.project-item .caption-item .btn:hover, .destinations-item.project-item .caption-item .btn:focus{margin-top: 52px;}
+/*==============================end-p-destinations-block==================================================*/
+/*==============================part-world-afrika.dream-block==================================================*/
+.part-world-afrika.dream-block{background: url('../images/afrika_dream_bg.jpg') center center no-repeat;height: 403px;background-size: auto 100%;color: #39363f;position: relative;}
+.part-world-afrika.dream-block:before{content: "";background: rgba(255, 255, 255, 0.65);height: 100%;width: 100%;position: absolute;top: 0;left: 0;}
+.part-world-afrika.dream-block>.container{position: relative;}
+.part-world-afrika.dream-block h1 > span{color: #39363f;font-size: 57px;}
+/*==============================end-part-world-afrika.dream-block==================================================*/
+/*==============================r-tours-block==================================================*/
+.r-tours-block .discont {font: normal 30px 'Aizel-Accent',arial,sans-serif;}
+.r-tours-block{padding-bottom: 8px;}
+.r-tours-block h2{margin-bottom: 25px;font-size: 24px;}
+.p-of-time{font: normal 24px 'Aizel-Accent',arial,sans-serif;margin-top: 20px;float: left;}
+.calendar-icon{background: url('../images/cflendar_icon.png') center center no-repeat; display: inline-block;width: 30px;height: 30px;vertical-align: bottom;margin-right: 14px;}
+.tours-item.project-item .caption-item .text{margin-top: 25px;}
+.r-tours-block .new-price {font-size: 50px;line-height: 51px;margin-top: 6px;padding-left: 0;}
+.r-tours-block .new-price>span {font-size: 36px;color: #39363f;}
+.r-tours-block .old-price {font-size: 36px;margin-top: 0;}
+.prices{text-align: right;}
+.tours-item.project-item .caption-item .btn, .tours-item.project-item .caption-item .btn:hover, .tours-item.project-item .caption-item .btn:focus{margin-top: 18px;float: right;}
+/*==============================end-r-tours-block==================================================*/
+/*==============================all-destinations-block==================================================*/
+.all-destinations-block{padding-bottom: 75px;}
+.all-destinations-block h2{margin-bottom: 66px;}
+.all-destinations-block ul{padding: 0;}
+.all-destinations-block li{text-align: center;list-style: none;margin-bottom: 4px;}
+.all-destinations-block li a{font-size: 16px;color: #878392;}
+/*==============================end-all-destinations-block==================================================*/
+/*==============================end-part-world-afrika.top-block==================================================*/
+/*==================================end-part-world-afrika-page===================================================*/
+
 @media (min-width: 768px){
     h2{font-size: 48px;padding-top: 45px;margin-bottom: 60px;}
     h2::after{width: 110px;}
@@ -324,7 +370,7 @@ video#top-video{display: none;}
     .call-back,.call-back:hover,.call-back:focus{background: none;border: 2px solid #f0b5b8;border-radius: 21px;color: #39363f;padding: 11px 23px;font-size: 14px;font-weight: 300;position: relative;top: -24px;margin-right: 18px;}
     .call-back>span{border: none;padding: 0;color: #39363f;}
     .nav.nav-menu{margin: 10px auto 10px 10px;}
-    .nav.nav-menu>li>a,.nav.nav-menu>li>a:hover,.nav.nav-menu>li>a:focus{text-transform: uppercase;font-size: 12px;font-weight: 600;background: none;letter-spacing: 0;}
+    .nav.nav-menu>li>a,.nav.nav-menu>li>a:hover,.nav.nav-menu>li>a:focus{text-transform: uppercase;font-size: 12px;font-weight: 600;background: none;}
     .nav.nav-menu > li:not(:first-child)>a:before{content: "";background: #8ecea5;border-radius: 10px;display: inline-block;width: 7px;height: 7px;margin: 0 10px 0 0px;}
     .head-form{font-size: 16px;}
     .head-form h2{font-size: 48px;}
@@ -385,7 +431,7 @@ video#top-video{display: none;}
     .carousel-image{position: relative;-webkit-filter: none;filter: none;width: auto;height: auto;}
     .carousel-caption{width: 45%;padding-top: 65px;padding-left: 26px;}
     .carousel-caption .descr {font-size: 14px;line-height: 24px;margin-top: 27px;margin-bottom: 14px;height: 70px;overflow: hidden;}
-    .carousel-caption .discont {font-size: 21px;margin-bottom: 17px;}
+    .discont {font-size: 21px;margin-bottom: 17px;}
     .carousel-caption .bot{float: none;margin: 0;}
     .owl-carousel-no-thumb .owl-controls {width: 705px;margin-top: 85px;margin-left: -3px;}
 /*==============================end-main-blk-3==================================================*/
@@ -502,6 +548,28 @@ video#top-video{display: none;}
 .part-world-block h2{font-size: 48px;}
 /*==============================end-part-world-block==================================================*/
 /*==================================end-part-world-page===================================================*/
+
+/*==================================part-world-afrika-page===================================================*/
+/*==============================part-world-afrika.top-block==================================================*/
+.part-world-afrika.top-block{height: 400px;}
+/*==============================part-world-afrika.top-block==================================================*/
+/*==============================p-destinations-block==================================================*/
+.p-destinations-block h2{font-size: 48px;padding-top: 55px;margin-bottom: 73px;}
+.destinations-item.project-item .caption-item {padding-left: 15px;}
+.destinations-item.project-item .caption-item h1.big-title>span {font-size: 70px;}
+/*==============================end-p-destinations-block==================================================*/
+/*==============================part-world-afrika.dream-block==================================================*/
+.part-world-afrika.dream-block{height: 500px;}
+.part-world-afrika.dream-block h1 > span{font-size: 60px;}
+/*==============================end-part-world-afrika.dream-block==================================================*/
+/*==============================r-tours-block==================================================*/
+.r-tours-block h2{padding-top: 55px;margin-bottom: 53px;font-size: 60px;}
+/*==============================end-r-tours-block==================================================*/
+/*==============================all-destinations-block==================================================*/
+.all-destinations-block li{text-align: center;list-style: none;margin-bottom: 4px;float: left;width: 50%;}
+/*==============================end-all-destinations-block==================================================*/
+/*==============================end-part-world-afrika.top-block==================================================*/
+/*==================================end-part-world-afrika-page===================================================*/
 }
 
 @media (min-width: 992px) {
@@ -564,15 +632,15 @@ video#top-video{display: none;}
 /*================================main-blk-3====================================================*/
     .carousel-caption h3{font-size: 56px;}
     .carousel-caption h5{font-size: 38px;}
-    .carousel-caption .old-price{font-size: 38px;}
-    .carousel-caption .new-price{font-size: 51px;}
+    .old-price{font-size: 38px;}
+    .new-price{font-size: 51px;}
     .main-blk-3 .owl-carousel-no-thumb .item > .container {padding: 0px 45px 25px 75px;max-width: 980px;}
     .carousel-caption{padding: 76px 0 0 35px;}
     .carousel-caption h3{padding-bottom: 10px;}
     .carousel-caption .descr{margin-bottom: 32px;margin-top: 24px;}
     .main-blk-3 .owl-carousel-no-thumb .item {padding: 157px 0 71px 0;}
     .carousel-caption label{margin-bottom: -13px;letter-spacing: 0;}
-    .carousel-caption .discont{margin-bottom: 27px;}
+    .discont{margin-bottom: 27px;}
     .carousel-caption .btn,.carousel-caption .btn:hover,.carousel-caption .btn:focus{margin-top: 60px;margin-left: 8px;}
     .owl-carousel-no-thumb .owl-controls{width: 960px;margin-left: 0px;margin-top: 54px;}
     .carousel h2 {padding-top: 40px;}
@@ -665,14 +733,27 @@ video#top-video{display: none;}
 /*==============================end-our-projects.top-block==================================================*/
 /*==================================end-our-projects-page===================================================*/
 
-/*==================================part-world-page===================================================*/
-/*==============================part-world.top-block==================================================*/
-.part-world.top-block{background-position: 0 bottom;height: 500px;background-size: auto 100%;}
-.part-world-block h3>span {width: 100%;padding: 0 7px;}
-/*==============================end-part-world.top-block==================================================*/
-/*==============================part-world-block==================================================*/
-/*==============================end-part-world-block==================================================*/
-/*==================================end-part-world-page===================================================*/
+/*==================================part-world-afrika-page===================================================*/
+/*==============================p-destinations-block==================================================*/
+.destinations-item.project-item .caption-item h1.big-title>span{font-size: 100px;}
+/*==============================end-p-destinations-block==================================================*/
+/*==============================part-world-afrika.dream-block==================================================*/
+.part-world-afrika.dream-block h1 > span{font-size: 110px;}
+/*==============================end-part-world-afrika.dream-block==================================================*/
+/*==============================r-tours-block==================================================*/
+.p-of-time{margin-top: 40px;float: none;}
+.tours-item.project-item .caption-item h1.big-title {margin-top: -34px;}
+.tours-item.project-item .caption-item .text{margin-top: 25px;}
+.r-tours-block .discont {margin-bottom: 0;margin-top: 14px;}
+.r-tours-block .new-price {font-size: 60px;margin-top: 6px;}
+.r-tours-block .old-price {float: right;margin-top: 18px;margin-right: 23px;}
+.prices{text-align: left;}
+.tours-item.project-item .caption-item .btn, .destinations-item.project-item .caption-item .btn:hover, .destinations-item.project-item .caption-item .btn:focus{margin-top: 42px;float: none;}
+/*==============================end-r-tours-block==================================================*/
+/*==============================all-destinations-block==================================================*/
+.all-destinations-block li{width: 25%;}
+/*==============================end-all-destinations-block==================================================*/
+/*==================================end-part-world-afrika-page===================================================*/
 }
 @media (min-width: 1200px){
     .container {width: 1180px;}
@@ -729,7 +810,7 @@ video#top-video{display: none;}
     .main-blk-3 .owl-carousel-no-thumb .item > .container {padding: 0px 45px 0px 52px;max-width: 1024px;}
     .carousel-caption{padding: 30px 0 0 40px;}
     .carousel-caption label{margin-bottom: -13px;letter-spacing: 0;}
-    .carousel-caption .discont{margin-bottom: 27px;}
+    .discont{margin-bottom: 27px;}
     .carousel-caption .btn,.carousel-caption .btn:hover,.carousel-caption .btn:focus{margin-top: 60px;margin-left: -4px;}
     .owl-carousel-no-thumb .owl-controls{width: 1052px;margin-top: 54px;}
     .carousel h2 {padding-top: 40px;}
@@ -825,6 +906,25 @@ video#top-video{display: none;}
 .part-world-block h3>span {width: 85%;padding: 0 11px;}
 /*==============================end-part-world-block==================================================*/
 /*==================================end-part-world-page===================================================*/
+
+/*==================================part-world-afrika-page===================================================*/
+/*==============================part-world-afrika.top-block==================================================*/
+.part-world-afrika.top-block{height: 722px;}
+.part-world-afrika.top-block:before{display: none;} 
+.part-world-afrika.top-block h1{margin-top: 55px;margin-bottom: 26px;}
+.part-world-afrika.top-block .text{font-size: 30px;line-height: 30px;}
+/*==============================end-part-world-afrika.top-block==================================================*/
+/*==============================p-destinations-block==================================================*/
+.p-destinations-block h2{font-size: 60px;}
+.destinations-item.project-item .image-item:not(.righted) img{margin-left: 4px;}
+.destinations-item.project-item .image-item.righted  img{margin-right: 11px;}
+.destinations-item.project-item .caption-item .text{margin-top: 45px;}
+/*==============================end-p-destinations-block==================================================*/
+/*==============================part-world-afrika.dream-block==================================================*/
+.part-world-afrika.dream-block{height: 673px;background-size: auto;}
+.part-world-afrika.dream-block:before{display: none;}
+/*==============================end-part-world-afrika.dream-block==================================================*/
+/*==================================end-part-world-afrika-page===================================================*/
 }
 @media (min-width: 1920px){
     .container {width: 1180px;}
@@ -857,7 +957,7 @@ video#top-video{display: none;}
     .carousel-image,.owl-carousel-no-thumb .owl-item .carousel-image img{width: auto;}
     .carousel-caption{padding: 28px 0 0 40px;}
     .carousel-caption label{margin-bottom: -13px;letter-spacing: 0;}
-    .carousel-caption .discont{margin-bottom: 27px;}
+    .discont{margin-bottom: 27px;}
     .carousel-caption .btn,.carousel-caption .btn:hover,.carousel-caption .btn:focus{margin-top: 60px;}
     .carousel h2 {padding-top: 37px;}
     .owl-carousel-no-thumb .owl-controls{width: 1050px;}
@@ -962,5 +1062,31 @@ video#top-video{display: none;}
 .part-world-block img {max-width: none;}
 /*==============================end-part-world-block==================================================*/
 /*==================================end-part-world-page===================================================*/
+
+/*==================================part-world-afrika-page===================================================*/
+/*==============================part-world-afrika.top-block==================================================*/
+.part-world-afrika.top-block{height: 722px;}
+.part-world-afrika.top-block:before{display: none;} 
+.part-world-afrika.top-block h1{margin-top: 55px;margin-bottom: 26px;}
+.part-world-afrika.top-block .text{font-size: 30px;line-height: 30px;}
+/*==============================end-part-world-afrika.top-block==================================================*/
+/*==============================p-destinations-block==================================================*/
+.p-destinations-block h2{font-size: 60px;}
+.destinations-item.project-item .caption-item h1.big-title > span {font-size: 100px;letter-spacing: 6px;}
+.destinations-item.project-item .image-item:not(.righted) img{margin-left: 4px;}
+.destinations-item.project-item .image-item.righted  img{margin-right: 11px;}
+.destinations-item.project-item .caption-item {padding-left: 3px;}
+.destinations-item.project-item .caption-item .text{margin-top: 45px;}
+/*==============================end-p-destinations-block==================================================*/
+/*==============================part-world-afrika.dream-block==================================================*/
+.part-world-afrika.dream-block{height: 673px;background-size: auto;}
+/*==============================end-part-world-afrika.dream-block==================================================*/
+/*==============================r-tours-block==================================================*/
+.tours-item.project-item .caption-item h1.big-title {margin-top: -31px;}
+.tours-item.project-item .caption-item .text {margin-top: 24px;}
+.r-tours-block .discont {margin-bottom: 0;margin-top: 14px;}
+.p-of-time {margin-top: 33px;float: none;}
+/*==============================end-r-tours-block==================================================*/
+/*==================================end-part-world-afrika-page===================================================*/
 }
  
