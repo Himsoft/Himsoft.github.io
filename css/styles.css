@@ -339,12 +339,10 @@ video#top-video{display: none;}
 .r-tours-block .discont {font: normal 30px 'Aizel-Accent',arial,sans-serif;}
 .r-tours-block{padding-bottom: 8px;}
 .r-tours-block h2{margin-bottom: 25px;font-size: 24px;}
-.p-of-time{font: normal 24px 'Aizel-Accent',arial,sans-serif;margin-top: 20px;float: left;}
-.calendar-icon{background: url('../images/cflendar_icon.png') center center no-repeat; display: inline-block;width: 30px;height: 30px;vertical-align: bottom;margin-right: 14px;}
 .tours-item.project-item .caption-item .text{margin-top: 25px;}
 .r-tours-block .new-price {font-size: 50px;line-height: 51px;margin-top: 6px;padding-left: 0;}
 .r-tours-block .new-price>span {font-size: 36px;color: #39363f;}
-.r-tours-block .old-price {font-size: 36px;margin-top: 0;}
+.r-tours-block .old-price {font-size: 36px;margin-top: 0;padding-left: 70px;}
 .prices{text-align: right;}
 .tours-item.project-item .caption-item .btn, .tours-item.project-item .caption-item .btn:hover, .tours-item.project-item .caption-item .btn:focus{margin-top: 18px;float: right;}
 /*==============================end-r-tours-block==================================================*/
@@ -552,7 +550,7 @@ video#top-video{display: none;}
 /*==================================part-world-afrika-page===================================================*/
 /*==============================part-world-afrika.top-block==================================================*/
 .part-world-afrika.top-block{height: 400px;}
-/*==============================part-world-afrika.top-block==================================================*/
+/*==============================end-part-world-afrika.top-block==================================================*/
 /*==============================p-destinations-block==================================================*/
 .p-destinations-block h2{font-size: 48px;padding-top: 55px;margin-bottom: 73px;}
 .destinations-item.project-item .caption-item {padding-left: 15px;}
@@ -564,11 +562,12 @@ video#top-video{display: none;}
 /*==============================end-part-world-afrika.dream-block==================================================*/
 /*==============================r-tours-block==================================================*/
 .r-tours-block h2{padding-top: 55px;margin-bottom: 53px;font-size: 60px;}
+/*==============================r-tours-block==================================================*/
+.tours-item.project-item .caption-item .btn, .destinations-item.project-item .caption-item .btn:hover, .destinations-item.project-item .caption-item .btn:focus{margin-top: 42px;float: none;}
 /*==============================end-r-tours-block==================================================*/
 /*==============================all-destinations-block==================================================*/
 .all-destinations-block li{text-align: center;list-style: none;margin-bottom: 4px;float: left;width: 50%;}
 /*==============================end-all-destinations-block==================================================*/
-/*==============================end-part-world-afrika.top-block==================================================*/
 /*==================================end-part-world-afrika-page===================================================*/
 }
 
@@ -741,13 +740,10 @@ video#top-video{display: none;}
 .part-world-afrika.dream-block h1 > span{font-size: 110px;}
 /*==============================end-part-world-afrika.dream-block==================================================*/
 /*==============================r-tours-block==================================================*/
-.p-of-time{margin-top: 40px;float: none;}
 .tours-item.project-item .caption-item h1.big-title {margin-top: -34px;}
 .tours-item.project-item .caption-item .text{margin-top: 25px;}
 .r-tours-block .discont {margin-bottom: 0;margin-top: 14px;}
 .r-tours-block .new-price {font-size: 60px;margin-top: 6px;}
-.r-tours-block .old-price {float: right;margin-top: 18px;margin-right: 23px;}
-.prices{text-align: left;}
 .tours-item.project-item .caption-item .btn, .destinations-item.project-item .caption-item .btn:hover, .destinations-item.project-item .caption-item .btn:focus{margin-top: 42px;float: none;}
 /*==============================end-r-tours-block==================================================*/
 /*==============================all-destinations-block==================================================*/
@@ -924,6 +920,10 @@ video#top-video{display: none;}
 .part-world-afrika.dream-block{height: 673px;background-size: auto;}
 .part-world-afrika.dream-block:before{display: none;}
 /*==============================end-part-world-afrika.dream-block==================================================*/
+/*==============================r-tours-block==================================================*/
+.r-tours-block .old-price {float: right;margin-top: 18px;margin-right: 23px;padding-left: 0;}
+.prices{text-align: left;}
+/*==============================end-r-tours-block==================================================*/
 /*==================================end-part-world-afrika-page===================================================*/
 }
 @media (min-width: 1920px){
@@ -1085,7 +1085,6 @@ video#top-video{display: none;}
 .tours-item.project-item .caption-item h1.big-title {margin-top: -31px;}
 .tours-item.project-item .caption-item .text {margin-top: 24px;}
 .r-tours-block .discont {margin-bottom: 0;margin-top: 14px;}
-.p-of-time {margin-top: 33px;float: none;}
 /*==============================end-r-tours-block==================================================*/
 /*==================================end-part-world-afrika-page===================================================*/
 }

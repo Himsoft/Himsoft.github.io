@@ -338,8 +338,6 @@ video#top-video{display: none;}
 .r-tours-block .discont {font: normal 30px 'Aizel-Accent',arial,sans-serif;}
 .r-tours-block{padding-bottom: 8px;}
 .r-tours-block h2{margin-bottom: 25px;font-size: 24px;}
-.p-of-time{font: normal 24px 'Aizel-Accent',arial,sans-serif;margin-top: 20px;float: left;}
-.calendar-icon{background: url('../images/cflendar_icon.png') center center no-repeat; display: inline-block;width: 30px;height: 30px;vertical-align: bottom;margin-right: 14px;}
 .tours-item.project-item .caption-item .text{margin-top: 25px;}
 .r-tours-block .new-price {font-size: 50px;line-height: 51px;margin-top: 6px;padding-left: 0;}
 .r-tours-block .new-price>span {font-size: 36px;color: #39363f;}
