@@ -16,7 +16,7 @@ author: bootply.com
 html{height: 100%;min-width: 320px;max-width: 800px;margin: 0 auto;}
 body {height: 100%;background-color:#ffffff;-webkit-font-smoothing: antialiased;font: 300 13px HelveticaNeueCyr,arial,sans-serif;line-height: 25px;letter-spacing: 1px;color: #39363f;}
 #content-wrapper{min-height: 100%;padding-bottom: 595px;margin-bottom: -595px;}
-.container {width: 100%!important;}
+.container:not(.not-imp) {width: 100%!important;}
 h1{font-size: 93.39px;border: none!important;font-weight: 800;}
 h2{color: #39363f;margin: 0;padding: 35px 0 0 0;border: none;font: normal 28px 'Aizel-Accent',arial,sans-serif;}
 h2:after{content: "";border: 2px solid #8ecea5;width: 60px;display: block;margin: 9px auto 0px auto;border-radius: 5px;}
@@ -89,6 +89,13 @@ a,a:hover,a:focus{color: #39363f;}
 #call-back-popup input[type="text"]:-moz-placeholder{color: #878392;opacity:  1;font: 300 13px 'HelveticaNeueCyr',arial,sans-serif;}
 #call-back-popup input[type="text"]::-moz-placeholder{color: #878392;opacity:  1;font: 300 13px 'HelveticaNeueCyr',arial,sans-serif;}
 #call-back-popup input[type="text"]:-ms-input-placeholder{color: #878392;font: 300 13px 'HelveticaNeueCyr',arial,sans-serif;}
+.navbar-toggle.search{left: 5px;top: 30px;font-size: 20px;}
+#navbar-collapse-search{position: relative;left: 0;width: 100%;background: none;padding: 0;}
+#navbar-collapse-search .search-form{margin: 10px 0;background: #8ecea5;padding: 10px 0;}
+#navbar-collapse-search .search-form input[type="text"]{width: 70%;}
+#subnav .search-form{position: absolute;top: 50%;right: 0;transform: translateY(-50%);margin-top: 4px;}
+.search-form input[type="text"],.search-form input[type="text"]:focus{background: none;border: none;border-bottom: 1px solid #ffffff;color: #ffffff;margin-left: -5px;outline: none;padding-bottom: 0;width: 235px;}
+.search-form button,.search-form button:focus{background: none;border: none;border-bottom: 1px solid #ffffff;color: #ffffff;margin-left: -5px;outline: none;width: 23px;padding: 0px;text-align: left;}
 /*==================================end-header=======================================================*/
 
 /*====================================footer=========================================================*/
@@ -354,3 +361,43 @@ video#top-video{display: none;}
 /*==============================end-all-destinations-block==================================================*/
 /*==============================end-part-world-afrika.top-block==================================================*/
 /*==================================end-part-world-afrika-page===================================================*/
+
+/*==================================country-page===================================================*/
+/*==============================country.top-block==================================================*/
+.country.top-block{background: url('../images/country_top_bg.jpg') 19% bottom no-repeat;height: 310px;background-size: cover;position: relative;}
+.country.top-block:before{content: "";background: rgba(255, 255, 255, 0.65);height: 100%;width: 100%;position: absolute;top: 0;left: 0;}
+.country.top-block>.container{position: relative;}
+.country.top-block .text {font: italic 24px 'Aizel-Accent',arial,sans-serif;}
+.country.top-block .text p {margin-bottom: 0px;}
+.country.top-block h1 {margin-top: 54px;margin-bottom: 23px;}
+.country.top-block h1:after{border-color: #39363f;}
+.btn-galery{position: absolute;right: 5px;top: 15px;width: 65px;height: 55px;background: url('../images/gal_contr_sprite.png') center -65px no-repeat;cursor: pointer;}
+.galery{opacity: 0;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: -1;background: #252525;}
+.galery .container{padding: 0;height: 100%;position: relative;padding-top: 18px;}
+.close-galery,.up,.down{background: url('../images/gal_contr_sprite.png') center 0 no-repeat;cursor: pointer;width: 41px;height: 45px;}
+.up{background-position: center -143px;}
+.down{background-position: center -194px;}
+.galery .scroller{height: 100%;overflow-y: scroll;}
+.galery-item{padding: 10px 0; text-align: center;}
+.galery-item img{max-width: calc(100% - 20px);}
+.controls-galery{position: absolute;top: 0;right: -25px;width: 45px;height: 100%;background: #252525;z-index: 99999;}
+.controls-galery .bottom{position: absolute;bottom: 90px;padding-left: 2px;}
+.controls-galery .top{position: absolute;top: 35px;}
+.controls-galery .top .count{position: absolute;color: #ffffff;right: 0;top: 0;background: #f284a3;font-size: 10px;font-weight: 800;line-height: 12px;border-radius: 10px;padding: 2px;transform: translate(10%,-50%);}
+.controls-galery .top .descr{font-size: 12px;font-weight: 600;color: #ffffff;position: absolute;bottom: -16px;left: 50%;transform: translatex(-50%);}
+.slider-popup{position: fixed;z-index: 99999;width: 100%;left: 0;top: 0;height: 100%;padding: 40px 0;background: #000000;}
+.slider-popup div{height: 100%;}
+.slider-carousel .owl-item{text-align: center;}
+.slider-carousel .owl-item img{max-width: 100%;max-height: 100%;width: auto!important;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+.slider-carousel .owl-controls{height: auto;width: calc(100% - 30px);}
+.slider-popup .close,.slider-popup .owl-nav >div{opacity: 1;color: #ffffff;font-size: 30px;text-shadow: none;}
+.slider-popup .close{height: auto;z-index: 9;}
+.slider-popup .owl-nav .owl-prev:after{content: "\f0a8";}
+.slider-popup .owl-nav .owl-next:after{content: "\f0a9";}
+
+/*==============================end-country.top-block==================================================*/
+/*==============================country.r-tours-block==================================================*/
+.country.r-tours-block h2{padding-top: 35px;margin-bottom: 71px;}
+.country.r-tours-block {padding-bottom: 104px;}
+/*==============================end-country.r-tours-block==================================================*/
+/*==================================end-country-page===================================================*/
