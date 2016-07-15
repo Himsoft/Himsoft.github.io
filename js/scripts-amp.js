@@ -14,7 +14,7 @@
             thumbImage: false,
             thumbContainerClass: 'owl-thumbs',
             thumbItemClass: 'owl-thumb-item',
-        });//.trigger('to.owl.carousel',[$index,0]);
+        });
 
     }
     
@@ -39,7 +39,7 @@
     
     }
 
-$(document).ready(function(){/* jQuery toggle layout */
+$(document).ready(function(){
     sorted();
     $('body').on('click','.slider-popup .close',function(){$('body').find('.slider-popup').remove();});
     $('.controls-galery .bottom>div').click(function(){
@@ -62,7 +62,6 @@ $(document).ready(function(){/* jQuery toggle layout */
     
     if($('.owl-carousel').length){
         $('.owl-carousel').owlCarousel({
-            //loop: true,
             nav: true,
             navText:["",""],
             items: 1,
@@ -74,7 +73,6 @@ $(document).ready(function(){/* jQuery toggle layout */
     }
     if($('.owl-carousel-no-thumb').length){
         $('.owl-carousel-no-thumb').owlCarousel({
-            //loop: true,
             nav: true,
             navText:["",""],
             items: 1,
@@ -82,7 +80,6 @@ $(document).ready(function(){/* jQuery toggle layout */
             thumbImage: false,
          });
     }
-        // Инициалиация
         var video = $("#main-video");
 
     $('.show-video').click(function(){

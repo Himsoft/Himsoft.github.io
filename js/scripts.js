@@ -14,7 +14,7 @@
             thumbImage: false,
             thumbContainerClass: 'owl-thumbs',
             thumbItemClass: 'owl-thumb-item',
-        });//.trigger('to.owl.carousel',[$index,0]);
+        });
 
     }
     
@@ -42,13 +42,6 @@
     var permutation=function(){
         console.log($(window).width());
         if($(window).width()>=751){
-//            $('.why-we-item:odd').each(function(){
-//                var $img=$(this).children('.image-item');
-//                $img.addClass('lefted');
-//                $(this).children('.caption-item').addClass('righted');
-//                $(this).children('.image-item').remove();
-//                $(this).prepend($img);
-//            });
             
             $('.project-item:not(.destinations-item):not(.tours-item):odd,.project-item.destinations-item:not(.tours-item):even,.project-item.tours-item:even,.secret-item:odd').each(function(){
                 var $img=$(this).children('.image-item');
@@ -66,13 +59,6 @@
                 $(this).prepend($img);
             });
                         
-//            $('.secret-item:odd').each(function(){
-//                var $img=$(this).children('.image-item');
-//                $img.addClass('lefted');
-//                $(this).children('.caption-item').addClass('righted');
-//                $(this).children('.image-item').remove();
-//                $(this).prepend($img);
-//            });
 
             $('.reviews-item:even').each(function(){
                 var $img=$(this).children('.caption-item').children('img');
@@ -99,11 +85,6 @@
                          var img_w=$(this).width();
                          $(this).css('width',(img_w*k)+'px');
                    });
-                    //$('.project-item .image-item img').each(function(){
-//                        $(this).css('width','');
-//                         var img_w=$(this).width();
-//                         $(this).css('width',(img_w*k)+'px');
-//                   });
                 }
             }
         }else{
@@ -123,7 +104,7 @@
         $('#content-wrapper').css('padding-bottom',h+'px').css('margin-bottom','-'+h+'px');
     }
 
-$(document).ready(function(){/* jQuery toggle layout */
+$(document).ready(function(){
     permutation();
     sorted();
     $('body').on('click','.slider-popup .close',function(){$('body').find('.slider-popup').remove();});
@@ -139,7 +120,6 @@ $(document).ready(function(){/* jQuery toggle layout */
     });
     if($('.owl-carousel').length){
         $('.owl-carousel').owlCarousel({
-            //loop: true,
             nav: true,
             navText:["",""],
             items: 1,
@@ -151,7 +131,6 @@ $(document).ready(function(){/* jQuery toggle layout */
     }
     if($('.owl-carousel-no-thumb').length){
         $('.owl-carousel-no-thumb').owlCarousel({
-            //loop: true,
             nav: true,
             navText:["",""],
             items: 1,
@@ -159,17 +138,7 @@ $(document).ready(function(){/* jQuery toggle layout */
             thumbImage: false,
          });
     }
-        // Инициалиация
         var video = $("#main-video");
-
-//    function vidplay() {
-//       if (video.paused) {
-//          video.play();
-//       } else {
-//          video.pause();
-//       }
-//    }        
-//
     $('.show-video').click(function(){
         $('.top-video-container').fadeOut(500);
         $('.main-video-container').fadeIn(500);
