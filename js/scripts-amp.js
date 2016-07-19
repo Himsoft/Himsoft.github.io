@@ -18,29 +18,29 @@
 
     }
     
-    var sorted=function(){
-        var current_width = $(document).width();
-        if(current_width > 800) current_width = 800;
-        if(current_width < 410) current_width = 410;
-        $(".galery .container").css('width',current_width - 100 + "px");
-        var n = parseInt((current_width - 110)/(300));
-        var elem_width = parseInt((current_width - 110)/n - 13);
-        $('.galery .container .galery-item').width(elem_width);
-        $('.galery .container .content').masonry({
-            itemSelector: '.galery-item',
-            singleMode: true,
-            resizeable: true,
-            isAnimated: true,
-            animationOptions: {
-                queue: false,
-                duration: 500
-            }
-        });
-    
-    }
+//    var sorted=function(){
+//        var current_width = $(document).width();
+//        if(current_width > 800) current_width = 800;
+//        if(current_width < 410) current_width = 410;
+//        $(".galery .container").css('width',current_width - 100 + "px");
+//        var n = parseInt((current_width - 110)/(300));
+//        var elem_width = parseInt((current_width - 110)/n - 13);
+//        $('.galery .container .galery-item').width(elem_width);
+//        $('.galery .container .content').masonry({
+//            itemSelector: '.galery-item',
+//            singleMode: true,
+//            resizeable: true,
+//            isAnimated: true,
+//            animationOptions: {
+//                queue: false,
+//                duration: 500
+//            }
+//        });
+//    
+//    }
 
 $(document).ready(function(){
-    sorted();
+    //sorted();
     $('body').on('click','.slider-popup .close',function(){$('body').find('.slider-popup').remove();});
     $('.controls-galery .bottom>div').click(function(){
         if($(this).hasClass('up')){var step=-300;}
@@ -109,5 +109,5 @@ $(document).ready(function(){
 
     var h=$('footer').height();
     $('#content-wrapper').css('padding-bottom',h+'px').css('margin-bottom','-'+h+'px');
-    $(window).resize(function(){sorted();});
+    //$(window).resize(function(){sorted();});
 });

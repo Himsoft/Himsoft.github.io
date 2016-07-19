@@ -394,10 +394,20 @@ video#top-video{display: none;}
 .slider-popup .close{height: auto;z-index: 9;}
 .slider-popup .owl-nav .owl-prev:after{content: "\f0a8";}
 .slider-popup .owl-nav .owl-next:after{content: "\f0a9";}
-
+.masonry[data-columns]::before {content: '1 .col-xs-12 .no-pad';}
 /*==============================end-country.top-block==================================================*/
 /*==============================country.r-tours-block==================================================*/
 .country.r-tours-block h2{padding-top: 35px;margin-bottom: 71px;}
 .country.r-tours-block {padding-bottom: 104px;}
 /*==============================end-country.r-tours-block==================================================*/
 /*==================================end-country-page===================================================*/
+@media (min-width: 768px){
+/*==================================country-page===================================================*/
+/*==============================country.top-block==================================================*/
+.country.top-block{height: 577px;}
+.country.top-block .text {font-size: 30px;}
+.masonry[data-columns]::before {content: '2 .col-xs-6 .no-pad';}
+/*==============================end-country.top-block==================================================*/
+/*==================================end-country-page===================================================*/
+    
+}
