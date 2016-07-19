@@ -44,7 +44,7 @@
         console.log($(window).width());
         if($(window).width()>=751){
             
-            $('.project-item:not(.destinations-item):not(.tours-item):odd,.project-item.destinations-item:not(.tours-item):even,.project-item.tours-item:even,.secret-item:odd').each(function(){
+            $('.project-item:not(.destinations-item):not(.tours-item):odd,.project-item.destinations-item:not(.tours-item):even,.project-item.tours-item:even').each(function(){
                 var $img=$(this).children('.image-item');
                 $img.addClass('righted');
                 $(this).children('.caption-item').addClass('lefted');
@@ -52,7 +52,7 @@
                 $(this).append($img);
             });
                         
-            $('.why-we-item:odd').each(function(){
+            $('.why-we-item:odd,.secret-item:odd').each(function(){
                 var $img=$(this).children('.image-item');
                 $img.addClass('lefted');
                 $(this).children('.caption-item').addClass('righted');
@@ -89,7 +89,7 @@
                 }
             }
         }else{
-            $('.why-we-item:odd').each(function(){
+            $('.why-we-item:odd,.secret-item:odd').each(function(){
                 var $img=$(this).children('.image-item');
                 $(this).children('.image-item').remove();
                 $(this).append($img);
