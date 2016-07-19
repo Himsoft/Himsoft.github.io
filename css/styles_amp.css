@@ -373,14 +373,14 @@ video#top-video{display: none;}
 .country.top-block h1:after{border-color: #39363f;}
 .btn-galery{position: absolute;right: 5px;top: 15px;width: 65px;height: 55px;background: url('../images/gal_contr_sprite.png') center -65px no-repeat;cursor: pointer;}
 .galery{opacity: 0;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: -1;background: #252525;}
-.galery .container{padding: 0;height: 100%;position: relative;padding-top: 18px;}
+.galery .container{padding: 18px 10px 0 10px;height: 100%;position: relative;}
 .close-galery,.up,.down{background: url('../images/gal_contr_sprite.png') center 0 no-repeat;cursor: pointer;width: 41px;height: 45px;}
 .up{background-position: center -143px;}
 .down{background-position: center -194px;}
 .galery .scroller{height: 100%;overflow-y: scroll;}
 .galery-item{padding: 10px 0; text-align: center;}
 .galery-item img{max-width: calc(100% - 20px);}
-.controls-galery{position: absolute;top: 0;right: -25px;width: 45px;height: 100%;background: #252525;z-index: 99999;}
+.controls-galery{position: absolute;top: 0;right: 0px;width: 45px;height: 100%;background: #252525;z-index: 99999;}
 .controls-galery .bottom{position: absolute;bottom: 90px;padding-left: 2px;}
 .controls-galery .top{position: absolute;top: 35px;}
 .controls-galery .top .count{position: absolute;color: #ffffff;right: 0;top: 0;background: #f284a3;font-size: 10px;font-weight: 800;line-height: 12px;border-radius: 10px;padding: 2px;transform: translate(10%,-50%);}
@@ -394,7 +394,6 @@ video#top-video{display: none;}
 .slider-popup .close{height: auto;z-index: 9;}
 .slider-popup .owl-nav .owl-prev:after{content: "\f0a8";}
 .slider-popup .owl-nav .owl-next:after{content: "\f0a9";}
-.masonry[data-columns]::before {content: '1 .col-xs-12 .no-pad';}
 /*==============================end-country.top-block==================================================*/
 /*==============================country.r-tours-block==================================================*/
 .country.r-tours-block h2{padding-top: 35px;margin-bottom: 71px;}
