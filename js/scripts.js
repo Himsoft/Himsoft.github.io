@@ -18,25 +18,26 @@
 
     }
     
-    var sorted=function(){
-        var current_width = $(document).width();
-        if(current_width > 1260) current_width = 1260;
-        if(current_width < 410) current_width = 410;
-        $(".galery .container").css('width',current_width - 100 + "px");
-        var n = parseInt((current_width - 110)/(300));
-        var elem_width = parseInt((current_width - 110)/n - 13);
-        $('.galery .container .galery-item').width(elem_width);
-        $('.galery .container .content').masonry({
-            itemSelector: '.galery-item',
-            singleMode: true,
-            resizeable: true,
-            isAnimated: true,
-            animationOptions: {
-                queue: false,
-                duration: 500
-            }
-        });
-    
+    var sorted=function(){	
+	if($('.galery').length){
+	        var current_width = $(document).width();
+	        if(current_width > 1260) current_width = 1260;
+	        if(current_width < 410) current_width = 410;
+	        $(".galery .container").css('width',current_width - 100 + "px");
+	        var n = parseInt((current_width - 110)/(300));
+	        var elem_width = parseInt((current_width - 110)/n - 13);
+	        $('.galery .container .galery-item').width(elem_width);
+	        $('.galery .container .content').masonry({
+	            itemSelector: '.galery-item',
+	            singleMode: true,
+	            resizeable: true,
+	            isAnimated: true,
+	            animationOptions: {
+	                queue: false,
+	                duration: 500
+	            }
+	        });
+    	}
     }
 
     var permutation=function(){
