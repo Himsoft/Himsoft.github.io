@@ -396,7 +396,6 @@ video#top-video{display: none;}
 .slider-popup .close{height: auto;z-index: 9;}
 .slider-popup .owl-nav .owl-prev:after{content: "\f0a8";}
 .slider-popup .owl-nav .owl-next:after{content: "\f0a9";}
-.masonry[data-columns]::before {content: '1 .col-xs-12 .no-pad';}
 /*==============================end-country.top-block==================================================*/
 /*==============================country.r-tours-block==================================================*/
 .country.r-tours-block h2{padding-top: 35px;margin-bottom: 71px;}
@@ -622,7 +621,6 @@ video#top-video{display: none;}
 /*==============================country.top-block==================================================*/
 .country.top-block{height: 577px;}
 .country.top-block .text {font-size: 30px;}
-.masonry[data-columns]::before {content: '2 .col-xs-6 .no-pad';}
 /*==============================end-country.top-block==================================================*/
 /*==================================end-country-page===================================================*/
 }
@@ -810,7 +808,6 @@ video#top-video{display: none;}
 /*==================================country-page===================================================*/
 /*==============================country.top-block==================================================*/
 .btn-galery{top: 40px;}
-.masonry[data-columns]::before {content: '3 .col-xs-4 .no-pad';}
 /*==============================end-country.top-block==================================================*/
 /*==================================end-country-page===================================================*/
 
@@ -991,12 +988,6 @@ video#top-video{display: none;}
 /*==============================end-r-tours-block==================================================*/
 /*==================================end-part-world-afrika-page===================================================*/
 
-/*==================================country-page===================================================*/
-/*==============================country.top-block==================================================*/
-.masonry[data-columns]::before {content: '3 .col-xs-4 .no-pad';}
-/*==============================end-country.top-block==================================================*/
-/*==================================end-country-page===================================================*/
-
 }
 @media (min-width: 1920px){
     .container {width: 1180px;}
@@ -1166,37 +1157,13 @@ video#top-video{display: none;}
 .country.top-block:before{display: none;}
 .country.top-block .text{font-size: 30px;line-height: 37px;}
 .btn-galery{right: -9px;}
-.masonry[data-columns]::before {content: '3 .col-xs-4 .no-pad';}
 /*==============================end-country.top-block==================================================*/
 /*==================================end-country-page===================================================*/
 
 }
  
-@media screen and (max-width: 767px) {
-	.masonry[data-columns]::before {
-		content: '1 .col-xs-12 .no-pad';
-	}
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-	.masonry[data-columns]::before {
-		content: '2 .col-xs-6 .no-pad';
-	}
-}
-
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-	.masonry[data-columns]::before {
-		content: '3 .col-xs-4 .no-pad';
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	.masonry[data-columns]::before {
-		content: '3 .col-xs-4 .no-pad';
-	}
-}
-@media screen and (min-width: 1920px) {
-	.masonry[data-columns]::before {
-		content: '3 .col-xs-4 .no-pad';
-	}
-}
+@media screen and (max-width: 767px) {.masonry[data-columns]::before {content: '1 .col-xs-12 .no-pad';}}
+@media screen and (min-width: 768px) and (max-width: 991px) {.masonry[data-columns]::before {content: '2 .col-xs-6 .no-pad';}}
+@media screen and (min-width: 992px) and (max-width: 1199px) {.masonry[data-columns]::before {content: '3 .col-xs-4 .no-pad';}}
+@media screen and (min-width: 1200px) {.masonry[data-columns]::before {content: '3 .col-xs-4 .no-pad';}}
+@media screen and (min-width: 1920px) {.masonry[data-columns]::before {content: '3 .col-xs-4 .no-pad';}}
