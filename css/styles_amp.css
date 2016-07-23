@@ -399,6 +399,19 @@ video#top-video{display: none;}
 .country.r-tours-block h2{padding-top: 35px;margin-bottom: 71px;}
 .country.r-tours-block {padding-bottom: 104px;}
 /*==============================end-country.r-tours-block==================================================*/
-/*==================================end-country-page===================================================*/
 @media screen and (max-width: 767px) {.masonry[data-columns]::before {content: '1 .col-xs-12 .no-pad';}}
 @media screen and (min-width: 768px) {.masonry[data-columns]::before {content: '2 .col-xs-6 .no-pad';}}
+/*==================================end-country-page===================================================*/
+
+/*==================================what-we-can-page===================================================*/
+/*==============================what-we-can.top-block==================================================*/
+.what-can.top-block{background: url('../images/what_we_can_top_bg.jpg') 35% bottom no-repeat;height: 320px;background-size: cover;}
+/*==============================end-what-we-can.top-block==================================================*/
+/*==============================what-we-can.secret-block==================================================*/
+.what-can.secret-block .caption-item{padding-left: 14px;padding-right: 14px;}
+.what-can.secret-block .caption-item h1{height: 80px;}
+.what-can.secret-block .caption-item h1 > span{font-size: 43px;}
+.what-can .secret-item{margin-bottom: 30px;}
+.what-can .secret-item .caption-item .text{height: auto;padding-right: 0;}
+/*==============================end-what-we-can.secret-block==================================================*/
+/*==================================end-what-we-can-page===================================================*/
