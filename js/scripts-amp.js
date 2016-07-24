@@ -42,6 +42,7 @@
 $(document).ready(function(){
     //sorted();
     $('body').on('click','.slider-popup .close',function(){$('body').find('.slider-popup').remove();});
+    $('body').on('click','.question-toggle.collapsed',function(){$('.question-toggle:not(.collapsed)').click();});
     $('.controls-galery .bottom>div').click(function(){
         if($(this).hasClass('up')){var step=-300;}
         if($(this).hasClass('down')){var step=300;}

@@ -41,7 +41,7 @@ a,a:hover,a:focus{color: #39363f;}
 .quotes-txt:before{content: '“';font: normal 60px 'Aizel-Accent',arial,sans-serif;color: #878392;position: absolute;left: -25px;top: -20px;opacity: 0.3;}
 .quotes-txt:after{content: '”';font: normal 60px 'Aizel-Accent',arial,sans-serif;color: #878392;position: absolute;bottom: -50px;right: -20px;opacity: 0.3;}
 .breadcrump {padding: 5px 0 8px 3px;margin: 0;}
-.breadcrump li{list-style: none;display: inline-block;color: #9c9e9f;font-size: 14px;font-weight: 300;}
+.breadcrump li{list-style: none;display: inline-block;color: #9c9e9f;font-size: 12px;font-weight: 300;}
 .breadcrump li:not(:last-child):after {content: '/';padding: 0 0px 0 3px;}
 .breadcrump li a{color: #b8b0c8;letter-spacing: 0.4px;}
 .breadcrump li span{color: #39363f;letter-spacing: 0.5px;}
@@ -405,7 +405,8 @@ video#top-video{display: none;}
 
 /*==================================what-we-can-page===================================================*/
 /*==============================what-we-can.top-block==================================================*/
-.what-can.top-block{background: url('../images/what_we_can_top_bg.jpg') 35% bottom no-repeat;height: 320px;background-size: cover;}
+.what-can.top-block{height: auto;background: none;}
+.what-can.top-block img{max-width: 100%;}
 /*==============================end-what-we-can.top-block==================================================*/
 /*==============================what-we-can.secret-block==================================================*/
 .what-can.secret-block .caption-item{padding-left: 14px;padding-right: 14px;}
@@ -415,6 +416,35 @@ video#top-video{display: none;}
 .what-can .secret-item .caption-item .text{height: auto;padding-right: 0;}
 /*==============================end-what-we-can.secret-block==================================================*/
 /*==================================end-what-we-can-page===================================================*/
+
+/*==================================what-we-can-detail-page===================================================*/
+/*==============================breadcrump-bl==================================================*/
+.what-can-detail.breadcrump-bl{background: #8ecea5;position: relative;}
+.what-can-detail .breadcrump li a{color: #508362;}
+.what-can-detail .breadcrump li span{color: #ffffff;}
+/*==============================end-breadcrump-bl==================================================*/
+/*==============================what-we-can-detail.top-block==================================================*/
+.what-can-detail.top-block{height: auto;background: none;margin-top: -30px;}
+.what-can-detail.top-block img{max-width: 100%;}
+/*==============================end-what-we-can-detail.top-block==================================================*/
+/*==============================what-we-can-detail-descr-block==================================================*/
+.what-can-detail-descr-block{padding-top: 22px;}
+.what-can-detail-descr-block h1{height: 38px;overflow: hidden;margin-bottom: 0;line-height: 20px;}
+.what-can-detail-descr-block h1 > span{font: italic 42px 'Aizel-Accent',arial,sans-serif;color: #f0b5b8;margin-top: -5px;}
+.what-can-detail-descr-block h3{font: normal 32px 'Aizel-Accent',arial,sans-serif;margin-top: 4px;margin-bottom: 38px;}
+.what-can-detail-descr-block .text{color: #878392;font-size: 13px;line-height: 20px;}
+/*==============================end-what-we-can-detail-descr-block==================================================*/
+/*==============================questions-block==================================================*/
+.questions-block{background: url('../images/questions_bg.png') center 309px no-repeat;padding-top: 48px;padding-bottom: 112px;background-size: 100% auto;}
+.questions-block h1{height: 77px;overflow: hidden;margin-bottom: 0;}
+.questions-block h1 > span{font: italic 75px 'Aizel-Accent',arial,sans-serif;color: #f0b5b8;margin-top: -5px;}
+.questions-block h3{font: normal 32px 'Aizel-Accent',arial,sans-serif;margin-top: 9px;}
+.questions{max-width: 670px;margin: 0px auto;padding-left: 15px;padding-top: 10px;padding-right: 15px;}
+.questions button{background: none;border: none;display: block;margin-top: 24px;font: normal 29px 'Aizel-Accent',arial,sans-serif;text-align: left;margin-bottom: 20px;}
+.questions button.collapsed{border-bottom: 1px solid #f284a3;margin-top: 52px;padding-bottom: 5px;}
+.questions .text{font-size: 13px;padding-left: 4px;line-height: 20px;margin-right: 0;}
+/*==============================end-questions-block==================================================*/
+/*==================================end-what-we-can-detail-page===================================================*/
 
 @media (min-width: 768px){
     h2{font-size: 48px;padding-top: 45px;margin-bottom: 60px;}
@@ -437,7 +467,9 @@ video#top-video{display: none;}
     #call-back-popup input[type="text"]::-moz-placeholder{font-size: 16px;}
     #call-back-popup input[type="text"]:-ms-input-placeholder{font-size: 16px;}
 /*==================================end-header=======================================================*/
-
+/*===================================main============================================================*/
+.breadcrump li{font-size: 14px;}
+/*=================================end-main==========================================================*/
 /*====================================footer=========================================================*/
     footer h1 > span, .caption-item h1.big-title > span{font-size: 80px;}
     footer h1, .caption-item h1.big-title {height: 59px;}
@@ -638,17 +670,31 @@ video#top-video{display: none;}
 /*==================================end-country-page===================================================*/
 
 /*==================================what-we-can-page===================================================*/
-/*==============================what-we-can.top-block==================================================*/
-.what-can.top-block{background-position: center bottom;height: 420px;}
-/*==============================end-what-we-can.top-block==================================================*/
 /*==============================what-we-can.secret-block==================================================*/
 .what-can .secret-item {margin-bottom: 80px;}
 .what-can.secret-block .caption-item h1 > span{font-size: 50px;}
 /*==============================end-what-we-can.secret-block==================================================*/
 /*==================================end-what-we-can-page===================================================*/
+
+/*==================================what-we-can-detail-page===================================================*/
+/*==============================what-we-can-detail-descr-block==================================================*/
+.what-can-detail-descr-block h1{height: 73px;}
+.what-can-detail-descr-block h1 > span{font-size: 83px;}
+.what-can-detail-descr-block h3{font-size: 48px;}
+.what-can-detail-descr-block .text{font-size: 16px;line-height: 30px;}
+/*==============================end-what-we-can-detail-descr-block==================================================*/
+/*==============================questions-block==================================================*/
+.questions-block h1{height: 89px;}
+.questions-block h1 > span{font-size: 100px;}
+.questions-block h3{font-size: 48px;}
+.questions{padding-right: 0;padding-left: 31px;}
+.questions button{font-size: 29px;margin-top: 42px;}
+.questions .text{font-size: 16px;line-height: 30px;margin-right: -15px;}
+/*==============================end-questions-block==================================================*/
+/*==================================end-what-we-can-detail-page===================================================*/
 }
 
-@media (min-width: 992px) {
+@media (min-width: 997px) {
     .container {width: 980px;}
     h2{padding-top: 37px;padding-bottom: 35px;letter-spacing: 0;font-size: 60px;margin-bottom: 34px;}
     h2::after{margin-top: 6px;}
@@ -835,9 +881,6 @@ video#top-video{display: none;}
 /*==================================end-country-page===================================================*/
 
 /*==================================what-we-can-page===================================================*/
-/*==============================what-we-can.top-block==================================================*/
-.what-can.top-block{height: 500px;}
-/*==============================end-what-we-can.top-block==================================================*/
 /*==============================what-we-can.secret-block==================================================*/
 .what-can .secret-item .image-item {padding-left: 20px;}
 .what-can .secret-item .image-item.lefted {padding-right: 20px;}
@@ -845,6 +888,11 @@ video#top-video{display: none;}
 /*==============================end-what-we-can.secret-block==================================================*/
 /*==================================end-what-we-can-page===================================================*/
 
+/*==================================what-we-can-detail-page===================================================*/
+/*==============================questions-block==================================================*/
+.questions-block{background-size: auto;}
+/*==============================end-questions-block==================================================*/
+/*==================================end-what-we-can-detail-page===================================================*/
 }
 @media (min-width: 1200px){
     .container {width: 1180px;}
@@ -1023,9 +1071,6 @@ video#top-video{display: none;}
 /*==================================end-part-world-afrika-page===================================================*/
 
 /*==================================what-we-can-page===================================================*/
-/*==============================what-we-can.top-block==================================================*/
-.what-can.top-block{height: 820px;background-size: auto;}
-/*==============================end-what-we-can.top-block==================================================*/
 /*==============================what-we-can.secret-block==================================================*/
 .what-can.secret-block .caption-item h1 {height: 75px;}
 .what-can.secret-block .caption-item h1 > span{font-size: 83px;}
@@ -1209,10 +1254,6 @@ video#top-video{display: none;}
 /*==================================end-country-page===================================================*/
 
 /*==================================what-we-can-page===================================================*/
-/*==============================what-we-can.top-block==================================================*/
-.what-can.top-block{height: 820px;background: url('../images/what_we_can_top_bg.jpg') center bottom no-repeat;}
-.what-can.top-block:before{display: none;}
-/*==============================end-what-we-can.top-block==================================================*/
 /*==============================what-we-can.secret-block==================================================*/
 .what-can.secret-block {padding-bottom: 84px;}
 .what-can.secret-block h2 {padding-bottom: 27px;}
@@ -1227,8 +1268,6 @@ video#top-video{display: none;}
 .what-can .secret-item .image-item.lefted{width: calc(50% + 20px);padding-left: 20px;}
 /*==============================end-what-we-can.secret-block==================================================*/
 /*==================================end-what-we-can-page===================================================*/
-
-
 
 }
  
