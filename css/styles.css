@@ -1077,7 +1077,6 @@ video#top-video{display: none;}
 .what-can .secret-item .image-item {padding-left: 20px;padding-right: 20px;}
 .what-can .secret-item .image-item.lefted {padding-right: 20px;}
 .what-can .secret-item .caption-item.righted {padding-right: 30px;}
-.what-can .secret-item .image-item img {width: auto;}
 /*==============================end-what-we-can.secret-block==================================================*/
 /*==================================end-what-we-can-page===================================================*/
 
@@ -1266,6 +1265,7 @@ video#top-video{display: none;}
 .what-can .secret-item .caption-item.righted{padding-left: 50px;width: calc(50% - 25px);padding-right: 0px;}
 .what-can .secret-item .caption-item.righted .text{padding-right: 0;}
 .what-can .secret-item .image-item.lefted{width: calc(50% + 20px);padding-left: 20px;}
+.what-can .secret-item .image-item img {width: auto;}
 /*==============================end-what-we-can.secret-block==================================================*/
 /*==================================end-what-we-can-page===================================================*/
 
