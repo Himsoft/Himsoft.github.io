@@ -107,6 +107,13 @@
 
 $(document).ready(function(){
     permutation();
+   	$("body").on("click","a.to-anchor", function (event) {
+		event.preventDefault();
+		var id  = $(this).attr('href'),
+			top = $(id).offset().top;
+		$('body,html').animate({scrollTop: (top)}, 800);
+	});
+
     $('.location.part-world-descr-block .text+.btns .btn').click(function(e){
         e.preventDefault();
         if(!$(this).hasClass('open')) $('.location.part-world-descr-block .text').addClass('open');
