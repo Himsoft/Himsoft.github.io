@@ -32,10 +32,6 @@
                       <span class="icon-bar"></span>
                       </button>
 
-                      <button type="button" class="navbar-toggle search" data-toggle="collapse" data-target="#navbar-collapse-search">
-                      <span class="fa fa-search"></span>
-                      </button>
-
                       <a href="/" class="navbar-brand"><img alt="img" src="images/logo.png" /></a>
                        
                       <ul class="nav nav-menu hidden-xs">
@@ -74,24 +70,11 @@
                           <li><a href="#">Наши проекты</a></li>
                           <li><a href="#">Контакты</a></li>
                        </ul>
-                       <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg sub-menu">
-                          <li><a href="#">Часть света</a></li>
-                          <li><a class="active" href="#">Страна</a></li>
-                          <li><a href="#">Локация</a></li>
-                        </ul>
-                    </div>
-                    <div class="collapse navbar-collapse" id="navbar-collapse-search">
-                       <div class="search-form hidden-sm hidden-md hidden-lg">
-                            <form action="/" method="get">
-                                <button name="s" type="submit"><span class="fa fa-search"></span></button>
-                                <input type="text" name="q" value="" />
-                            </form>
-                        </div>
                     </div>
                   </div>  
                 </div>
              </div>	
-             <div id="subnav" class="col-md-12 hidden-xs">
+             <div id="subnav" class="col-md-12">
                 <div class="container">
                     <div class="row">
                         <ul class="nav nav-menu sub-menu part-menu">
@@ -99,7 +82,7 @@
                           <li><a class="active" href="#">Страна</a></li>
                           <li><a href="#">Локация</a></li>
                         </ul>
-                        <div class="search-form">
+                        <div class="search-form  hidden-xs">
                             <form action="/" method="get">
                                 <button name="s" type="submit"><span class="fa fa-search"></span></button>
                                 <input type="text" name="q" value=""/>
@@ -107,6 +90,12 @@
                         </div>
                     </div>
                 </div>
+             </div>
+             <div class="mob search-form hidden-sm hidden-md hidden-lg">
+                <form action="/" method="get">
+                    <button name="s" type="submit"><span class="fa fa-search"></span></button>
+                    <input type="text" placeholder="Поиск" name="q" value="" />
+                </form>
              </div>
         </nav>
         <!--main-->
