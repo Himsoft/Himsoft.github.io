@@ -393,7 +393,7 @@ video#top-video{/*display: none;*/}
 .controls-galery{position: absolute;top: 0;right: 0px;width: 45px;height: 100%;background: #252525;z-index: 99999;}
 .controls-galery .bottom{position: absolute;bottom: 90px;padding-left: 2px;}
 .controls-galery .top{position: absolute;top: 35px;}
-.controls-galery .top .count{position: absolute;color: #ffffff;right: 0;top: 0;background: #f284a3;font-size: 10px;font-weight: 800;line-height: 12px;border-radius: 10px;padding: 2px;transform: translate(10%,-50%);}
+.controls-galery .top .count{position: absolute;color: #ffffff;right: 0;top: 0;background: #f284a3;font-size: 10px;font-weight: 800;line-height: 12px;border-radius: 10px;padding: 2px;transform: translate(10%,-50%);min-width: 17px;min-height: 17px;display: block;text-align: center;}
 .controls-galery .top .descr{font-size: 12px;font-weight: 600;color: #ffffff;position: absolute;bottom: -16px;left: 50%;transform: translatex(-50%);}
 .slider-popup{position: fixed;z-index: 99999;width: 100%;left: 0;top: 0;height: 100%;padding: 40px 0;background: #000000;}
 .slider-popup div{height: 100%;}
