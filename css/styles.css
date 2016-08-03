@@ -135,8 +135,8 @@ footer h3{font: italic 22px 'Aizel-Accent',arial,sans-serif;color: #39363f;margi
 .video-container {display: block;position: relative;padding: 0;line-height: 0;}
 .video-desc-container {position: absolute;top: 0;left: 0;bottom: 0;right: 0;margin: 0;background: rgba(0,0,0,.7);z-index: 98;text-align: center;}
 video#top-video,video#main-video {max-width: 100%;width: 100%;}
-video#top-video{/*display: none;*/}
-.main-video-container{display: none;line-height: 0;}
+video#top-video{display: none;}
+.main-video-container{display: none;line-height: 0;padding-top: 222px;background: rgba(0,0,0,.7);}
 .main-video-container .video-content{min-height: 0;}
 .video-desc-content {display: inline-block;position: absolute;left: 50%;bottom: 45px;transform: translate(-50%,0);z-index: 99;font-size: 16px;line-height: 32px;font-weight: 300;color: #FFF;width: 100%;max-width: 300px;}
 .video-desc-content .container{padding: 0;}
@@ -594,6 +594,7 @@ a.pluso-moimir{background-position: -89px 0!important;}
     .video-desc-content{max-width: 100%;bottom: auto;top: 50%;transform: translate(-50%,-50%);}
     .video-desc-content .descr .text{font-size: 76.09px;padding: 0 15px;}
     .show-video{padding: 12px 44px;margin-top: 69px;margin-bottom: 18px;}
+    .main-video-container{padding-top: 0;background: none;}
 /*==============================end-top-video-block==================================================*/
 
 /*================================why-we-bloc====================================================*/
@@ -901,7 +902,8 @@ a.pluso-moimir{background-position: -113px 0!important;margin-right: 0 !importan
 /*================================top-video-block====================================================*/
     .show-video{margin-top: 69px;margin-bottom: 0;padding: 13px 44px;}
     .video-desc-content .descr .text {font-size: 76.09px;line-height: 92px;margin-top: -6px;padding: 0 130px;}
-    .video-content{min-height: 577px;}
+    video#top-video{display: block;}
+    .video-content{min-height: 415px;}
 /*==============================end-top-video-block==================================================*/
 
 /*================================why-we-bloc====================================================*/
@@ -1139,7 +1141,7 @@ a.pluso-moimir{background-position: -113px 0!important;margin-right: 0 !importan
 /*================================top-video-block====================================================*/
     .show-video{margin-top: 70px;}
     .video-desc-content .descr .text {font-size: 76.09px;line-height: 92px;margin-top: -6px;padding: 0 250px;}
-    .video-content{min-height: 577px;}
+    .video-content{min-height: 500px;}
 /*==============================end-top-video-block==================================================*/
 
 /*================================why-we-bloc====================================================*/
@@ -1343,7 +1345,7 @@ a.pluso-moimir{background-position: -113px 0!important;margin-right: 0 !importan
 
 /*================================top-video-block====================================================*/
     .video-desc-content .descr .text {font-size: 93px;margin: 0 auto;line-height: 112px;}
-    .video-content {min-height: 820px;}
+    .video-content {min-height: 790px;}
     .show-video {margin-top: 184px;}    
 /*==============================end-top-video-block==================================================*/
 /*================================why-we-bloc====================================================*/
