@@ -127,7 +127,7 @@ footer h3{font: italic 22px 'Aizel-Accent',arial,sans-serif;color: #39363f;margi
 .video-desc-container {position: absolute;top: 0;left: 0;bottom: 0;right: 0;margin: 0;background: rgba(0,0,0,.7);z-index: 98;text-align: center;}
 video#top-video,video#main-video {max-width: 100%;width: 100%;}
 video#top-video{display: none;}
-.main-video-container{display: none;line-height: 0;}
+.main-video-container{display: none;line-height: 0;padding-top: 222px;background: rgba(0,0,0,.7);}
 .main-video-container .video-content{min-height: 0;}
 .video-desc-content {display: inline-block;position: absolute;left: 50%;bottom: 45px;transform: translate(-50%,0);z-index: 99;font-size: 16px;line-height: 32px;font-weight: 300;color: #FFF;width: 100%;max-width: 300px;}
 .video-desc-content .container{padding: 0;}
