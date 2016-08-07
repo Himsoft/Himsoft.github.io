@@ -143,7 +143,7 @@ button:hover,button:focus,.btn:hover,.btn:focus{color: #383d43;}
 .perriod{position: relative;}
 .perriod .time_fild+span{width: 14px;height: 16px;background: url(../images/icons.png) no-repeat;background-position: 0px -90px;position: absolute;display: inline-block;left: 75%;top: 50%;transform: translateY(-50%);}
 .perriod.for:after{content: "-";margin-left: 5px;font-size: 20px;line-height: 20px;}
-.abbreviated .abbr,.abbreviated .country,.abbreviated .per-cost,.abbreviated .per-cost .bl,.abbreviated .action{float: none;padding-bottom: 4px;}
+.abbreviated .abbr,.abbreviated .country,.abbreviated .per-cost,.abbreviated .per-cost .bl,.abbreviated .action{float: none;padding-bottom: 4px;clear: both;}
 .abbreviated .action,.abbreviated .per-cost{border: none;padding-bottom: 0;}
 #search-tur .country > div,#search-tur .perriod,#search-tur .cost{width: 50%;float: left;margin-bottom: 19px;}
 #search-tur .action{text-align: center;margin-bottom: -15px;}
