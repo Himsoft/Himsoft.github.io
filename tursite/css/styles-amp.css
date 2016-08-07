@@ -325,7 +325,7 @@ footer .social span{display: inline-block;vertical-align: top;}
 #subnav{padding-bottom: 0;margin-top: 5px;}
 .nav.nav-menu.sub-menu{padding: 13px 0 6px 0;}
 .search-form{margin-top: 8px;text-align: right;padding-right: 5px;}
-.search-form input[type="text"],.search-form input[type="text"]:focus{width: 200px;margin-left: 15px;}
+.search-form input[type="text"],.search-form input[type="text"]:focus{width: 195px;margin-left: 15px;}
 #search-tur .abbr_ext{top: -39px;left: 11px;}
 #search-tur .abbr_ext span.up{top: 40%;}
 #search-tur{padding-top: 20px;padding-bottom: 20px;}
