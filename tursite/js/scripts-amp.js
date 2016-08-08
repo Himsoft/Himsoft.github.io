@@ -121,6 +121,11 @@
     });
 
 $(document).ready(function(){
+    $('#ui-datepicker-div').append('<a href="#" class="close" data-handler="hide" data-event="click"></a>');
+    $('.perriod .time_fild + span').click(function(){
+        $(this).prev().focus();
+    });
+    
     $('.back-to-top').click(function(e) {e.preventDefault(); $('body,html').animate({scrollTop:0},1000);});
     $('.map-contacts-block .view-map > .btn,.map-contacts-block .contacts-feedback-block > .btn').click(function(e){
         e.preventDefault();
@@ -187,13 +192,10 @@ $(document).ready(function(){
                 0: {
                     items: 1
                 },
-                480: {
-                    items: 1
+                580: {
+                    items: 3
                 },
                 768: {
-                    items: 4
-                },
-                960: {
                     items: 4
                 }
             },
@@ -209,13 +211,10 @@ $(document).ready(function(){
                 0: {
                     items: 1
                 },
-                480: {
-                    items: 1
+                580: {
+                    items: 2
                 },
                 768: {
-                    items: 3
-                },
-                960: {
                     items: 3
                 }
             },
@@ -233,9 +232,9 @@ $(document).ready(function(){
             nav: true,
             navText:["",""],
             items: 1,
-            //autoplay: true,
-            //autoplaySpeed: 1500,
-            //autoplayTimeout: 3000,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            autoplayTimeout: 3000,
             thumbs: false,
             thumbImage: false,
          });

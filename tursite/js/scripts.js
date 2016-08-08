@@ -140,9 +140,6 @@ $(document).ready(function(){
         onClose: function( selectedDate ) {
             $( "#datepicker2" ).datepicker( "option", "minDate", selectedDate||0 );
         }
-    }).on('show', function(e) {
-        console.log(e);
-        // `e` here contains the extra attributes
     });
     $( "#datepicker2").datepicker({
         minDate: 0,
@@ -195,8 +192,8 @@ $(document).ready(function(){
                 0: {
                     items: 1
                 },
-                480: {
-                    items: 1
+                580: {
+                    items: 3
                 },
                 768: {
                     items: 4
@@ -217,13 +214,13 @@ $(document).ready(function(){
                 0: {
                     items: 1
                 },
-                480: {
-                    items: 1
+                580: {
+                    items: 2
                 },
                 768: {
                     items: 3
                 },
-                960: {
+                1200: {
                     items: 4
                 }
             },
@@ -241,9 +238,9 @@ $(document).ready(function(){
             nav: true,
             navText:["",""],
             items: 1,
-            //autoplay: true,
-            //autoplaySpeed: 1500,
-            //autoplayTimeout: 3000,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            autoplayTimeout: 3000,
             thumbs: false,
             thumbImage: false,
          });
