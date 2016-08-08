@@ -354,7 +354,7 @@ footer .social span{display: inline-block;vertical-align: top;}
 #search-tur .extended .cost{margin-left: -4px;}
 #search-tur .extended h3{display: block;}
 #search-tur .extended .country>div{width: 100%;padding-left: 19px;}
-#search-tur .extended select{width: 336px;}
+/*#search-tur .extended select{width: 336px;}*/
 #search-tur .extended .country{border-right: 1px solid #d7b40d;}
 #search-tur .extended .ext.type{padding-left: 27px;margin-top: -5px;}
 #search-tur .extended .per-cost>div{width: 50%;padding-left: 19px;}
