@@ -139,7 +139,7 @@ button:hover,button:focus,.btn:hover,.btn:focus{color: #383d43;}
 .bl .cost{text-align: center;float: none;display: inline-block;margin: 0 -8px;}
 #search-tur .bl .cost label{padding: 0 5px;font-size: 14px;}
 .country .chosen-container-single .chosen-single div{display: block;position: absolute;top: 6px;left: 8px;width: 11px;height: 15px;}
-.country .chosen-container-single .chosen-single div b{background: url(../images/icons.png) no-repeat;background-position: 0px -70px;}
+.country .chosen-container-single .chosen-single div b{background: url(../images/icons.png) no-repeat!important;background-position: 0px -70px!important;}
 .perriod{position: relative;}
 .perriod .time_fild+span{width: 14px;height: 16px;background: url(../images/icons.png) no-repeat;background-position: 0px -90px;position: absolute;display: inline-block;left: 75%;top: 50%;transform: translateY(-50%);}
 .perriod.for:after{content: "-";margin-left: 3px;font-size: 20px;line-height: 20px;margin-right: -3px;}
