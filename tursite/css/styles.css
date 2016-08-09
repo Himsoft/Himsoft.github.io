@@ -65,13 +65,13 @@ button:hover,button:focus,.btn:hover,.btn:focus{color: #383d43;}
 .call-back > span{border-bottom: 1px dotted #ffffff;}
 .call-block .phone{font-size: 24px;font-family: 'Roboto Slab Bold';color: #ffffff;display: inline-block;vertical-align: bottom;padding-bottom: 2px;}
 .header {border-width:0;}
-.header .navbar-collapse {background-color: rgba(0, 0, 0, 0.7);position: absolute;top: 0;width: calc(100% + 15px);left: -15px;text-align: center;color: #ffffff;z-index: 99;}
+.header .navbar-collapse {background-color: rgba(0, 0, 0, 0.7);position: absolute;top: 0;width: calc(100% + 15px);left: -15px;color: #ffffff;z-index: 9999;padding-left: 40px;}
 .navbar-collapse .navbar-toggle{top: 16px;left: 32px;margin: 0;}
-.navbar-collapse .navbar-toggle .icon-bar{background: #ffffff!important;height: 3px;bottom: 0;position: absolute;transform: rotate(45deg);left: 0;top: 50%;margin: 0;}
+.navbar-collapse .navbar-toggle .icon-bar{background: #666b70!important;height: 3px;bottom: 0;position: absolute;transform: rotate(45deg);left: 0;top: 50%;margin: 0;}
 .navbar-collapse .navbar-toggle .icon-bar+.icon-bar{transform: rotate(-45deg);}
-.navbar-collapse .navbar-nav{margin-top: 170px;padding: 100px 0;}
+.navbar-collapse .navbar-nav{padding: 45px 0 0 0;}
 .navbar-collapse .navbar-nav.sub-menu {margin-top: -80px;padding:20px 0 0 0;margin-bottom: 40px;border-top: solid 3px #8ecea5;}
-.header .navbar-collapse .navbar-nav > li > a,.header .navbar-collapse .navbar-nav > li > a:hover,.header .navbar-collapse .navbar-nav > li > a:focus{color: #ffffff;background: none;font-weight: 300;}
+.header .navbar-collapse .navbar-nav > li > a,.header .navbar-collapse .navbar-nav > li > a:hover,.header .navbar-collapse .navbar-nav > li > a:focus{color: #ffffff;background: none;font-family: 'Roboto Slab Bold';font-weight: bold;}
 .navbar.header{margin-bottom: 0;width: 100%;padding-top: 4px;padding-bottom: 25px;border-radius: 0;}
 .navbar.header .col-md-12{padding: 0;}
 .navbar.header .container{position: relative;}
@@ -81,7 +81,7 @@ button:hover,button:focus,.btn:hover,.btn:focus{color: #383d43;}
 .navbar-toggle .icon-bar{background: #666b70;}
 .navbar-toggle{float: left;padding: 15px;position: absolute;left: 0;z-index: 0;margin-top: 0px;background: #272b31;}
 .mob-header{position: relative;background: #383d43;padding: 8px 0 12px 0;}
-.mob-header .call a{background: #272b31;color: #ffd200;text-decoration: none;padding: 9px 26px;display: inline-block;border-radius: 20px;font: bold 14px 'Roboto Bold';}
+.mob-header .call a{background: #272b31;color: #ffd200;text-decoration: none;padding: 9px 26px;display: inline-block;border-radius: 20px;font: bold 14px 'Roboto Bold';position: relative;z-index: 99999;}
 .mob-header .call a:before{content: "";width: 12px;height: 18px;background: url(../images/icons.png) no-repeat;background-position: 0px -520px;display: inline-block;vertical-align: middle;margin-right: 8px;}
 .mob-header > .navbar-toggle{height: 100%;top: 0;}
 .navbar-toggle .icon-bar {display: block;width: 24px;height: 4px;border-radius: 1px;}
@@ -637,6 +637,7 @@ footer .contacts {padding-top: 11px;width: 51.4%;margin: 0 auto;}
 /*====================================header=========================================================*/
 .navbar-header{float: none;padding-left: 28px;}    
 .search-form{margin-right: 10px;}
+#search-tur .cost input[type="text"] + span {left: 82%;}
 /*====================================ent-header=========================================================*/
 
 /*===================================front-page======================================================*/
@@ -681,9 +682,6 @@ footer .contacts {padding-top: 11px;width: 51.4%;margin: 0 auto;}
     .per-cost .bl{width: 55.5%;}
     #search-tur .action{width: 21%;}
     #search-tur .abbreviated .per-cost .bl {width: 55.5%;}
-    .perriod .time_fild + span {left: 67%;}
-    .perriod.for .time_fild + span {left: 71%;}
-    #search-tur .extended .perriod .time_fild + span {left: 72%;}
 /*====================================ent-header=========================================================*/
 
 /*===================================front-page======================================================*/
