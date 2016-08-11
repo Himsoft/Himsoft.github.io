@@ -224,7 +224,7 @@ video#top-video{display: none;}
 .top-block .container{position: relative;z-index: 1;}
 .top-block h1{font: normal 42px 'Aizel-Accent',arial,sans-serif;margin-top: 8px;margin-bottom: 14px;color: #ffffff;}
 .top-block h1:after{content: "";border: 2px solid #f0b5b8;width: 60px;display: block;margin: 5px auto 0px auto;border-radius: 5px;}
-.top-block .text{font: 300 12px HelveticaNeueCyr,arial,sans-serif;}
+.top-block .text{font: 300 12px HelveticaNeueCyr,arial,sans-serif;color: #ffffff;}
 .top-block .text p{margin-bottom: 6px;}
 /*==============================end-top-block==================================================*/
 /*==============================secret-block==================================================*/
