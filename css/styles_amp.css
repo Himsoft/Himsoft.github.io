@@ -257,7 +257,7 @@ video#top-video{display: none;}
 .reviews-item h2{font: italic 30px 'Aizel-Accent',arial,sans-serif;color: #f0b5b8;padding-top: 15px;padding-left: 12px;}
 .reviews-item .caption-item h4{font: normal 20px 'Aizel-Accent',arial,sans-serif;padding-left: 13px;margin-top: -6px;margin-bottom: 4px;}
 .reviews-item img{width: 100%;}
-.reviews-item .quotes-txt .text{height: 90px;padding: 0px;}
+.reviews-item .quotes-txt .text{padding: 0px;}
 .reviews-item .read-moore {text-align: center;}
 .reviews-item .read-moore .btn{float: none;text-transform: uppercase;margin-top: 32px;padding: 12px 24px 12px 29px;}
 
