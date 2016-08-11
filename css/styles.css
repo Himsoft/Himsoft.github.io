@@ -219,7 +219,9 @@ video#top-video{display: none;}
 .about-page .navbar.header{position: relative;}
 /*========================================end-header=================================================*/
 /*==============================top-block==================================================*/
-.top-block{background: url('../images/about_top_bg.jpg') 65% bottom no-repeat;height: 496px;background-size: auto 70%;}
+.top-block{background: url('../images/about_top_bg.jpg') 65% bottom no-repeat;height: 496px;background-size: auto 70%;position: relative;}
+.top-block:before{content: "";background: rgba(255, 255, 255, 0.55);height: 100%;width: 100%;position: absolute;top: 0;left: 0;}
+.top-block .container{position: relative;z-index: 1;}
 .top-block h1{font: normal 42px 'Aizel-Accent',arial,sans-serif;margin-top: 8px;margin-bottom: 14px;}
 .top-block h1:after{content: "";border: 2px solid #f0b5b8;width: 60px;display: block;margin: 5px auto 0px auto;border-radius: 5px;}
 .top-block .text{font: 300 12px HelveticaNeueCyr,arial,sans-serif;}
@@ -431,7 +433,8 @@ video#top-video{display: none;}
 .what-can-detail .breadcrump li span{color: #ffffff;}
 /*==============================end-breadcrump-bl==================================================*/
 /*==============================what-we-can-detail.top-block==================================================*/
-.what-can-detail.top-block{height: auto;background: none;margin-top: -30px;}
+.what-can-detail.top-block{background: url('../images/ceremony_top_bg.jpg') center bottom no-repeat;overflow: hidden;height: 400px;background-size:cover;}
+.what-can-detail.top-block h1 {font: normal 38px 'Aizel-Accent',arial,sans-serif;margin-top: 100px;margin-bottom: 14px;}
 .what-can-detail.top-block img{max-width: 100%;}
 /*==============================end-what-we-can-detail.top-block==================================================*/
 /*==============================what-we-can-detail-descr-block==================================================*/
@@ -1508,6 +1511,11 @@ a.pluso-moimir{background-position: -113px 0!important;margin-right: 0 !importan
 /*==================================end-country-page===================================================*/
 
 /*==================================what-we-can-page===================================================*/
+/*==============================what-we-can-detail.top-block==================================================*/
+.what-can-detail.top-block{background-size: auto;height: 820px;}
+.what-can-detail.top-block h1 {font-size: 93.39px;margin-top: 123px;}
+.what-can-detail.top-block img{max-width: 100%;}
+/*==============================end-what-we-can-detail.top-block==================================================*/
 /*==============================what-we-can.secret-block==================================================*/
 .what-can.secret-block {padding-bottom: 84px;}
 .what-can.secret-block h2 {padding-bottom: 27px;}
