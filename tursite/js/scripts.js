@@ -5,6 +5,9 @@
         }else{
             $('.top-block .owl-carousel-no-thumb .owl-item img').css('margin-left','');        
         }
+        var h=$('footer').height();
+        $('#content-wrapper').css('padding-bottom',h+'px').css('margin-bottom','-'+h+'px');
+
     }
     
     var carousel_init=function($index,$parent){
@@ -132,7 +135,7 @@ $(document).ready(function(){
         if($('.map-contacts-block .contacts-feedback-block:visible').length) $('.map-contacts-block .contacts-feedback-block,.map-contacts-block .mask').fadeOut(500);
         else $('.map-contacts-block .contacts-feedback-block,.map-contacts-block .mask').fadeIn(500);
     });
-    $('#search-tur select').chosen();
+    $('#search-tur select,.head-res select').chosen({disable_search_threshold: 10});
     $( "#datepicker1").datepicker({
         minDate: 0,
         changeMonth: true,
@@ -154,9 +157,13 @@ $(document).ready(function(){
         if($(this).hasClass('open')){
             $(this).removeClass('open');
             $('#search-tur-form').removeClass('extended').addClass('abbreviated');
+            $('#search-hotels-form').show('slow');
+            $('#search-hotels h5').hide('slow');
         }else{
             $(this).addClass('open');
             $('#search-tur-form').addClass('extended').removeClass('abbreviated');
+            $('#search-hotels-form').hide('slow');
+            $('#search-hotels h5').show('slow');
         }
     });
 

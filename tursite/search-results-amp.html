@@ -1,0 +1,742 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Tursite</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="/avia.html" rel="canonical" />
+		<link href="css/jquery-ui.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/owl.carousel.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/chosen.css">
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles-amp.css" rel="stylesheet">
+	</head>
+	<body>
+      <div id="content-wrapper"  class="front-page">
+        <div class="mob-header header hidden-sm hidden-md hidden-lg">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="call text-center">
+                <a href="tel:89007070">Позвонить</a>
+            </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse1">
+                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse1"><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                       <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
+                          <li><a href="#">Поиск туров</a></li>
+                          <li><a href="#">Отели</a></li>
+                          <li><a href="#">Страны</a></li>
+                          <li><a href="#">Авиабилеты</a></li>
+                          <li><a href="#">Виды отдыха</a></li>
+                       </ul>
+                    </div>
+        </div>
+        <nav class="navbar header base-bg-color">
+                <div class="container">
+                  <div class="row">
+                    <div class="navbar-header">
+                      <div class="col-sm-5 no-pad">
+                          <ul class="nav nav-menu">
+                            <li><a href="#">Новости</a></li>
+           					<li><a href="#">О нас</a></li>
+        					<li><a href="#">Агентам</a></li>
+        					<li><a href="#">Контакты</a></li>
+                          </ul>                      
+    
+                          <div class="call-block hidden-xs">
+                              <div class="phone">8 900 70 70</div>
+                              <a class="call-back" href="#"><span>Обратный звонок</span></a>
+                              <div id="call-back-popup">
+                                <a class="fa fa-close close"></a>
+                                <form action="/" method="POST">
+                                    <div class="head-form text-center">
+                                        <h2 class="upper">Заказать звонок</h2>
+                                        <div>Заполните форму и мы обязательно Вам перезвоним</div>
+                                    </div>
+                                    <input type="text" name="name" placeholder="Ваше имя" />
+                                    <input type="text" name="phone" placeholder="Телефон" />
+                                    <input class="base-bg-color" type="submit" value="Отправить" />
+                                </form>
+                              </div>
+                              <div id="call-back-popup-mask"></div>
+                          </div>
+                      </div>
+                      <div class="col-sm-3 text-center">
+                        <a href="/" class="navbar-brand"><img alt="img" src="images/logo.png" /><span>ТурСайт</span></a>
+                      </div>
+                      <div class="col-sm-4 text-center">
+                          <div class="search-form">
+                            <form action="/" method="get">
+                                <input type="text" name="q" placeholder="Поиск..." value=""/>
+                                <button name="s" type="submit"><span class="fa fa-search"></span></button>
+                            </form>
+                          </div>
+                      </div>
+                      
+                      
+
+                    </div>
+                  </div>  
+                </div>
+                <div id="subnav" class="hidden-xs">
+                  <div class="container">
+                    <div class="row">
+                        <ul class="nav nav-menu sub-menu">
+                          <li><a href="#">Поиск туров</a></li>
+                          <li><a href="#">Отели</a></li>
+                          <li><a href="#">Страны</a></li>
+                          <li><a href="#">Авиабилеты</a></li>
+                          <li><a href="#">Виды отдыха</a></li>
+                         </ul>
+                    </div>
+                  </div>
+             </div>
+        </nav>
+	<div id="search-tur" class="avia base-second-bg-color">
+        <div class="container">
+            <button class="abbr_ext base-second-bg-color"><span class="down"></span><span class="up"></span></button>	
+            <form class="abbreviated" action="/" id="search-tur-form">
+        			<h3 class="abbr col-md-1">Найти тур</h3>
+        			<h3 class="ext">Расширенный поиск</h3>
+                    <div class="col-sm-6 country">
+                     <div class="col-sm-6 no-pad">
+                        <label>Вылет из</label>
+    				    <select class="place-icon" name="city_from" id="city-from-select">
+                            <option value="">(все)</option>
+                            <option value="35627" >Днепропетровск</option>
+                            <option value="35620" >Киев</option>
+                        </select>
+                     </div>
+                     <div class="col-sm-6 no-pad">
+                        <label>Страна</label>
+                        <select class="place-icon" name="country" id="countires-select">
+                            <option value="">(все)</option>
+                        </select>
+       					<label class="ext">Курорт</label>
+       					<select class="place-icon ext" name="resort" id="resort-select" disabled="disabled">
+                            <option>Выберите страну...</option>
+                        </select>
+                     </div>   
+                    </div>
+        			<div class="col-sm-6 ext type">
+                        <label>Тип питания</label>
+    				    <select class="no-s"  name="food" id="food-select">
+                            <option value="">(все)</option>
+                            <option value="35366" >AI</option>
+                            <option value="35368" >BB</option>
+                            <option value="35367" >HB</option>
+                            <option value="35365" >RO</option>
+                        </select>
+                        <label>Тип номера</label>
+    				    <select class="no-s" name="room"  id="room-select">
+                            <option value="">(все)</option>
+                            <option value="35597" >Deluxe room</option>
+                            <option value="35596" >Single</option>
+                            <option value="35595" >Standard room</option>
+                        </select>
+                        <label>Вид отдыха</label>
+                        <select class="no-s" name="activity"  id="activity-select">
+                            <option value="">(все)</option>
+                            <option value="35754" >SPA & welness</option>
+                            <option value="35630" >Автобусные туры</option>
+                            <option value="35675" >Альпинизм</option>
+                            <option value="35672" >Дайвинг</option>
+                            <option value="35755" >Молодежный отдых</option>
+                            <option value="35629" >Морские путешествия</option>
+                            <option value="35676" >Пешие переходы</option>
+                            <option value="35757" >Пляжный отдых</option>
+                            <option value="35674" >Рафтинг</option>
+                            <option value="35673" >Сафари</option>
+                            <option value="35756" >Семейный отдых</option>
+                            <option value="35758" >Шоппинг</option>
+                            <option value="35628" >Экзотические страны</option>
+                            <option value="35631" >Экскурсии</option>
+                            <option value="35632" >Экстрим туры</option>    
+                        </select>
+                    </div>
+                    <div class="per-cost  col-sm-12">
+                        <div class="bl col-sm-6 no-pad">
+                            <label class="block">Период заезда</label>
+                			<div class="perriod for col-sm-6 no-pad">
+                                    <input class="time_fild" type="text" readonly="readonly" name="date_start" id="datepicker1" value=""/>
+               					    <span></span>
+           					</div>
+           					<div class="perriod col-sm-6 no-pad">
+                                    <input class="time_fild" type="text" readonly="readonly" name="date_end" id="datepicker2" value=""/>
+           					        <span></span>
+           					</div>			
+                        </div>	
+                        <div class="bl col-sm-6 no-pad">	
+                			<label class="block">Стоимость</label> 
+           					<div class="cost col-sm-6 no-pad">
+        	                   <label>от</label>
+        			           <input id="minCost" type="text" name="price_from" value=""/>
+                               <span>$</span>
+        	                </div>
+                			<div class="cost col-sm-6 no-pad">
+                               <label>до</label>
+                               <input id="maxCost" type="text" name="price_to" value=""/>
+                               <span>$</span>
+                			</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 hot-tur ext">
+                        <span class="fa fa-chevron-right"></span>
+  						<input id="is-hot-tur" type="checkbox" name="ishot" value="Y"/>
+  						<label for="is-hot-tur">Только горящие туры</label>	
+        			</div>
+        			<div class="action col-sm-12">
+                        <button class="base-bg-color" type="submit">Найти<span class="fa fa-search"></span></button>
+        			</div>
+                    <div class="clearfix"></div>
+            </form>
+        </div>
+	</div>       
+        <!--main-->
+        <div id="main">
+            <div class="breadcrump-bl">
+                <div class="container no-pad">
+                    <ul class="breadcrump">
+                        <li><a href="#">Главная</a></li>
+                        <li><span class="base-txt-color">Поиск туров</span></li>
+                    </ul>
+                </div>
+            </div>       
+            <div class="search-turs search-res-block">
+              <div class="container no-pad">
+                <div class="head-res">
+                    <ul class="pull-left">
+                        <li>Всего найдено</li>
+                        <li><span class="count bold">159</span><span class="type">туров</span></li>
+                    </ul>
+                    <div class="pull-right hidden-xs">
+                        <form action="" method="">
+                            <label>Отображать по:</label>
+                            <select>
+                                <option>5</option>
+                                <option>10</option>
+                                <option>15</option>
+                                <option>20</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="result-block">
+                    <div class="head hidden-xs">
+                        <div class="col-sm-6 no-pad">Название</div>
+                        <div class="col-sm-6 no-pad">
+                            <div class="col-xs-4 no-pad head-item">
+                                <div class="no-pad">Страна</div>
+                                <div class="no-pad">Дата</div>
+                            </div>
+                            <div class="col-xs-4 no-pad head-item">
+                                <div class="no-pad text-center">Питание</div>
+                                <div class="no-pad">Номер</div>
+                            </div>
+                            <div class="col-xs-4 no-pad head-item">
+                                <div class="">Цена</div>
+                                <div class="no-pad">Вид отдыха</div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="result-container">
+                        <div class="row-result">
+                            <a class="lnk" href="#"></a>
+                            <div class="col-sm-6 col-xs-12 cl1">
+                                <img class="pull-left" alt="avia" title="avia" src="images/search_res1.jpg" />
+                                <div class="col-sm-7 col-xs-6 no-pad titls">
+                                    <h5>Новогодняя супер сказка в сердце Египта</h5>
+                                    <div class="desc">Sultana Beach Resort</div>
+                                    <div class="rating r_5"><span></span></div>
+                                </div>
+                           </div>
+                            <div class="col-sm-6 col-xs-12 cl2">
+                                <div class="col-xs-4 no-pad bord-xs-l item">
+                                    <div class="no-pad country base-txt-color">Египет</div>
+                                    <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                </div>
+                                <div class="col-xs-4 no-pad bord-xs-l item">
+                                    <div class="no-pad food">HB</div>
+                                    <div class="no-pad room">Deluxe Standart</div>
+                                </div>
+                                <div class="col-xs-4 no-pad bord-xs-l bord-xs-r item">
+                                    <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                    <div class="no-pad resttype"><a href="#"><img alt="resttype1" title="resttype1" src="images/resttype1.png" /></a></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <button type="button" class="base-second-bg-color collapsed" data-toggle="collapse" data-target="#res-collapse1"><span class="shows">еще  8</span><span class="fa fa-chevron-down down"></span><span class="hides">свернуть</span><span class="fa fa-chevron-up up"></span></button>
+                            <div class="clearfix"></div>
+                            <div id="res-collapse1" class="col-xs-12 col-sm-6  no-pad collapse">
+                                <div class="dop-row">
+                                    <a class="lnk" href="#"></a>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad country base-txt-color">Египет</div>
+                                        <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad food">HB</div>
+                                        <div class="no-pad room">Deluxe Standart</div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l bord-xs-r item">
+                                        <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                        <div class="no-pad resttype"><a href="#"><img alt="resttype1" title="resttype1" src="images/resttype1.png" /></a></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="dop-row">
+                                    <a class="lnk" href="#"></a>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad country base-txt-color">Египет</div>
+                                        <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad food">HB</div>
+                                        <div class="no-pad room">Deluxe Standart</div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l bord-xs-r item">
+                                        <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                        <div class="no-pad resttype"><a href="#"><img alt="resttype1" title="resttype1" src="images/resttype1.png" /></a></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="dop-row">
+                                    <a class="lnk" href="#"></a>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad country base-txt-color">Египет</div>
+                                        <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad food">HB</div>
+                                        <div class="no-pad room">Deluxe Standart</div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l bord-xs-r item">
+                                        <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                        <div class="no-pad resttype"><a href="#"><img alt="resttype1" title="resttype1" src="images/resttype1.png" /></a></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="dop-row">
+                                    <a class="lnk" href="#"></a>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad country base-txt-color">Египет</div>
+                                        <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad food">HB</div>
+                                        <div class="no-pad room">Deluxe Standart</div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l bord-xs-r item">
+                                        <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                        <div class="no-pad resttype"><a href="#"><img alt="resttype1" title="resttype1" src="images/resttype1.png" /></a></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="dop-row">
+                                    <a class="lnk" href="#"></a>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad country base-txt-color">Египет</div>
+                                        <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad food">HB</div>
+                                        <div class="no-pad room">Deluxe Standart</div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l bord-xs-r item">
+                                        <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                        <div class="no-pad resttype"><a href="#"><img alt="resttype1" title="resttype1" src="images/resttype1.png" /></a></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="dop-row">
+                                    <a class="lnk" href="#"></a>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad country base-txt-color">Египет</div>
+                                        <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad food">HB</div>
+                                        <div class="no-pad room">Deluxe Standart</div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l bord-xs-r item">
+                                        <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                        <div class="no-pad resttype"><a href="#"><img alt="resttype1" title="resttype1" src="images/resttype1.png" /></a></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="dop-row">
+                                    <a class="lnk" href="#"></a>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad country base-txt-color">Египет</div>
+                                        <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad food">HB</div>
+                                        <div class="no-pad room">Deluxe Standart</div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l bord-xs-r item">
+                                        <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                        <div class="no-pad resttype"><a href="#"><img alt="resttype1" title="resttype1" src="images/resttype1.png" /></a></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="dop-row">
+                                    <a class="lnk" href="#"></a>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad country base-txt-color">Египет</div>
+                                        <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad food">HB</div>
+                                        <div class="no-pad room">Deluxe Standart</div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l bord-xs-r item">
+                                        <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                        <div class="no-pad resttype"><a href="#"><img alt="resttype1" title="resttype1" src="images/resttype1.png" /></a></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="row-result">
+                            <a class="lnk" href="#"></a>
+                            <div class="col-sm-6 col-xs-12 cl1">
+                                <img class="pull-left" alt="avia" title="avia" src="images/search_res2.jpg" />
+                                <div class="no-pad">
+                                    <div class="col-sm-7 col-xs-6 no-pad titls">
+                                        <h5>Супер мега Тур!!!</h5>
+                                        <div class="desc">Hor Palace</div>
+                                        <div class="rating r_3"><span></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12 cl2">
+                                <div class="col-xs-4 no-pad bord-xs-l item">
+                                    <div class="no-pad country base-txt-color">Черногория</div>
+                                    <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                </div>
+                                <div class="col-xs-4 no-pad bord-xs-l item">
+                                    <div class="no-pad food">АI</div>
+                                    <div class="no-pad room">Deluxe Standart</div>
+                                </div>
+                                <div class="col-xs-4 no-pad bord-xs-l item">
+                                    <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                    <div class="no-pad resttype"><a href="#"><img alt="resttype2" title="resttype2" src="images/resttype2.png" /></a><a href="#"><img alt="resttype3" title="resttype3" src="images/resttype3.png" /></a></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="row-result">
+                            <a class="lnk" href="#"></a>
+                            <div class="col-sm-6 col-xs-12 cl1">
+                                <img class="pull-left" alt="avia" title="avia" src="images/search_res1.jpg" />
+                                 <div class="no-pad">
+                                    <div class="col-sm-7 col-xs-6 no-pad titls">
+                                        <h5>Новогодняя супер сказка в сердце Египта</h5>
+                                        <div class="desc">Sultana Beach Resort</div>
+                                        <div class="rating r_5"><span></span></div>
+                                    </div>
+                                </div>
+                           </div>
+                            <div class="col-sm-6 col-xs-12 cl2">
+                                <div class="col-xs-4 no-pad bord-xs-l item">
+                                    <div class="no-pad country base-txt-color">Египет</div>
+                                    <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                </div>
+                                <div class="col-xs-4 no-pad bord-xs-l item">
+                                    <div class="no-pad food">HB</div>
+                                    <div class="no-pad room">Deluxe Standart</div>
+                                </div>
+                                <div class="col-xs-4 no-pad bord-xs-l bord-xs-r item">
+                                    <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                    <div class="no-pad resttype"><a href="#"><img alt="resttype1" title="resttype1" src="images/resttype1.png" /></a></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="row-result">
+                            <a class="lnk" href="#"></a>
+                            <div class="col-sm-6 col-xs-12 cl1">
+                                <img class="pull-left" alt="avia" title="avia" src="images/search_res2.jpg" />
+                                <div class="no-pad">
+                                    <div class="col-sm-7 col-xs-6 no-pad titls">
+                                        <h5>Супер мега Тур!!!</h5>
+                                        <div class="desc">Hor Palace</div>
+                                        <div class="rating r_3"><span></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12 cl2">
+                                <div class="col-xs-4 no-pad bord-xs-l item">
+                                    <div class="no-pad country base-txt-color">Черногория</div>
+                                    <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                </div>
+                                <div class="col-xs-4 no-pad bord-xs-l item">
+                                    <div class="no-pad food">АI</div>
+                                    <div class="no-pad room">Deluxe Standart</div>
+                                </div>
+                                <div class="col-xs-4 no-pad bord-xs-l item">
+                                    <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                    <div class="no-pad resttype"><a href="#"><img alt="resttype2" title="resttype2" src="images/resttype2.png" /></a><a href="#"><img alt="resttype3" title="resttype3" src="images/resttype3.png" /></a></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <button type="button" class="base-second-bg-color collapsed" data-toggle="collapse" data-target="#res-collapse4"><span class="shows">еще  2</span><span class="fa fa-chevron-down down"></span><span class="hides">свернуть</span><span class="fa fa-chevron-up up"></span></button>
+                            <div class="clearfix"></div>
+                            <div id="res-collapse4"  class="col-sm-6 no-pad collapse">
+                                <div class="dop-row">
+                                    <a class="lnk" href="#"></a>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad country base-txt-color">Черногория</div>
+                                        <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad food">АI</div>
+                                        <div class="no-pad room">Deluxe Standart</div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                        <div class="no-pad resttype"><a href="#"><img alt="resttype2" title="resttype2" src="images/resttype2.png" /></a><a href="#"><img alt="resttype3" title="resttype3" src="images/resttype3.png" /></a></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="dop-row">
+                                    <a class="lnk" href="#"></a>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad country base-txt-color">Черногория</div>
+                                        <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad food">АI</div>
+                                        <div class="no-pad room">Deluxe Standart</div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                        <div class="no-pad resttype"><a href="#"><img alt="resttype2" title="resttype2" src="images/resttype2.png" /></a><a href="#"><img alt="resttype3" title="resttype3" src="images/resttype3.png" /></a></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                             </div>
+                             <div class="clearfix"></div>
+                        </div>
+                        <div class="row-result">
+                            <a class="lnk" href="#"></a>
+                            <div class="col-sm-6 col-xs-12 cl1">
+                                <img class="pull-left" alt="avia" title="avia" src="images/search_res1.jpg" />
+                                 <div class="no-pad">
+                                    <div class="col-sm-7 col-xs-6 no-pad titls">
+                                        <h5>Новогодняя супер сказка в сердце Египта</h5>
+                                        <div class="desc">Sultana Beach Resort</div>
+                                        <div class="rating r_5"><span></span></div>
+                                    </div>
+                                </div>
+                           </div>
+                            <div class="col-sm-6 col-xs-12 cl2">
+                                <div class="col-xs-4 no-pad bord-xs-l item">
+                                    <div class="no-pad country base-txt-color">Египет</div>
+                                    <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                </div>
+                                <div class="col-xs-4 no-pad bord-xs-l item">
+                                    <div class="no-pad food">HB</div>
+                                    <div class="no-pad room">Deluxe Standart</div>
+                                </div>
+                                <div class="col-xs-4 no-pad bord-xs-l bord-xs-r item">
+                                    <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                    <div class="no-pad resttype"><a href="#"><img alt="resttype1" title="resttype1" src="images/resttype1.png" /></a></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <button type="button" class="base-second-bg-color collapsed" data-toggle="collapse" data-target="#res-collapse5"><span class="shows">еще  4</span><span class="fa fa-chevron-down down"></span><span class="hides">свернуть</span><span class="fa fa-chevron-up up"></span></button>
+                            <div class="clearfix"></div>
+                            <div id="res-collapse5" class="col-sm-6 no-pad collapse">
+                                <div class="dop-row">
+                                    <a class="lnk" href="#"></a>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad country base-txt-color">Египет</div>
+                                        <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad food">HB</div>
+                                        <div class="no-pad room">Deluxe Standart</div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l bord-xs-r item">
+                                        <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                        <div class="no-pad resttype"><a href="#"><img alt="resttype1" title="resttype1" src="images/resttype1.png" /></a></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="dop-row">
+                                    <a class="lnk" href="#"></a>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad country base-txt-color">Египет</div>
+                                        <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad food">HB</div>
+                                        <div class="no-pad room">Deluxe Standart</div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l bord-xs-r item">
+                                        <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                        <div class="no-pad resttype"><a href="#"><img alt="resttype1" title="resttype1" src="images/resttype1.png" /></a></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="dop-row">
+                                    <a class="lnk" href="#"></a>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad country base-txt-color">Египет</div>
+                                        <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad food">HB</div>
+                                        <div class="no-pad room">Deluxe Standart</div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l bord-xs-r item">
+                                        <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                        <div class="no-pad resttype"><a href="#"><img alt="resttype1" title="resttype1" src="images/resttype1.png" /></a></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="dop-row">
+                                    <a class="lnk" href="#"></a>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad country base-txt-color">Египет</div>
+                                        <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l item">
+                                        <div class="no-pad food">HB</div>
+                                        <div class="no-pad room">Deluxe Standart</div>
+                                    </div>
+                                    <div class="col-xs-4 no-pad bord-xs-l bord-xs-r item">
+                                        <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                        <div class="no-pad resttype"><a href="#"><img alt="resttype1" title="resttype1" src="images/resttype1.png" /></a></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="row-result">
+                            <a class="lnk" href="#"></a>
+                            <div class="col-sm-6 col-xs-12 cl1">
+                                <img class="pull-left" alt="avia" title="avia" src="images/search_res2.jpg" />
+                                <div class="no-pad">
+                                    <div class="col-sm-7 col-xs-6 no-pad titls">
+                                        <h5>Супер мега Тур!!!</h5>
+                                        <div class="desc">Hor Palace</div>
+                                        <div class="rating r_3"><span></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12 cl2">
+                                <div class="col-xs-4 no-pad bord-xs-l item">
+                                    <div class="no-pad country base-txt-color">Черногория</div>
+                                    <div class="no-pad dates"><span class="per">2.01 - 20.01</span> <span class="dsc">8 ночей</span></div>
+                                </div>
+                                <div class="col-xs-4 no-pad bord-xs-l item">
+                                    <div class="no-pad food">АI</div>
+                                    <div class="no-pad room">Deluxe Standart</div>
+                                </div>
+                                <div class="col-xs-4 no-pad bord-xs-l item">
+                                    <div class="no-pad prc"><div class="prices"><span class="price">1 899 $</span></div></div>
+                                    <div class="no-pad resttype"><a href="#"><img alt="resttype2" title="resttype2" src="images/resttype2.png" /></a><a href="#"><img alt="resttype3" title="resttype3" src="images/resttype3.png" /></a></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="show-moore-blk text-center"><a class="btn btn-plus btn-brd base-second-bg-color show-moore">еще</a></div>
+                </div>
+              </div>
+            </div>
+        </div><!--/main-->
+      </div><!--/content-wrapper-->
+      <footer id="foot" class="base-bg-color">
+        <div class="container">
+            <div class="footer-center">
+                <div class="feedback">
+                    <form class="base-second-bg-color" action="" method="">
+                      <div class="pull-right inp  base-second-bg-color">
+                        <input type="text" name="" placeholder="ваш email" />
+                        <button type="submit"><span class="subscr-icon"></span></button>
+                      </div>
+                      <div class="pull-left desc">
+                        <span class="check-icon"></span>
+                        <label>Подписаться на наши обновления</label>
+                      </div>
+                      <div class="clearfix"></div>
+                    </form>
+                </div>
+                <div class="contacts">
+                    <div class="col-sm-3">
+                        <label>Адрес:</label>
+                        <div>г.Киев, Украина ул. Ивана Франко, 40-Б</div>
+                    </div>
+                    <div class="col-sm-3">
+                        <label>Телефоны:</label>
+                        <div>
+                            <p>050 445 25 45</p>
+                            <p>(044) 238 60 20</p>
+                            <p>238 62 31</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 hidden-xs">
+                        <label>E-mail:</label>
+                        <div>
+                            <p><a href="mailto:sale@tursite.com.ua">sale@tursite.com.ua</a></p>
+                            <p><a href="mailto:market@tursite.com.ua">market@tursite.com.ua</a></p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="footer-bottom">
+              <div class="col1">
+                <div class="social">
+       	            <span>Мы в сети:</span>
+                    <ul class="social-footer">
+                        <li><a href="#"><i class="facebook base-second-bg-color"></i></a></li>
+                        <li><a href="#"><i class="twitter base-second-bg-color"></i></a></li>
+                        <li><a href="#"><i class="google base-second-bg-color"></i></a></li>
+                    </ul>
+                </div>
+                <div class="copyright">©  ТурСайт, 2016 Все права защищены.</div>
+                <a href="#" class="rules">Правила использования</a>
+              </div>
+              <div class="col2">
+                    <div class="production">Разработка сайтов на Битриксе: <a href="http://webmediaform.com.ua"><img alt="webmediaform.com.ua" title="webmediaform.com.ua" src="images/webmediaform.png" /></a></div>
+              </div>
+              <div class="clearfix"></div>
+           </div>
+        </div>
+      </footer>
+      <a class="back-to-top base-second-bg-color" href="#"><span class="fa fa-arrow-up"></span></a>
+	<!-- script references -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script>
+            var monthNamesArr=['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь', 'Ноябрь', 'Декабрь' ];
+            var dayNamesMinArr=['','','','','','',''];
+        </script> 
+        <script src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.js"></script>
+        <script src="js/OwlCarousel2Thumbs.min.js"></script>
+        <script src="js/chosen.jquery.js"></script>
+		<script src="js/scripts-amp.js"></script>
+        <div class="clearfix"></div>
+	</body>
+</html>

@@ -2870,8 +2870,8 @@
 				this._controls.$indicators.children().slice(difference).remove();
 			}
 
-			this._controls.$indicators.find('.active').removeClass('active');
-			this._controls.$indicators.children().eq($.inArray(this.current(), this._pages)).addClass('active');
+			this._controls.$indicators.find('.active').removeClass('active base-second-bg-color');
+			this._controls.$indicators.children().eq($.inArray(this.current(), this._pages)).addClass('active base-second-bg-color');
 		}
 
 		this._controls.$indicators.toggle(options.dots);

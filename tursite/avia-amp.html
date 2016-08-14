@@ -6,7 +6,6 @@
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href="/avia.html" rel="canonical" />
-        <link href="/avia-amp.html" rel="amphtml" />
 		<link href="css/jquery-ui.css" rel="stylesheet">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/owl.carousel.css" rel="stylesheet">
@@ -14,7 +13,7 @@
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="css/styles-amp.css" rel="stylesheet">
 	</head>
 	<body>
       <div id="content-wrapper"  class="front-page">
@@ -43,7 +42,7 @@
                 <div class="container">
                   <div class="row">
                     <div class="navbar-header">
-                      <div class="col-md-4 col-sm-5 no-pad">
+                      <div class="col-sm-5 no-pad">
                           <ul class="nav nav-menu">
                             <li><a href="#">Новости</a></li>
            					<li><a href="#">О нас</a></li>
@@ -69,10 +68,10 @@
                               <div id="call-back-popup-mask"></div>
                           </div>
                       </div>
-                      <div class="col-md-5 col-sm-3 text-center">
+                      <div class="col-sm-3 text-center">
                         <a href="/" class="navbar-brand"><img alt="img" src="images/logo.png" /><span>ТурСайт</span></a>
                       </div>
-                      <div class="col-md-3 col-sm-4 text-center">
+                      <div class="col-sm-4 text-center">
                           <div class="search-form">
                             <form action="/" method="get">
                                 <input type="text" name="q" placeholder="Поиск..." value=""/>
@@ -106,8 +105,8 @@
             <form class="abbreviated" action="/" id="search-tur-form">
         			<h3 class="abbr col-md-1">Найти тур</h3>
         			<h3 class="ext">Расширенный поиск</h3>
-                    <div class="col-md-4 col-sm-6 country">
-                     <div class="col-md-6 col-sm-6 no-pad">
+                    <div class="col-sm-6 country">
+                     <div class="col-sm-6 no-pad">
                         <label>Вылет из</label>
     				    <select class="place-icon" name="city_from" id="city-from-select">
                             <option value="">(все)</option>
@@ -115,7 +114,7 @@
                             <option value="35620" >Киев</option>
                         </select>
                      </div>
-                     <div class="col-md-6 col-sm-6 no-pad">
+                     <div class="col-sm-6 no-pad">
                         <label>Страна</label>
                         <select class="place-icon" name="country" id="countires-select">
                             <option value="">(все)</option>
@@ -126,7 +125,7 @@
                         </select>
                      </div>   
                     </div>
-        			<div class="col-md-4 col-sm-6 ext type">
+        			<div class="col-sm-6 ext type">
                         <label>Тип питания</label>
     				    <select class="no-s"  name="food" id="food-select">
                             <option value="">(все)</option>
@@ -162,38 +161,38 @@
                             <option value="35632" >Экстрим туры</option>    
                         </select>
                     </div>
-                    <div class="per-cost col-md-6  col-sm-12">
-                        <div class="bl col-md-6 col-sm-6 no-pad">
+                    <div class="per-cost  col-sm-12">
+                        <div class="bl col-sm-6 no-pad">
                             <label class="block">Период заезда</label>
-                			<div class="perriod for col-md-6 col-sm-6 no-pad">
+                			<div class="perriod for col-sm-6 no-pad">
                                     <input class="time_fild" type="text" readonly="readonly" name="date_start" id="datepicker1" value=""/>
                					    <span></span>
            					</div>
-           					<div class="perriod col-md-6 col-sm-6 no-pad">
+           					<div class="perriod col-sm-6 no-pad">
                                     <input class="time_fild" type="text" readonly="readonly" name="date_end" id="datepicker2" value=""/>
            					        <span></span>
            					</div>			
                         </div>	
-                        <div class="bl col-md-6 col-sm-6 no-pad">	
+                        <div class="bl col-sm-6 no-pad">	
                 			<label class="block">Стоимость</label> 
-           					<div class="cost col-md-6 col-sm-6 no-pad">
+           					<div class="cost col-sm-6 no-pad">
         	                   <label>от</label>
         			           <input id="minCost" type="text" name="price_from" value=""/>
                                <span>$</span>
         	                </div>
-                			<div class="cost col-md-6 col-sm-6 no-pad">
+                			<div class="cost col-sm-6 no-pad">
                                <label>до</label>
                                <input id="maxCost" type="text" name="price_to" value=""/>
                                <span>$</span>
                 			</div>
                         </div>
                     </div>
-                    <div class="col-md-5 col-sm-6 hot-tur ext">
+                    <div class="col-sm-6 hot-tur ext">
                         <span class="fa fa-chevron-right"></span>
   						<input id="is-hot-tur" type="checkbox" name="ishot" value="Y"/>
   						<label for="is-hot-tur">Только горящие туры</label>	
         			</div>
-        			<div class="action col-md-1 col-sm-12">
+        			<div class="action col-sm-12">
                         <button class="base-bg-color" type="submit">Найти<span class="fa fa-search"></span></button>
         			</div>
                     <div class="clearfix"></div>
@@ -242,7 +241,7 @@
                             </div>
                             <div>
                                 <div class="col-sm-6 no-pad">
-                                    <div class="col-md-8 col-sm-11 no-pad">
+                                    <div class="col-sm-11 no-pad">
                                         <h5>Уикенды в Европе и не только!</h5>
                                         <div class="desc base-txt-color">Киев - Амстердам</div>
                                     </div>
@@ -258,7 +257,7 @@
                             </div>
                             <div>
                                 <div class="col-sm-6 no-pad">
-                                    <div class="col-md-8 col-sm-11 no-pad">
+                                    <div class="col-sm-11 no-pad">
                                         <h5>Свадебный романтический вечер в Австрии на 2х</h5>
                                         <div class="desc base-txt-color">Киев - Вена</div>
                                     </div>
@@ -274,7 +273,7 @@
                             </div>
                             <div>
                                 <div class="col-sm-6 no-pad">
-                                    <div class="col-md-8 col-sm-11 no-pad">
+                                    <div class="col-sm-11 no-pad">
                                         <h5>Уикенды в Европе и не только!</h5>
                                         <div class="desc base-txt-color">Киев - Амстердам</div>
                                     </div>
@@ -290,7 +289,7 @@
                             </div>
                             <div>
                                 <div class="col-sm-6 no-pad">
-                                    <div class="col-md-8 col-sm-11 no-pad">
+                                    <div class="col-sm-11 no-pad">
                                         <h5>Свадебный романтический вечер в Австрии на 2х</h5>
                                         <div class="desc base-txt-color">Киев - Вена</div>
                                     </div>
@@ -306,7 +305,7 @@
                             </div>
                             <div>
                                 <div class="col-sm-6 no-pad">
-                                    <div class="col-md-8 no-pad">
+                                    <div class="no-pad">
                                         <h5>Уикенды в Европе и не только!</h5>
                                         <div class="desc base-txt-color">Киев - Амстердам</div>
                                     </div>
@@ -322,7 +321,7 @@
                             </div>
                             <div>
                                 <div class="col-sm-6 no-pad">
-                                    <div class="col-md-8 no-pad">
+                                    <div class="no-pad">
                                         <h5>Свадебный романтический вечер в Австрии на 2х</h5>
                                         <div class="desc base-txt-color">Киев - Вена</div>
                                     </div>
@@ -342,7 +341,7 @@
       <footer id="foot" class="base-bg-color">
         <div class="container">
             <div class="footer-center">
-                <div class="col-md-5 feedback">
+                <div class="feedback">
                     <form class="base-second-bg-color" action="" method="">
                       <div class="pull-right inp  base-second-bg-color">
                         <input type="text" name="" placeholder="ваш email" />
@@ -355,12 +354,12 @@
                       <div class="clearfix"></div>
                     </form>
                 </div>
-                <div class="col-md-7 contacts">
-                    <div class="col-md-3 col-sm-3">
+                <div class="contacts">
+                    <div class="col-sm-3">
                         <label>Адрес:</label>
                         <div>г.Киев, Украина ул. Ивана Франко, 40-Б</div>
                     </div>
-                    <div class="col-md-3 col-sm-3">
+                    <div class="col-sm-3">
                         <label>Телефоны:</label>
                         <div>
                             <p>050 445 25 45</p>
@@ -368,7 +367,7 @@
                             <p>238 62 31</p>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-3 hidden-xs">
+                    <div class="col-sm-3 hidden-xs">
                         <label>E-mail:</label>
                         <div>
                             <p><a href="mailto:sale@tursite.com.ua">sale@tursite.com.ua</a></p>
@@ -380,7 +379,7 @@
                 <div class="clearfix"></div>
             </div>
             <div class="footer-bottom">
-              <div class="col-md-5 col1">
+              <div class="col1">
                 <div class="social">
        	            <span>Мы в сети:</span>
                     <ul class="social-footer">
@@ -392,7 +391,7 @@
                 <div class="copyright">©  ТурСайт, 2016 Все права защищены.</div>
                 <a href="#" class="rules">Правила использования</a>
               </div>
-              <div class="col-md-7 col2">
+              <div class="col2">
                     <div class="production">Разработка сайтов на Битриксе: <a href="http://webmediaform.com.ua"><img alt="webmediaform.com.ua" title="webmediaform.com.ua" src="images/webmediaform.png" /></a></div>
               </div>
               <div class="clearfix"></div>
@@ -411,7 +410,7 @@
         <script src="js/owl.carousel.js"></script>
         <script src="js/OwlCarousel2Thumbs.min.js"></script>
         <script src="js/chosen.jquery.js"></script>
-		<script src="js/scripts.js"></script>
+		<script src="js/scripts-amp.js"></script>
         <div class="clearfix"></div>
 	</body>
 </html>
