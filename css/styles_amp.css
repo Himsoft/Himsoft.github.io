@@ -475,6 +475,14 @@ a.pluso-moimir{background-position: -89px 0!important;}
 .location.part-world-descr-block .text.open{overflow: visible;height: auto;}
 .location.part-world-descr-block .text.open+.btns .btn:not(.open){display: none;}
 .location.part-world-descr-block .text.open+.btns .btn.open{display: block;}
+.location.part-world-descr-block .head-blk{margin-bottom: 33px;}
+.nav-tabs{border: none;margin: 0 -5px 12px -5px;}
+.nav-tabs>li{width: 50%;border: none;border-bottom: 1px solid #d7d7d7;font-size: 12px;padding-bottom: 0px;padding-left: 1px;padding-right: 1px;}
+.nav-tabs>li:first-child{padding-left: 12.5px;padding-right: 12px;}
+.nav-tabs>li.active{border: none;border-bottom: 3px solid #f284a3}
+.nav-tabs>li a, .nav-tabs>li>a:hover, .nav-tabs>li>a:focus,.nav-tabs>li>span{border: none;background: none;color: #999999;font-weight: 600;line-height: 13px;padding-top: 11px;padding-bottom: 7px;display: block;}
+.nav-tabs>li>span{font-size: 10px;}
+.nav-tabs>li.active a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{color: #39363f;border: none;background: none;padding-bottom: 6px;}
 /*==============================end-location.part-world-descr-block==================================================*/
 /*==============================pakets-block==================================================*/
 .pakets-block{padding-top: 26px;}
