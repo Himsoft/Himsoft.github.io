@@ -465,7 +465,7 @@ footer .social span{display: inline-block;vertical-align: top;}
 #search-tur .chosen-container{width: 95.73% !important;}
 #search-tur .abbreviated .per-cost .bl{width: 54.5%;padding-left: 10px;padding-right: 10px;    padding-bottom: 0px;}
 #search-tur .perriod:not(.for){text-align: left;}
-#search-tur .country > div:not(.inl-blk){margin-bottom: 5px;width: calc(50% - 6px);margin: 0 3px;}
+#search-tur .country > div:not(.inl-blk){margin-bottom: 5px;width: calc(50% - 6px);margin: 0 3px;float: left;}
 #search-tur .perriod, #search-tur .cost{margin-bottom: 5px;width: calc(50% - 14px);margin: 0 7px;}
 .perriod.for:after{right: -7px;}
 .abbreviated .abbr,.abbreviated .country,.abbreviated .per-cost,.abbreviated .per-cost .bl{display: table-cell;vertical-align: middle;border-right: 1px solid #d7b40d;padding-bottom: 10px;}
