@@ -52,7 +52,7 @@ a,a:hover,a:focus{color: #39363f;}
 .quotes-txt .text{height: 90px;padding: 0px;}
 .quotes-txt:before{content: '“';font: normal 60px 'Aizel-Accent',arial,sans-serif;color: #878392;position: absolute;left: -25px;top: -20px;opacity: 0.3;}
 .quotes-txt:after{content: '”';font: normal 60px 'Aizel-Accent',arial,sans-serif;color: #878392;position: absolute;bottom: -50px;right: -20px;opacity: 0.3;}
-.breadcrump {padding: 5px 10px 8px 10px;margin: 0;}
+.breadcrump {padding: 7px 10px 8px 19px;margin: 0;}
 .breadcrump li{list-style: none;display: inline-block;font-size: 12px;font-weight: normal;;}
 .breadcrump li:not(:last-child):after {content: '\f054';padding: 0 3px 0 3px;font-family: FontAwesome;font-size: 10px;}
 .breadcrump li a{color: #383d43;letter-spacing: 0.4px;}
@@ -151,7 +151,7 @@ button:hover,button:focus,.btn:hover,.btn:focus{color: #383d43;}
 .perriod.for:after{content: "-";margin-left: 3px;font-size: 20px;line-height: 23px;margin-right: -3px;position: absolute;top: 0;right: -9px;}
 .abbreviated .abbr,.abbreviated .country,.abbreviated .per-cost,.abbreviated .per-cost .bl,.abbreviated .action{float: none;padding-bottom: 4px;clear: both;}
 .abbreviated .action,.abbreviated .per-cost{border: none;padding-bottom: 0;}
-#search-tur .country > div,#search-tur .perriod,#search-tur .cost{width: calc(50% - 20px);margin: 0 10px;float: left;margin-bottom: 19px;}
+#search-tur .country > div:not(.inl-blk),#search-tur .perriod,#search-tur .cost{width: calc(50% - 20px);margin: 0 10px;float: left;margin-bottom: 19px;}
 #search-tur .action{text-align: center;margin-bottom: -15px;}
 #search-tur.avia .action{margin-bottom: 34px;}
 #search-tur .country label{display: block;}
@@ -176,7 +176,7 @@ button:hover,button:focus,.btn:hover,.btn:focus{color: #383d43;}
 #search-tur .extended .per-cost{border-color: transparent;}
 #search-tur .extended .ext.type .chosen-container{padding-bottom: 16px;}
 #search-tur .extended .ext.type .chosen-container-single .chosen-drop{margin-top: -17px;}
-#search-tur .extended .ext.type .chosen-single div b,.head-res .chosen-single div b{background: url(../images/icons.png) no-repeat;background-position: 0px -40px;width: 11px;height: 7px;position: absolute;top: 50%;transform: translatey(-50%);right: 10px;}
+#search-tur .resort .chosen-single div b,#search-tur .extended .ext.type .chosen-single div b,.head-res .chosen-single div b{background: url(../images/icons.png) no-repeat;background-position: 0px -40px;width: 11px;height: 7px;position: absolute;top: 50%;transform: translatey(-50%);right: 10px;}
 #search-tur .extended .per-cost>div{width: 100%;padding-bottom: 18px;}
 #search-tur .extended .perriod.for::after{margin-left: 3px;}
 #search-tur .extended .hot-tur{clear: both;float: left;padding-left: 48px;padding-top: 20px;}
@@ -333,10 +333,10 @@ footer .social span{display: inline-block;vertical-align: top;}
 .head-res ul.chosen-results li{font-size: inherit;}
 .head-res ul li .count{font-family: 'Roboto Slab Bold';padding-right: 3px;}
 .head-res ul li .type{color: #959b9e;font-size: 12px;}
-.head-res .pull-left li:not(:last-child):after {content: '\f054';padding: 0 3px 0 16px;font-family: FontAwesome;font-size: 11px;display: inline-block;vertical-align: middle;}
+.head-res ul li:not(:last-child):after {content: '\f054';padding: 0 3px 0 16px;font-family: FontAwesome;font-size: 11px;display: inline-block;vertical-align: middle;}
 .head-res label{color: rgb(56, 61, 67);font: 12px "Roboto Regular",arial,sans-serif;}
 .head-res .chosen-container-single .chosen-single{border: 1px solid #d1d4d6;border-radius: 30px;box-shadow: none;padding-left: 13px;font-weight: bold;font-family: 'Roboto Bold';font-size: 14px;height: 30px;line-height: 24px !important;}
-.chosen-container-active.chosen-with-drop .chosen-single{border-radius: 15px 15px 0px 0px;background: none;}
+.chosen-container-active.chosen-with-drop .chosen-single{border-radius: 15px 15px 0px 0px;background-image: none;}
 .chosen-container .chosen-results li.highlighted{background: #ebeef0;color: inherit;}
 .head-res .chosen-container-active .chosen-drop{padding-top: 15px;margin-top: -4px;z-index: 2147483647;box-shadow: none;border: 1px solid #d1d4d6;border-top: none;}
 .head-res .chosen-container{min-width: 76px;max-width: 76px; margin: -1px 12px 0px 4px;}
@@ -374,6 +374,7 @@ footer .social span{display: inline-block;vertical-align: top;}
 .search-turs .row-result .prc .prices {margin-top: 7px;margin-bottom: -4px;}
 .search-turs .row-result .titls{margin-left: 13px;}
 .search-turs .row-result .cl2{margin-top: 10px;margin-bottom: 10px;}
+.row-result a:not(.lnk){position: relative;z-index: 1;}
 .row-result h5{margin: -4px 0px 4px 5px;padding-right: 0;}
 .search-turs .row-result .prc,.search-turs .row-result .resttype{padding-left: 5px;}
 .search-turs .row-result .dates {padding-left: 0;}
@@ -399,12 +400,51 @@ footer .social span{display: inline-block;vertical-align: top;}
 /*==================================end-search-results-page===================================================*/
 
 /*==================================hotels-page===================================================*/
-#search-hotels .container{position: relative;}
-#search-hotels .abbr_ext {position: absolute;top: -30px;left: calc(50% - 19px);width: 33px;height: 33px;border: 4px solid #fff;border-radius: 30px;padding: 0;}
-#search-hotels .abbr_ext span {position: absolute;top: calc(50%);left: calc(50%);right: auto;width: 11px;height: 7px;background: url(../images/icons.png) no-repeat;background-position: 0px -40px;transform: translate(-50%,-50%);}
-#search-hotels .abbr_ext.open span.up, #search-hotels .abbr_ext span.down {display: block;}
-#search-hotels h5,#search-hotels .abbr_ext span.up, #search-hotels .abbr_ext.open span.down {display: none;}
-#search-hotels .abbr_ext span.up {background-position: 0px -60px;}
+#search-tur.hotels{padding-top: 13px;}
+#search-tur.hotels form{padding-right: 21px;}
+#search-tur.hotels h5{display: none;margin: 0;text-align: center;padding: 5px 0;}
+#search-tur.hotels h3{text-align: center;margin: 9px 0 0 0;padding: 7px 5px 13px 0;display: block;}
+#search-tur.hotels .country{margin-top: 21px;padding: 0 6px 12px 24px;}
+#search-tur .country > div:not(.inl-blk){float: none;margin: 0;margin-bottom: 1px;}
+#search-tur.hotels .resort{padding: 0 6px 10px 24px;}
+#search-tur.hotels .stars{padding: 3px 10px 3px 24px;}
+#search-tur.hotels .action{padding: 27px 1px 35px 20px;text-align: center;margin: 0;}
+#search-tur .stars input[type="checkbox"]{display: none;}
+#search-tur .stars input[type="checkbox"] + label{font-weight: bold;font-size: 13px;cursor: pointer;padding: 0px 7px 0px 10px;border-radius: 30px;line-height: 27px;margin-right: 10px;}
+#search-tur .stars input[type="checkbox"]:not(:checked) + label{background: #ffffff;}
+#search-tur .stars input[type="checkbox"]:checked + label{color: #ffffff;}
+#search-tur .stars input[type="checkbox"] + label .star-icon{background: url(../images/icons.png) no-repeat;background-position: 5px -1240px;display: inline-block;width: 18px;height: 18px;vertical-align: middle;}
+#search-tur .stars input[type="checkbox"]:checked + label .star-icon{background-position: 5px -1260px;}
+/*==================================hotels.search-res-block===================================================*/
+.hotels.search-res-block{padding: 0px 0 10px 0px;}
+.hotels.search-res-block .container {padding-left: 6px;}
+.hotels.search-res-block .search-turs .head-res ul{padding-left: 3px;}
+.hotels.search-res-block .head-res{padding-left: 3px;padding-bottom: 22px;}
+.hotels.search-res-block .head-res .srch .search{border: 1px solid #d1d4d6;width: 96%;padding: 1px 35px 2px 15px;font-size: 12px;margin-bottom: 12px;}
+.hotels.search-res-block .head-res ul {margin-bottom: 12px;}
+.hotels.search-res-block .head-res .srch button{background: none;width: auto;padding: 0;margin-left: -31px;font-size: 15px;}
+.hotels.search-res-block .head-res .sort .chosen-container {min-width: 75px;max-width: 75px;margin-right: 0;text-align: left;}
+.hotels.search-res-block .head-res .type{margin-top: 11px;}
+.hotels.search-res-block .head-res .type .chosen-container {min-width: 140px;max-width: 140px;margin-right: 0;text-align: left;}
+.hotels.search-res-block .head-res .limit{text-align: right;}
+.hotels.search-res-block .head-res .limit .chosen-container {text-align: left;margin-right: 8px;}
+.hotels.search-res-block .row-result {padding: 6px 0 15px 0px;position: relative;margin-right: 15px;margin-left: 5px;}
+.hotels.search-res-block .row-result:nth-child(even){background: #ebeef0;}
+.hotels.search-res-block .row-result h4{margin: 0px 0 6px 18px;font-size: 14px;letter-spacing: -0.4px;line-height: 16px;}
+.hotels.search-res-block .row-result .rating{margin-left: 18px;}
+.hotels.search-res-block .row-result .bot-res{margin-left: 14px;margin-top: 6px;}
+.hotels.search-res-block .row-result .desc{display: block;color: #97999b;padding-right: 12px;}
+.hotels.search-res-block .row-result .show-map{display: block;background: url(../images/icons.png) no-repeat;background-position: 5px -1219px;position: relative;z-index: 1;cursor: pointer;text-decoration: underline;line-height: 20px;padding-left: 27px;font-size: 11px;margin-top: 3px;}
+.hotels.search-res-block .row-result .titls {padding-bottom: 20px;position: initial;margin-left: 0px;}
+.hotels.search-res-block .row-result .cl1{padding-bottom: 0;}
+.hotels.search-res-block .row-result .cl2{margin-top: -3px;padding-right: 25px;}
+.hotels.search-res-block .row-result .rates,.hotels.search-res-block .row-result .comments{font-size: 12px;text-align: center;color: #97999b;}
+.hotels.search-res-block .row-result .dsc{color: #383d43;}
+.hotels.search-res-block .row-result .rates{float: right;line-height: 14px;}
+.hotels.search-res-block .row-result .comments{float: right;clear: both;line-height: 14px;}
+.search-turs-hotel{float: left;margin-top: -14px;}
+.search-turs-hotel .btn{font: bold 12px 'Roboto Slab Bold';padding: 5px 16px 7px 22px;}
+/*==================================end-hotels.search-res-block===================================================*/
 /*==================================end-hotels-page===================================================*/
 
 @media (min-width: 580px){
@@ -438,7 +478,7 @@ footer .social span{display: inline-block;vertical-align: top;}
 #search-tur .chosen-container{width: 95.73% !important;}
 #search-tur .abbreviated .per-cost .bl{width: 54.5%;padding-left: 10px;padding-right: 10px;    padding-bottom: 0px;}
 #search-tur .perriod:not(.for){text-align: left;}
-#search-tur .country > div{margin-bottom: 5px;width: calc(50% - 6px);margin: 0 3px;}
+#search-tur .country > div:not(.inl-blk){margin-bottom: 5px;width: calc(50% - 6px);margin: 0 3px;}
 #search-tur .perriod, #search-tur .cost{margin-bottom: 5px;width: calc(50% - 14px);margin: 0 7px;}
 .perriod.for:after{right: -7px;}
 .abbreviated .abbr,.abbreviated .country,.abbreviated .per-cost,.abbreviated .per-cost .bl{display: table-cell;vertical-align: middle;border-right: 1px solid #d7b40d;padding-bottom: 10px;}
@@ -468,6 +508,7 @@ footer .social span{display: inline-block;vertical-align: top;}
 #search-tur .extended .perriod.for::after{margin-left: 3px;}
 #search-tur .extended .per-cost > div:first-child{border-right: 1px solid #d7b40d;padding-right: 17px;}
 #search-tur .extended .hot-tur{border-right: 1px solid #d7b40d;}
+.breadcrump{padding: 6px 10px 8px 10px;}
 /*==================================end-header=======================================================*/
 /*==================================footer=======================================================*/
 footer{padding-top: 34px;padding-bottom: 36px;}
@@ -645,8 +686,55 @@ footer .copyright,footer .rules{float: left;margin: 0;}
 /*==================================end-search-results-page===================================================*/
 
 /*==================================hotels-page===================================================*/
-#search-hotels .abbr_ext {top: -19px;left: 11px;}
-.search-turs-hotel{float: right;}
+#search-tur.hotels .abbr_ext{top: -30px;left: 11px;}
+#search-tur.hotels form{display: table;width: 100%;}
+#search-tur.hotels h5{display: none;margin: -4px 0 -11px 45px;text-align: left;padding: 0;}
+#search-tur.hotels h3{width: 14.4%;text-align: right;margin: 7px 0 0 0;padding: 7px 25px 13px 0;border-right: 1px solid #d7b40d;}
+#search-tur.hotels .country{width: 24.5%;padding: 0 18px 12px 15px;margin-top: 7px;border-right: 1px solid #d7b40d;}
+#search-tur.hotels .resort{width: 24.1%;padding: 0 11px 10px 18px;border-right: 1px solid #d7b40d;}
+#search-tur.hotels .stars{width: 20%;padding: 0 0 3px 24px;}
+#search-tur.hotels .action{width: 15.9%;padding: 15px 3px 0 17px;text-align: right;}
+#search-tur .stars input[type="checkbox"] + label{padding: 0px 11px;margin-right: -3px;}
+#search-tur .stars input[type="checkbox"] + label .star-icon{display: none;}
+/*==================================top-hotels===================================================*/
+.top-hotels h2{margin-top: 18px;margin-bottom: 29px;}
+.top-hotels .content{margin-left: -20px;padding: 0 20px;}
+.top-hotels .content .item{padding-right: 0;}
+.top-hotels .content .item img{width: 100%;}
+.top-hotels .content .item .caption{padding: 2px 0 0 19px;min-height: 114px;position: relative;background: #ebeef0;}
+.top-hotels .content .item h4{margin-bottom: 4px;}
+.top-hotels .content .item .rating{margin-left: 0px;}
+.top-hotels .content .item .bot-res{position: absolute;left: 0;bottom: 12px;width: 100%;padding: 0 10px 0 20px;}
+.top-hotels .content .item .desc{float: left;color: #97999b;font: 800 12px 'Roboto Medium';}
+.top-hotels .content .item .bot-res .btn{font: bold 12px 'Roboto Slab Bold';padding: 5px 14px 7px 14px;float: right;margin-top: -4px;}
+/*==================================end-top-hotels===================================================*/
+/*==================================hotels.search-res-block===================================================*/
+.hotels.search-res-block{padding-top: 29px;padding-bottom: 0px;}
+.hotels.search-res-block .search-turs .head-res ul{padding-left: 3px;}
+.hotels.search-res-block .head-res{padding-bottom: 6px;padding-left: 7px;}
+.hotels.search-res-block .head-res .srch .search{border: 1px solid #d1d4d6;width: 90%;padding: 1px 35px 2px 15px;font-size: 12px;}
+.hotels.search-res-block .head-res ul {margin-bottom: 24px;}
+.hotels.search-res-block .head-res .srch button{background: none;width: auto;padding: 0;margin-left: -31px;font-size: 15px;}
+.hotels.search-res-block .head-res .sort .chosen-container {min-width: 75px;max-width: 75px;margin-right: 0;text-align: left;}
+.hotels.search-res-block .head-res .type{padding-right: 12px;margin-top: 0;}
+.hotels.search-res-block .head-res .type .chosen-container {min-width: 140px;max-width: 140px;margin-right: 0;text-align: left;}
+.hotels.search-res-block .head-res .limit{display: none;}
+.hotels.search-res-block .result-block{padding-right: 7px;}
+.hotels.search-res-block .row-result .cl1 {padding-bottom: 19px;}
+.hotels.search-res-block .row-result .rating{margin-left: 18px;}
+.hotels.search-res-block .row-result {padding: 6px 0 6px 12px;position: relative;}
+.hotels.search-res-block .row-result h4{margin: -1px 0 8px 18px;font-size: 18px;}
+.hotels.search-res-block .row-result .bot-res{position: absolute; bottom: 12px;margin: 0;}
+.hotels.search-res-block .row-result .desc{display: inline-block;color: #97999b;padding-right: 12px;margin-left: 20px;}
+.hotels.search-res-block .row-result .show-map{display: inline-block;background: url(../images/icons.png) no-repeat;background-position: 5px -1219px;position: relative;z-index: 1;cursor: pointer;text-decoration: underline;line-height: 20px;padding-left: 27px;font-size: 11px;}
+.hotels.search-res-block .row-result .titls {margin-left: 0;}
+.hotels.search-res-block .row-result .cl2{padding-left: 26px;margin-top: 20px;padding-right: 5px;}
+.hotels.search-res-block .row-result .rates,.hotels.search-res-block .row-result .comments{float: left;clear: none;}
+.hotels.search-res-block .row-result .dsc{color: #383d43;}
+.hotels.search-res-block .row-result .rates{text-align: right;}
+.search-turs-hotel{float: right;margin-top: 6px;}
+.search-turs-hotel .btn{margin: 32px 13px 0 0;}
+/*==================================end-hotels.search-res-block===================================================*/
 /*==================================end-hotels-page===================================================*/
 
 }
@@ -672,7 +760,6 @@ footer .copyright,footer .rules{float: left;margin: 0;}
 #search-tur h3{display: table-cell;}
 .abbreviated .per-cost{border-right: 1px solid #d7b40d;}
 #search-tur .cost {margin-left: 7px;width: calc(50% - 14px);}
-#search-tur .abbr_ext span.up{top: calc(50% - 4px);}
 #search-tur .abbreviated .per-cost .bl{width: 52.5%;}
 #search-tur .extended .per-cost{width: 33.33333%;}
 #search-tur .extended .ext.type{border-right: 1px solid #d7b40d;}
@@ -688,7 +775,7 @@ footer .copyright,footer .rules{float: left;margin: 0;}
 #search-tur .action{display: table-cell;vertical-align: middle;}
 #search-tur .extended .action{margin-bottom: 0;}
 #search-tur .cost input[type="text"] + span{left: 75%;}
-.breadcrump {padding: 5px 0 8px 3px;margin: 0;}
+.breadcrump {padding: 12px 0 8px 3px;margin: 0;}
 /*====================================end-header=========================================================*/
 
 /*===================================front-page======================================================*/
@@ -831,6 +918,52 @@ footer .contacts {padding-top: 11px;width: 51.4%;margin: 0 auto;}
 .footer-bottom .col2 {float: right;width: 34%;padding: 0;text-align: right;clear: none;}
 /*====================================end-footer=========================================================*/
 
+/*==================================hotels-page===================================================*/
+#search-tur.hotels .abbr_ext {top: -32px;left: 5px;}
+#search-tur.hotels form{padding-right: 0;}
+#search-tur.hotels h5{display: none;margin: -5px 0 -10px 65px;}
+#search-tur.hotels h3{padding: 7px 19px 13px 0;width: 9.4%;}
+#search-tur.hotels .country{width: 24.6%;padding: 0 15px 12px 20px;}
+#search-tur.hotels .resort{width: 24.3%;padding: 0 13px 10px 19px;}
+#search-tur.hotels .stars{border-right: 1px solid #d7b40d;width: 25.8%;padding: 0 10px 3px 18px;}
+#search-tur.hotels .action{width: 15.9%;}
+#search-tur .stars input[type="checkbox"] + label .star-icon{display: inline-block;}
+#search-tur .stars input[type="checkbox"] + label{margin-right: 10px;padding-right: 6px;}
+/*==================================top-hotels===================================================*/
+.top-hotels h2{margin-top: 10px;margin-bottom: 24px;}
+.top-hotels .content{margin-left: -15px;padding: 0 6px;}
+.top-hotels .content .item{padding-right: 0;}
+.top-hotels .content .item img{width: 100%;}
+.top-hotels .content .item .caption{padding: 2px 0 0 19px;min-height: 114px;position: relative;background: #ebeef0;}
+.top-hotels .content .item h4{margin-bottom: 4px;}
+.top-hotels .content .item .rating{margin-left: 0px;}
+.top-hotels .content .item .desc{position: absolute;left: 20px;bottom: 20px;color: #97999b;font: 800 12px 'Roboto Medium';}
+/*==================================end-top-hotels===================================================*/
+/*==================================hotels.search-res-block===================================================*/
+.hotels.search-res-block{padding: 41px 0 10px 0;}
+.hotels.search-res-block .search-turs .head-res ul{padding-left: 3px;}
+.hotels.search-res-block .head-res{padding-left: 3px;padding-bottom: 23px;}
+.hotels.search-res-block .head-res .srch .search{border: 1px solid #d1d4d6;width: 90%;padding: 1px 35px 2px 15px;font-size: 12px;}
+.hotels.search-res-block .head-res ul {margin-bottom: 31px;}
+.hotels.search-res-block .head-res .srch button{background: none;width: auto;padding: 0;margin-left: -31px;font-size: 15px;}
+.hotels.search-res-block .head-res .sort .chosen-container {min-width: 75px;max-width: 75px;margin-right: 0;text-align: left;}
+.hotels.search-res-block .head-res .type{text-align: right;}
+.hotels.search-res-block .head-res .type .chosen-container {min-width: 140px;max-width: 140px;margin-right: 0;text-align: left;}
+.hotels.search-res-block .head-res .limit{text-align: right;display: block;}
+.hotels.search-res-block .head-res .limit .chosen-container {text-align: left;margin-right: 8px;}
+.hotels.search-res-block .row-result {padding: 6px 0 6px 12px;position: relative;margin: 0;}
+.hotels.search-res-block .row-result .bot-res{position: absolute; bottom: 12px;}
+.hotels.search-res-block .row-result .desc{display: inline-block;color: #97999b;padding-right: 12px;}
+.hotels.search-res-block .row-result .show-map{display: inline-block;background: url(../images/icons.png) no-repeat;background-position: 5px -1219px;position: relative;z-index: 1;cursor: pointer;text-decoration: underline;line-height: 20px;padding-left: 27px;font-size: 11px;}
+.hotels.search-res-block .row-result .titls {padding-bottom: 20px;position: initial;}
+.hotels.search-res-block .row-result .cl2{margin-top: 20px;padding-right: 14px;}
+.hotels.search-res-block .row-result .rates,.hotels.search-res-block .row-result .comments{font-size: 12px;text-align: center;color: #97999b;}
+.hotels.search-res-block .row-result .dsc{color: #383d43;}
+.hotels.search-res-block .row-result .rates{text-align: right;}
+.hotels.search-res-block .row-result .search-turs-hotel .btn{margin-right: 9px;}
+/*==================================end-hotels.search-res-block===================================================*/
+/*==================================end-hotels-page===================================================*/
+
 }
 
 @media (min-width: 1200px){
@@ -866,6 +999,13 @@ footer .contacts {padding-top: 11px;width: 51.4%;margin: 0 auto;}
 .banners{margin: 19px 0 0 0;}
 .footer-center,.footer-bottom{margin: 0 -16px;}
 /*====================================end-footer=========================================================*/
+
+/*==================================hotels-page===================================================*/
+.inl-blk {display: inline-block;text-align: left;width: 85%!important;}
+#search-tur.hotels .stars>.inl-blk{width: auto!important;}
+#search-tur.hotels .stars,#search-tur.hotels .resort,#search-tur.hotels .country,#search-tur.hotels .action{text-align: center;}
+.top-hotels .content{max-width: 1000px;margin: 0 auto;}
+/*==================================end-hotels-page===================================================*/
 }
 
 @media (min-width: 1280px){
@@ -935,6 +1075,7 @@ footer .contacts{width: 42.4%;}
 .footer-bottom .col1 {width: 45%;padding-right: 6px;}
 .banners .descr h5{font-size: 14px;}
 /*====================================end-footer=========================================================*/
+
 }
 
 @media (min-width: 1920px){

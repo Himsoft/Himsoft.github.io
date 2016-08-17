@@ -157,13 +157,13 @@ $(document).ready(function(){
         if($(this).hasClass('open')){
             $(this).removeClass('open');
             $('#search-tur-form').removeClass('extended').addClass('abbreviated');
-            $('#search-hotels-form').show('slow');
-            $('#search-hotels h5').hide('slow');
+            $('#search-hotels-form').show();
+            $('#search-tur.hotels h5').hide();
         }else{
             $(this).addClass('open');
             $('#search-tur-form').addClass('extended').removeClass('abbreviated');
-            $('#search-hotels-form').hide('slow');
-            $('#search-hotels h5').show('slow');
+            $('#search-hotels-form').hide();
+            $('#search-tur.hotels h5').show();
         }
     });
 

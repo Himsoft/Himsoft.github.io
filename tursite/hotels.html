@@ -1,0 +1,476 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Tursite</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="/avia.html" rel="canonical" />
+        <link href="/avia-amp.html" rel="amphtml" />
+		<link href="css/jquery-ui.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/owl.carousel.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/chosen.css">
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+      <div id="content-wrapper"  class="hotels-page">
+        <div class="mob-header header hidden-sm hidden-md hidden-lg">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="call text-center">
+                <a href="tel:89007070">Позвонить</a>
+            </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse1">
+                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse1"><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                       <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
+                          <li><a href="#">Поиск туров</a></li>
+                          <li><a href="#">Отели</a></li>
+                          <li><a href="#">Страны</a></li>
+                          <li><a href="#">Авиабилеты</a></li>
+                          <li><a href="#">Виды отдыха</a></li>
+                       </ul>
+                    </div>
+        </div>
+        <nav class="navbar header base-bg-color">
+                <div class="container">
+                  <div class="row">
+                    <div class="navbar-header">
+                      <div class="col-md-4 col-sm-5 no-pad">
+                          <ul class="nav nav-menu">
+                            <li><a href="#">Новости</a></li>
+           					<li><a href="#">О нас</a></li>
+        					<li><a href="#">Агентам</a></li>
+        					<li><a href="#">Контакты</a></li>
+                          </ul>                      
+    
+                          <div class="call-block hidden-xs">
+                              <div class="phone">8 900 70 70</div>
+                              <a class="call-back" href="#"><span>Обратный звонок</span></a>
+                              <div id="call-back-popup">
+                                <a class="fa fa-close close"></a>
+                                <form action="/" method="POST">
+                                    <div class="head-form text-center">
+                                        <h2 class="upper">Заказать звонок</h2>
+                                        <div>Заполните форму и мы обязательно Вам перезвоним</div>
+                                    </div>
+                                    <input type="text" name="name" placeholder="Ваше имя" />
+                                    <input type="text" name="phone" placeholder="Телефон" />
+                                    <input class="base-bg-color" type="submit" value="Отправить" />
+                                </form>
+                              </div>
+                              <div id="call-back-popup-mask"></div>
+                          </div>
+                      </div>
+                      <div class="col-md-5 col-sm-3 text-center">
+                        <a href="/" class="navbar-brand"><img alt="img" src="images/logo.png" /><span>ТурСайт</span></a>
+                      </div>
+                      <div class="col-md-3 col-sm-4 text-center">
+                          <div class="search-form">
+                            <form action="/" method="get">
+                                <input type="text" name="q" placeholder="Поиск..." value=""/>
+                                <button name="s" type="submit"><span class="fa fa-search"></span></button>
+                            </form>
+                          </div>
+                      </div>
+                      
+                      
+
+                    </div>
+                  </div>  
+                </div>
+                <div id="subnav" class="hidden-xs">
+                  <div class="container">
+                    <div class="row">
+                        <ul class="nav nav-menu sub-menu">
+                          <li><a href="#">Поиск туров</a></li>
+                          <li><a href="#">Отели</a></li>
+                          <li><a href="#">Страны</a></li>
+                          <li><a href="#">Авиабилеты</a></li>
+                          <li><a href="#">Виды отдыха</a></li>
+                         </ul>
+                    </div>
+                  </div>
+             </div>
+        </nav>
+	<div id="search-tur" class="hotels base-second-bg-color">
+        <div class="container no-pad">
+            <button class="abbr_ext base-second-bg-color"><span class="down"></span><span class="up"></span></button>	
+            <h5>Найти отель</h5>
+            <form action="/" id="search-hotels-form">
+        			<h3 class="col-sm-1 no-pad">Найти отель</h3>
+                    <div class="col-sm-4 no-pad country">
+                      <div class="inl-blk">
+                        <label>Выберите страну</label>
+                        <select class="place-icon" name="country" id="countires-select">
+                            <option value="">(все)</option>
+                        </select>
+                      </div>
+                    </div>   
+                    <div class="col-sm-4 no-pad resort">
+                      <div class="inl-blk">
+      					<label>Выберите курорт</label>
+      					<select class="place-icon" name="resort" id="resort-select" disabled="disabled">
+                            <option>Выберите страну...</option>
+                        </select>
+                      </div>
+                    </div>   
+                    <div class="col-sm-4 no-pad stars">
+                      <div class="inl-blk">
+      					<label>Количество звезд</label>
+      					<div>
+                            <input type="checkbox" id="star2" name="" value="" /><label class="base-bg-color" for="star2">2<span class="star-icon"></span></label>
+                            <input type="checkbox" id="star3" name="" value="" /><label class="base-bg-color" for="star3">3<span class="star-icon"></span></label>
+                            <input type="checkbox" id="star4" name="" value="" /><label class="base-bg-color" for="star4">4<span class="star-icon"></span></label>
+                            <input type="checkbox" id="star5" name="" value="" /><label class="base-bg-color" for="star5">5<span class="star-icon"></span></label>   
+                        </div>
+                      </div>  
+                    </div>   
+        			<div class="action col-sm-1">
+                      <div class="inl-blk">
+                        <button class="base-bg-color" type="submit">Найти<span class="fa fa-search"></span></button>
+                      </div>  
+        			</div>
+                    <div class="clearfix"></div>
+            </form>
+        </div>
+	</div>       
+        <!--main-->
+        <div id="main">
+            <div class="breadcrump-bl">
+                <div class="container no-pad">
+                    <ul class="breadcrump">
+                        <li><a href="#">Главная</a></li>
+                        <li><span class="base-txt-color">Отели</span></li>
+                    </ul>
+                </div>
+            </div>       
+            <div class="top-hotels hidden-xs">
+                <div class="container no-pad">
+                    <h2 class="text-center">Лучшие отели Турции</h2>
+                    <div class="content">
+                        <div class="col-md-3 col-sm-4 item">
+                            <div><img alt="" title="" src="images/top_hotel1.jpg" /></div>
+                            <div class="caption ">
+                                <h4>Abant Palace</h4>
+                                <div class="rating r_5"><span></span></div>
+                                <div class="bot-res">
+                                    <div class="desc">аланья</div>
+                                    <a class="btn base-second-bg-color">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 item">
+                            <div><img alt="" title="" src="images/top_hotel2.jpg" /></div>
+                            <div class="caption ">
+                                <h4>Acapulco Resort & Convention & SPA</h4>
+                                <div class="rating r_5"><span></span></div>
+                                <div class="bot-res">
+                                    <div class="desc">Кемер</div>
+                                    <a class="btn base-second-bg-color">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 item">
+                            <div><img alt="" title="" src="images/top_hotel1.jpg" /></div>
+                            <div class="caption ">
+                                <h4>Abant Palace</h4>
+                                <div class="rating r_5"><span></span></div>
+                                <div class="bot-res">
+                                    <div class="desc">Мармарис</div>
+                                    <a class="btn base-second-bg-color">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden-sm col-md-3 item">
+                            <div><img alt="" title="" src="images/top_hotel2.jpg" /></div>
+                            <div class="caption ">
+                                <h4>Acapulco Resort & Convention & SPA</h4>
+                                <div class="rating r_5"><span></span></div>
+                                <div class="bot-res">
+                                    <div class="desc">Белек</div>
+                                    <a class="btn base-second-bg-color">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-turs hotels search-res-block">
+              <div class="container no-pad">
+                <div class="head-res">
+                    <ul>
+                        <li>Всего найдено</li>
+                        <li><span class="count bold">78</span><span class="type">отелей</span></li>
+                    </ul>
+                    <div>
+                        <form action="" method="">
+                            <div class="col-sm-5 col-md-4 no-pad srch">
+                                <input type="text" class="search" placeholder="Введите название отеля..." />
+                                <button type="submit"><span class="fa fa-search"></span></button>
+                            </div>
+                            <div class="col-sm-3 col-md-2 no-pad sort">
+                                <label>По  названию:</label>
+                                <select>
+                                    <option>A-Z</option>
+                                    <option>Z-A</option>
+                                 </select>
+                            </div>
+                            <div class="col-sm-4 col-md-3 no-pad type">
+                                <label>Сортировать:</label>
+                                <select>
+                                    <option>по рейтингу</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 no-pad hidden-xs limit">
+                                <label>Отображать по:</label>
+                                <select>
+                                    <option>5</option>
+                                    <option>10</option>
+                                    <option>15</option>
+                                    <option>20</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="result-block">
+                    <div class="result-container">
+                        <div class="row-result">
+                            <a class="lnk" href="#"></a>
+                            <div class="col-sm-8 col-md-9 col-xs-12 cl1">
+                                <img class="pull-left" alt="avia" title="avia" src="images/hotel1.jpg" />
+                                <div class="col-md-8 col-sm-8 col-xs-6 no-pad titls">
+                                    <h4>ACG Hotels Sunset Beach Resort</h4>
+                                    <div class="rating r_5"><span></span></div>
+                                    <div class="bot-res">
+                                        <div class="desc">Шарм-аль-шейх</div>
+                                        <a class="show-map base-txt-color">На карте</a>
+                                    </div>
+                                </div>
+                           </div>
+                            <div class="col-sm-4 col-md-3 col-xs-12 cl2">
+                                <div class="col-sm-6 no-pad rates"><span class="lbl">Рейтинг:</span> <span class="dsc">28.4</span></div>
+                                <div class="col-sm-6 no-pad comments"><span class="lbl"><a class="base-txt-color" href="#">Отзывы:</a></span> <span class="dsc">49</span></div>
+                                <div class="search-turs-hotel"><a class="btn btn-plus btn-brd base-second-bg-color show-moore">Найти туры в отель</a></div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="row-result">
+                            <a class="lnk" href="#"></a>
+                            <div class="col-sm-8 col-md-9 col-xs-12 cl1">
+                                <img class="pull-left" alt="avia" title="avia" src="images/hotel2.jpg" />
+                                <div class="col-md-8 col-sm-8 col-xs-6 no-pad titls">
+                                    <h4>Airport Inn</h4>
+                                    <div class="rating r_5"><span></span></div>
+                                    <div class="bot-res">
+                                        <div class="desc">Шарм-аль-шейх</div>
+                                        <a class="show-map base-txt-color">На карте</a>
+                                    </div>
+                                </div>
+                           </div>
+                            <div class="col-sm-4 col-md-3 col-xs-12 cl2">
+                                <div class="col-sm-6 no-pad rates"><span class="lbl">Рейтинг:</span> <span class="dsc">28.4</span></div>
+                                <div class="col-sm-6 no-pad comments"><span class="lbl"><a class="base-txt-color" href="#">Отзывы:</a></span> <span class="dsc">49</span></div>
+                                <div class="search-turs-hotel"><a class="btn btn-plus btn-brd base-second-bg-color show-moore">Найти туры в отель</a></div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="row-result">
+                            <a class="lnk" href="#"></a>
+                            <div class="col-sm-8 col-md-9 col-xs-12 cl1">
+                                <img class="pull-left" alt="avia" title="avia" src="images/hotel3.jpg" />
+                                <div class="col-md-8 col-sm-8 col-xs-6 no-pad titls">
+                                    <h4>Acacia Resort Antalya</h4>
+                                    <div class="rating r_5"><span></span></div>
+                                    <div class="bot-res">
+                                        <div class="desc">Шарм-аль-шейх</div>
+                                        <a class="show-map base-txt-color">На карте</a>
+                                    </div>
+                                </div>
+                           </div>
+                            <div class="col-sm-4 col-md-3 col-xs-12 cl2">
+                                <div class="col-sm-6 no-pad rates"><span class="lbl">Рейтинг:</span> <span class="dsc">28.4</span></div>
+                                <div class="col-sm-6 no-pad comments"><span class="lbl"><a class="base-txt-color" href="#">Отзывы:</a></span> <span class="dsc">49</span></div>
+                                <div class="search-turs-hotel"><a class="btn btn-plus btn-brd base-second-bg-color show-moore">Найти туры в отель</a></div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="row-result">
+                            <a class="lnk" href="#"></a>
+                            <div class="col-sm-8 col-md-9 col-xs-12 cl1">
+                                <img class="pull-left" alt="avia" title="avia" src="images/hotel1.jpg" />
+                                <div class="col-md-8 col-sm-8 col-xs-6 no-pad titls">
+                                    <h4>ACG Hotels Sunset Beach Resort</h4>
+                                    <div class="rating r_5"><span></span></div>
+                                    <div class="bot-res">
+                                        <div class="desc">Шарм-аль-шейх</div>
+                                        <a class="show-map base-txt-color">На карте</a>
+                                    </div>
+                                </div>
+                           </div>
+                            <div class="col-sm-4 col-md-3 col-xs-12 cl2">
+                                <div class="col-sm-6 no-pad rates"><span class="lbl">Рейтинг:</span> <span class="dsc">28.4</span></div>
+                                <div class="col-sm-6 no-pad comments"><span class="lbl"><a class="base-txt-color" href="#">Отзывы:</a></span> <span class="dsc">49</span></div>
+                                <div class="search-turs-hotel"><a class="btn btn-plus btn-brd base-second-bg-color show-moore">Найти туры в отель</a></div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="row-result">
+                            <a class="lnk" href="#"></a>
+                            <div class="col-sm-8 col-md-9 col-xs-12 cl1">
+                                <img class="pull-left" alt="avia" title="avia" src="images/hotel2.jpg" />
+                                <div class="col-md-8 col-sm-8 col-xs-6 no-pad titls">
+                                    <h4>Airport Inn</h4>
+                                    <div class="rating r_5"><span></span></div>
+                                    <div class="bot-res">
+                                        <div class="desc">Шарм-аль-шейх</div>
+                                        <a class="show-map base-txt-color">На карте</a>
+                                    </div>
+                                </div>
+                           </div>
+                            <div class="col-sm-4 col-md-3 col-xs-12 cl2">
+                                <div class="col-sm-6 no-pad rates"><span class="lbl">Рейтинг:</span> <span class="dsc">28.4</span></div>
+                                <div class="col-sm-6 no-pad comments"><span class="lbl"><a class="base-txt-color" href="#">Отзывы:</a></span> <span class="dsc">49</span></div>
+                                <div class="search-turs-hotel"><a class="btn btn-plus btn-brd base-second-bg-color show-moore">Найти туры в отель</a></div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="row-result">
+                            <a class="lnk" href="#"></a>
+                            <div class="col-sm-8 col-md-9 col-xs-12 cl1">
+                                <img class="pull-left" alt="avia" title="avia" src="images/hotel3.jpg" />
+                                <div class="col-md-8 col-sm-8 col-xs-6 no-pad titls">
+                                    <h4>Acacia Resort Antalya</h4>
+                                    <div class="rating r_5"><span></span></div>
+                                    <div class="bot-res">
+                                        <div class="desc">Шарм-аль-шейх</div>
+                                        <a class="show-map base-txt-color">На карте</a>
+                                    </div>
+                                </div>
+                           </div>
+                            <div class="col-sm-4 col-md-3 col-xs-12 cl2">
+                                <div class="col-sm-6 no-pad rates"><span class="lbl">Рейтинг:</span> <span class="dsc">28.4</span></div>
+                                <div class="col-sm-6 no-pad comments"><span class="lbl"><a class="base-txt-color" href="#">Отзывы:</a></span> <span class="dsc">49</span></div>
+                                <div class="search-turs-hotel"><a class="btn btn-plus btn-brd base-second-bg-color show-moore">Найти туры в отель</a></div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="row-result">
+                            <a class="lnk" href="#"></a>
+                            <div class="col-sm-8 col-md-9 col-xs-12 cl1">
+                                <img class="pull-left" alt="avia" title="avia" src="images/hotel1.jpg" />
+                                <div class="col-md-8 col-sm-8 col-xs-6 no-pad titls">
+                                    <h4>ACG Hotels Sunset Beach Resort</h4>
+                                    <div class="rating r_5"><span></span></div>
+                                    <div class="bot-res">
+                                        <div class="desc">Шарм-аль-шейх</div>
+                                        <a class="show-map base-txt-color">На карте</a>
+                                    </div>
+                                </div>
+                           </div>
+                            <div class="col-sm-4 col-md-3 col-xs-12 cl2">
+                                <div class="col-sm-6 no-pad rates"><span class="lbl">Рейтинг:</span> <span class="dsc">28.4</span></div>
+                                <div class="col-sm-6 no-pad comments"><span class="lbl"><a class="base-txt-color" href="#">Отзывы:</a></span> <span class="dsc">49</span></div>
+                                <div class="search-turs-hotel"><a class="btn btn-plus btn-brd base-second-bg-color show-moore">Найти туры в отель</a></div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="show-moore-blk text-center"><a class="btn btn-plus btn-brd base-second-bg-color show-moore">еще</a></div>
+                </div>
+              </div>
+            </div>
+        </div><!--/main-->
+      </div><!--/content-wrapper-->
+      <footer id="foot" class="base-bg-color">
+        <div class="container">
+            <div class="footer-center">
+                <div class="col-md-5 feedback">
+                    <form class="base-second-bg-color" action="" method="">
+                      <div class="pull-right inp  base-second-bg-color">
+                        <input type="text" name="" placeholder="ваш email" />
+                        <button type="submit"><span class="subscr-icon"></span></button>
+                      </div>
+                      <div class="pull-left desc">
+                        <span class="check-icon"></span>
+                        <label>Подписаться на наши обновления</label>
+                      </div>
+                      <div class="clearfix"></div>
+                    </form>
+                </div>
+                <div class="col-md-7 contacts">
+                    <div class="col-md-3 col-sm-3">
+                        <label>Адрес:</label>
+                        <div>г.Киев, Украина ул. Ивана Франко, 40-Б</div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <label>Телефоны:</label>
+                        <div>
+                            <p>050 445 25 45</p>
+                            <p>(044) 238 60 20</p>
+                            <p>238 62 31</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 hidden-xs">
+                        <label>E-mail:</label>
+                        <div>
+                            <p><a href="mailto:sale@tursite.com.ua">sale@tursite.com.ua</a></p>
+                            <p><a href="mailto:market@tursite.com.ua">market@tursite.com.ua</a></p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="footer-bottom">
+              <div class="col-md-5 col1">
+                <div class="social">
+       	            <span>Мы в сети:</span>
+                    <ul class="social-footer">
+                        <li><a href="#"><i class="facebook base-second-bg-color"></i></a></li>
+                        <li><a href="#"><i class="twitter base-second-bg-color"></i></a></li>
+                        <li><a href="#"><i class="google base-second-bg-color"></i></a></li>
+                    </ul>
+                </div>
+                <div class="copyright">©  ТурСайт, 2016 Все права защищены.</div>
+                <a href="#" class="rules">Правила использования</a>
+              </div>
+              <div class="col-md-7 col2">
+                    <div class="production">Разработка сайтов на Битриксе: <a href="http://webmediaform.com.ua"><img alt="webmediaform.com.ua" title="webmediaform.com.ua" src="images/webmediaform.png" /></a></div>
+              </div>
+              <div class="clearfix"></div>
+           </div>
+        </div>
+      </footer>
+      <a class="back-to-top base-second-bg-color" href="#"><span class="fa fa-arrow-up"></span></a>
+	<!-- script references -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script>
+            var monthNamesArr=['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь', 'Ноябрь', 'Декабрь' ];
+            var dayNamesMinArr=['','','','','','',''];
+        </script> 
+        <script src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.js"></script>
+        <script src="js/OwlCarousel2Thumbs.min.js"></script>
+        <script src="js/chosen.jquery.js"></script>
+		<script src="js/scripts.js"></script>
+        <div class="clearfix"></div>
+	</body>
+</html>
