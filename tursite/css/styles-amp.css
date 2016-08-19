@@ -443,8 +443,43 @@ footer .social span{display: inline-block;vertical-align: top;}
 /*==================================end-hotels.search-res-block===================================================*/
 /*==================================end-hotels-page===================================================*/
 
+/*==================================resttypes-page===================================================*/
+/*==================================grid-block===================================================*/
+.resttypes.grid-block h2{margin-top: 15px;margin-left: 4px;}
+.resttypes.grid-block  .container{padding: 0 16px 0 20px;}
+.resttypes.grid-block .result-block{padding-right: 0;padding-top: 17px;max-width: 285px;margin: 0 auto;}
+.img-blk{position: relative;overflow: hidden;}
+.img-blk img:not(.type-tur){width: 100%;transform: scale(1);transition-duration: 0.4s;}
+.img-blk .dimmer{position: absolute;top: 0;left: 0;right: 0;bottom: 0;opacity: 0.4;z-index: 1;}
+.grid-block .inner{background: #ebeef0;}
+.grid-block .inner:hover{background: #ffffff;box-shadow: 0 0 24px -4px #101211;}
+.grid-block .inner:hover .dimmer{opacity: 0;}
+.grid-block .inner:hover img:not(.type-tur){transform: scale(1.2);}
+.result-block>div:not(.clearfix){padding: 0 9px 0 6px;margin-bottom: 20px;}
+.resttypes-list{list-style: none;font: 800 12px 'Roboto Medium';padding: 0;line-height: 20px;}
+.grid-block .inner>.caption{padding: 2px 2px 5px 20px;}
+li.hides{display: none;}
+.grid-block .inner .show-moore{text-decoration: none!important;cursor: pointer;font-size: 11px;float: right;margin-right: 12px;}
+.show-moore .bold{font-family: 'Roboto Bold';}
+.show-moore:not(.active) .hides, .show-moore:not(.active) .up, .show-moore.active .shows, .show-moore.active .down {display: none;}
+.show-moore .fa{margin-left: 8px;}
+.type-tur-blk{position: absolute;right: 10px;top: 9px;}
+.type-tur-blk img{z-index: 1;position: relative;cursor: pointer;}
+.type-tur-blk .caption{display: block;position: absolute;width: 85px;right: 0;margin-top: 5px;line-height: 10px;padding: 5px 7px;background-color: #ffd200;font-family: 'roboto_r';font-size: 8pt;color: #383d43;border-radius: 150px 150px 150px 150px;opacity: 0;z-index: -1;text-align: center;}
+.type-tur-blk:hover .caption{opacity: 1;z-index: 1;-webkit-transition: all 0.6s ease-in-out;-moz-transition: all 0.6s ease-in-out;-o-transition: all 0.6s ease-in-out;-ms-transition: all 0.6s ease-in-out;transition: all 0.6s ease-in-out;}
+.type-tur-blk .caption:before{content: "";display: block;position: absolute;right: 15px;top: -6px;width: 9px;height: 6px;background: url(../images/icons.png) no-repeat;background-position: 0px -1180px;}
+/*==================================end-grid-block===================================================*/
+/*==================================end-resttypes-page===================================================*/
+
 @media (min-width: 580px){
     .hot-items{max-width: 600px;}
+/*==================================resttypes-page===================================================*/
+/*==================================grid-block===================================================*/
+.result-block>div:nth-child(2n+1){clear: both;}
+.collapseds .caption{position: absolute;background: inherit;box-shadow: inherit;width: calc(100% - 15px);z-index: 5;}
+.resttypes.grid-block .result-block{margin: 0;max-width: none;}
+/*==================================end-grid-block===================================================*/
+/*==================================end-resttypes-page===================================================*/
 }
 
 @media (min-width: 768px){
@@ -723,6 +758,16 @@ footer .copyright,footer .rules{float: left;margin: 0;}
 .search-turs-hotel .btn{margin: 32px 13px 0 0;}
 /*==================================end-hotels.search-res-block===================================================*/
 /*==================================end-hotels-page===================================================*/
+
+/*==================================resttypes-page===================================================*/
+#search-tur.resttypes .action {margin-bottom: -5px;}
+/*==================================grid-block===================================================*/
+.resttypes.grid-block  .container{padding-left: 1px;padding-right: 15px;}
+.result-block>div:nth-child(2n+1):not(.clearfix) {clear: none;}
+.result-block>div:nth-child(3n+1) {clear: both;}
+
+/*==================================end-grid-block===================================================*/
+/*==================================end-resttypes-page===================================================*/
 
 }
 @media (max-width: 767px){

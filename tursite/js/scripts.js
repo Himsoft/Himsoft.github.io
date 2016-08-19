@@ -152,7 +152,21 @@ $(document).ready(function(){
             $( "#datepicker1" ).datepicker( "option", "maxDate", selectedDate );
         }
     });
-    
+    $('.resttypes .show-moore').click(function(){
+        var h=$(this).parents('.inner').find('.img-blk + .caption').innerHeight();
+        if($(this).hasClass('active')){
+            $(this).parents('.inner').find('li.hides').hide();
+            $(this).parents('.inner').removeClass('collapseds').css('padding-bottom','');
+            $(this).removeClass('active');
+        }else{
+            $('li.hides').hide();
+            $('.inner.collapseds').removeClass('collapseds').css('padding-bottom','');
+            $(this).parents('.inner').find('li.hides').show();
+            $(this).parents('.inner').addClass('collapseds').css('padding-bottom',h);
+            $('.resttypes .show-moore.active').removeClass('active');
+            $(this).addClass('active');            
+        }
+    });
     $('.abbr_ext').click(function(){
         if($(this).hasClass('open')){
             $(this).removeClass('open');
