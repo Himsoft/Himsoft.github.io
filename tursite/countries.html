@@ -1,0 +1,937 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Tursite</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="/countries.html" rel="canonical" />
+        <link href="/countries-amp.html" rel="amphtml" />
+		<link href="css/jquery-ui.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/owl.carousel.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/chosen.css">
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+      <div id="content-wrapper"  class="front-page">
+        <div class="mob-header header hidden-sm hidden-md hidden-lg">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="call text-center">
+                <a href="tel:89007070">Позвонить</a>
+            </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse1">
+                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse1"><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                       <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
+                          <li><a href="#">Поиск туров</a></li>
+                          <li><a href="#">Отели</a></li>
+                          <li><a href="#">Страны</a></li>
+                          <li><a href="#">Авиабилеты</a></li>
+                          <li><a href="#">Виды отдыха</a></li>
+                       </ul>
+                    </div>
+        </div>
+        <nav class="navbar header base-bg-color">
+                <div class="container">
+                  <div class="row">
+                    <div class="navbar-header">
+                      <div class="col-md-4 col-sm-5 no-pad">
+                          <ul class="nav nav-menu">
+                            <li><a href="#">Новости</a></li>
+           					<li><a href="#">О нас</a></li>
+        					<li><a href="#">Агентам</a></li>
+        					<li><a href="#">Контакты</a></li>
+                          </ul>                      
+    
+                          <div class="call-block hidden-xs">
+                              <div class="phone">8 900 70 70</div>
+                              <a class="call-back" href="#"><span>Обратный звонок</span></a>
+                              <div id="call-back-popup">
+                                <a class="fa fa-close close"></a>
+                                <form action="/" method="POST">
+                                    <div class="head-form text-center">
+                                        <h2 class="upper">Заказать звонок</h2>
+                                        <div>Заполните форму и мы обязательно Вам перезвоним</div>
+                                    </div>
+                                    <input type="text" name="name" placeholder="Ваше имя" />
+                                    <input type="text" name="phone" placeholder="Телефон" />
+                                    <input class="base-bg-color" type="submit" value="Отправить" />
+                                </form>
+                              </div>
+                              <div id="call-back-popup-mask"></div>
+                          </div>
+                      </div>
+                      <div class="col-md-5 col-sm-3 text-center">
+                        <a href="/" class="navbar-brand"><img alt="img" src="images/logo.png" /><span>ТурСайт</span></a>
+                      </div>
+                      <div class="col-md-3 col-sm-4 text-center">
+                          <div class="search-form">
+                            <form action="/" method="get">
+                                <input type="text" name="q" placeholder="Поиск..." value=""/>
+                                <button name="s" type="submit"><span class="fa fa-search"></span></button>
+                            </form>
+                          </div>
+                      </div>
+                      
+                      
+
+                    </div>
+                  </div>  
+                </div>
+                <div id="subnav" class="hidden-xs">
+                  <div class="container">
+                    <div class="row">
+                        <ul class="nav nav-menu sub-menu">
+                          <li><a href="#">Поиск туров</a></li>
+                          <li><a href="#">Отели</a></li>
+                          <li><a href="#">Страны</a></li>
+                          <li><a href="#">Авиабилеты</a></li>
+                          <li><a href="#">Виды отдыха</a></li>
+                         </ul>
+                    </div>
+                  </div>
+             </div>
+        </nav>
+	<div id="search-tur" class="countries base-second-bg-color">
+        <div class="container">
+            <button class="abbr_ext base-second-bg-color"><span class="down"></span><span class="up"></span></button>	
+            <form class="abbreviated" action="/" id="search-tur-form">
+        			<h3 class="abbr col-md-1">Найти тур</h3>
+        			<h3 class="ext">Расширенный поиск</h3>
+                    <div class="col-md-4 col-sm-6 country">
+                     <div class="col-md-6 col-sm-6 no-pad">
+                        <label>Вылет из</label>
+    				    <select class="place-icon" name="city_from" id="city-from-select">
+                            <option value="">(все)</option>
+                            <option value="35627" >Днепропетровск</option>
+                            <option value="35620" >Киев</option>
+                        </select>
+                     </div>
+                     <div class="col-md-6 col-sm-6 no-pad">
+                        <label>Страна</label>
+                        <select class="place-icon" name="country" id="countires-select">
+                            <option value="">(все)</option>
+                        </select>
+       					<label class="ext">Курорт</label>
+       					<select class="place-icon ext" name="resort" id="resort-select" disabled="disabled">
+                            <option>Выберите страну...</option>
+                        </select>
+                     </div>   
+                    </div>
+        			<div class="col-md-4 col-sm-6 ext type">
+                        <label>Тип питания</label>
+    				    <select class="no-s"  name="food" id="food-select">
+                            <option value="">(все)</option>
+                            <option value="35366" >AI</option>
+                            <option value="35368" >BB</option>
+                            <option value="35367" >HB</option>
+                            <option value="35365" >RO</option>
+                        </select>
+                        <label>Тип номера</label>
+    				    <select class="no-s" name="room"  id="room-select">
+                            <option value="">(все)</option>
+                            <option value="35597" >Deluxe room</option>
+                            <option value="35596" >Single</option>
+                            <option value="35595" >Standard room</option>
+                        </select>
+                        <label>Вид отдыха</label>
+                        <select class="no-s" name="activity"  id="activity-select">
+                            <option value="">(все)</option>
+                            <option value="35754" >SPA & welness</option>
+                            <option value="35630" >Автобусные туры</option>
+                            <option value="35675" >Альпинизм</option>
+                            <option value="35672" >Дайвинг</option>
+                            <option value="35755" >Молодежный отдых</option>
+                            <option value="35629" >Морские путешествия</option>
+                            <option value="35676" >Пешие переходы</option>
+                            <option value="35757" >Пляжный отдых</option>
+                            <option value="35674" >Рафтинг</option>
+                            <option value="35673" >Сафари</option>
+                            <option value="35756" >Семейный отдых</option>
+                            <option value="35758" >Шоппинг</option>
+                            <option value="35628" >Экзотические страны</option>
+                            <option value="35631" >Экскурсии</option>
+                            <option value="35632" >Экстрим туры</option>    
+                        </select>
+                    </div>
+                    <div class="per-cost col-md-6  col-sm-12">
+                        <div class="bl col-md-6 col-sm-6 no-pad">
+                            <label class="block">Период заезда</label>
+                			<div class="perriod for col-md-6 col-sm-6 no-pad">
+                                    <input class="time_fild" type="text" readonly="readonly" name="date_start" id="datepicker1" value=""/>
+               					    <span></span>
+           					</div>
+           					<div class="perriod col-md-6 col-sm-6 no-pad">
+                                    <input class="time_fild" type="text" readonly="readonly" name="date_end" id="datepicker2" value=""/>
+           					        <span></span>
+           					</div>			
+                        </div>	
+                        <div class="bl col-md-6 col-sm-6 no-pad">	
+                			<label class="block">Стоимость</label> 
+           					<div class="cost col-md-6 col-sm-6 no-pad">
+        	                   <label>от</label>
+        			           <input id="minCost" type="text" name="price_from" value=""/>
+                               <span>$</span>
+        	                </div>
+                			<div class="cost col-md-6 col-sm-6 no-pad">
+                               <label>до</label>
+                               <input id="maxCost" type="text" name="price_to" value=""/>
+                               <span>$</span>
+                			</div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-6 hot-tur ext">
+                        <span class="fa fa-chevron-right"></span>
+  						<input id="is-hot-tur" type="checkbox" name="ishot" value="Y"/>
+  						<label for="is-hot-tur">Только горящие туры</label>	
+        			</div>
+        			<div class="action col-md-1 col-sm-12">
+                        <button class="base-bg-color" type="submit">Найти<span class="fa fa-search"></span></button>
+        			</div>
+                    <div class="clearfix"></div>
+            </form>
+        </div>
+	</div>       
+        <!--main-->
+        <div id="main">
+            <div class="breadcrump-bl">
+                <div class="container no-pad">
+                    <ul class="breadcrump">
+                        <li><a href="#">Главная</a></li>
+                        <li><span class="base-txt-color">Страны и курорты</span></li>
+                    </ul>
+                </div>
+            </div>       
+            <div class="resttypes countries grid-block">
+              <div class="container no-pad">
+                <h2 class="col-sm-6">Страны и курорты</h2>
+                <div class="col-sm-6 col-lg-5 filter-block no-pad hidden-xs">
+                     <input type="checkbox" id="filter-1" value="not-visa" /><label class="col-sm-4" for="filter-1"><span>Страны безвизового въезда</span></label>
+                     <input type="checkbox" id="filter-2" value="visa-boundary" /><label class="col-sm-4" for="filter-2"><span>Страны, где виза ставится на границе</span></label>
+                     <input type="checkbox" id="filter-3" value="visa" /><label class="col-sm-4" for="filter-3"><span>Страны с визовым въездом</span></label>
+                </div>
+                <div class="clearfix"></div>
+                <div class="result-block">
+                    <div class="col-lg-15 col-md-3 col-sm-4 col-xsm-6 item not-visa">
+                        <div class="inner">
+                            
+                            <div class="img-blk">
+                                <div class="dimmer base-bg-color"></div>
+                                <div class="type-tur-blk">
+                                    <div class="type-tur"><span class="base-second-bg-color">18</span></div>
+                                    <div class="caption">Туров в страну</div>
+                                </div>
+                                <img alt="" title="" src="images/countries1.jpg" />
+                            </div>
+                            <div class="caption">
+                                <h4>Турция</h4>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Кемер</a></li>
+                                    <li><a class="base-txt-color" href="#">Аланья</a></li>
+                                    <li><a class="base-txt-color" href="#">Сиде</a></li>
+                                    <li><a class="base-txt-color" href="#">Белек</a></li>
+                                    <li><a class="base-txt-color" href="#">Анталия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Мармарис</a></li>
+                                    <li><a class="base-txt-color" href="#">Бодрум</a></li>
+                                    <li><a class="base-txt-color" href="#">Кушадасы</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <a class="show-moore"><span class="shows">Еще <span class="bold">10</span></span><span class="fa fa-chevron-down down"></span><span class="hides">Свернуть</span><span class="fa fa-chevron-up up"></span></a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-15 col-md-3 col-sm-4 col-xsm-6 item visa-boundary">
+                        <div class="inner">
+                            
+                            <div class="img-blk">
+                                <div class="dimmer base-bg-color"></div>
+                                <div class="type-tur-blk">
+                                    <div class="type-tur"><span class="base-second-bg-color">6</span></div>
+                                    <div class="caption">Туров в страну</div>
+                                </div>
+                                <img alt="" title="" src="images/countries2.jpg" />
+                            </div>
+                            <div class="caption">
+                                <h4>Черногория</h4>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Шарм-Эль-Шейх</a></li>
+                                    <li><a class="base-txt-color" href="#">Хургада</a></li>
+                                    <li><a class="base-txt-color" href="#">Макади</a></li>
+                                    <li><a class="base-txt-color" href="#">Сахл Хашиш</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Марса Алам, Эль Кусейр</a></li>
+                                    <li><a class="base-txt-color" href="#">Таба</a></li>
+                                    <li><a class="base-txt-color" href="#">Сома Бей</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a> <span>17</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a> <span>4</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a> <span>1</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a> <span>27</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a> <span>8</span></li>
+                                </ul>
+                                <a class="show-moore"><span class="shows">Еще <span class="bold">10</span></span><span class="fa fa-chevron-down down"></span><span class="hides">Свернуть</span><span class="fa fa-chevron-up up"></span></a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-15 col-md-3 col-sm-4 col-xsm-6 item visa">
+                        <div class="inner">
+                            
+                            <div class="img-blk">
+                                <div class="dimmer base-bg-color"></div>
+                                <div class="type-tur-blk">
+                                    <div class="type-tur"><span class="base-second-bg-color">1</span></div>
+                                    <div class="caption">Туров в страну</div>
+                                </div>
+                                <img alt="" title="" src="images/countries3.jpg" />
+                            </div>
+                            <div class="caption">
+                                <h4>Египет</h4>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Кемер</a></li>
+                                    <li><a class="base-txt-color" href="#">Аланья</a></li>
+                                    <li><a class="base-txt-color" href="#">Сиде</a></li>
+                                    <li><a class="base-txt-color" href="#">Белек</a></li>
+                                    <li><a class="base-txt-color" href="#">Анталия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Мармарис</a></li>
+                                    <li><a class="base-txt-color" href="#">Бодрум</a></li>
+                                    <li><a class="base-txt-color" href="#">Кушадасы</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <a class="show-moore"><span class="shows">Еще <span class="bold">10</span></span><span class="fa fa-chevron-down down"></span><span class="hides">Свернуть</span><span class="fa fa-chevron-up up"></span></a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-15 col-md-3 col-sm-4 col-xsm-6 item not-visa">
+                        <div class="inner">
+                            
+                            <div class="img-blk">
+                                <div class="dimmer base-bg-color"></div>
+                                <div class="type-tur-blk">
+                                    <div class="type-tur"><span class="base-second-bg-color">29</span></div>
+                                    <div class="caption">Туров в страну</div>
+                                </div>
+                                <img alt="" title="" src="images/countries4.jpg" />
+                            </div>
+                            <div class="caption">
+                                <h4>Греция</h4>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Шарм-Эль-Шейх</a></li>
+                                    <li><a class="base-txt-color" href="#">Хургада</a></li>
+                                    <li><a class="base-txt-color" href="#">Макади</a></li>
+                                    <li><a class="base-txt-color" href="#">Сахл Хашиш</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Марса Алам, Эль Кусейр</a></li>
+                                    <li><a class="base-txt-color" href="#">Таба</a></li>
+                                    <li><a class="base-txt-color" href="#">Сома Бей</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a> <span>17</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a> <span>4</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a> <span>1</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a> <span>27</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a> <span>8</span></li>
+                                </ul>
+                                <a class="show-moore"><span class="shows">Еще <span class="bold">10</span></span><span class="fa fa-chevron-down down"></span><span class="hides">Свернуть</span><span class="fa fa-chevron-up up"></span></a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-15 col-md-3 col-sm-4 col-xsm-6 item visa">
+                        <div class="inner">
+                            
+                            <div class="img-blk">
+                                <div class="dimmer base-bg-color"></div>
+                                <div class="type-tur-blk">
+                                    <div class="type-tur"><span class="base-second-bg-color">1</span></div>
+                                    <div class="caption">Туров в страну</div>
+                                </div>
+                                <img alt="" title="" src="images/countries3.jpg" />
+                            </div>
+                            <div class="caption">
+                                <h4>Египет</h4>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Кемер</a></li>
+                                    <li><a class="base-txt-color" href="#">Аланья</a></li>
+                                    <li><a class="base-txt-color" href="#">Сиде</a></li>
+                                    <li><a class="base-txt-color" href="#">Белек</a></li>
+                                    <li><a class="base-txt-color" href="#">Анталия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Мармарис</a></li>
+                                    <li><a class="base-txt-color" href="#">Бодрум</a></li>
+                                    <li><a class="base-txt-color" href="#">Кушадасы</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <a class="show-moore"><span class="shows">Еще <span class="bold">10</span></span><span class="fa fa-chevron-down down"></span><span class="hides">Свернуть</span><span class="fa fa-chevron-up up"></span></a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-15 col-md-3 col-sm-4 col-xsm-6 item not-visa">
+                        <div class="inner">
+                            
+                            <div class="img-blk">
+                                <div class="dimmer base-bg-color"></div>
+                                <div class="type-tur-blk">
+                                    <div class="type-tur"><span class="base-second-bg-color">29</span></div>
+                                    <div class="caption">Туров в страну</div>
+                                </div>
+                                <img alt="" title="" src="images/countries4.jpg" />
+                            </div>
+                            <div class="caption">
+                                <h4>Греция</h4>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Шарм-Эль-Шейх</a></li>
+                                    <li><a class="base-txt-color" href="#">Хургада</a></li>
+                                    <li><a class="base-txt-color" href="#">Макади</a></li>
+                                    <li><a class="base-txt-color" href="#">Сахл Хашиш</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Марса Алам, Эль Кусейр</a></li>
+                                    <li><a class="base-txt-color" href="#">Таба</a></li>
+                                    <li><a class="base-txt-color" href="#">Сома Бей</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a> <span>17</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a> <span>4</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a> <span>1</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a> <span>27</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a> <span>8</span></li>
+                                </ul>
+                                <a class="show-moore"><span class="shows">Еще <span class="bold">10</span></span><span class="fa fa-chevron-down down"></span><span class="hides">Свернуть</span><span class="fa fa-chevron-up up"></span></a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-15 col-md-3 col-sm-4 col-xsm-6 item not-visa">
+                        <div class="inner">
+                            
+                            <div class="img-blk">
+                                <div class="dimmer base-bg-color"></div>
+                                <div class="type-tur-blk">
+                                    <div class="type-tur"><span class="base-second-bg-color">18</span></div>
+                                    <div class="caption">Туров в страну</div>
+                                </div>
+                                <img alt="" title="" src="images/countries1.jpg" />
+                            </div>
+                            <div class="caption">
+                                <h4>Турция</h4>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Кемер</a></li>
+                                    <li><a class="base-txt-color" href="#">Аланья</a></li>
+                                    <li><a class="base-txt-color" href="#">Сиде</a></li>
+                                    <li><a class="base-txt-color" href="#">Белек</a></li>
+                                    <li><a class="base-txt-color" href="#">Анталия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Мармарис</a></li>
+                                    <li><a class="base-txt-color" href="#">Бодрум</a></li>
+                                    <li><a class="base-txt-color" href="#">Кушадасы</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <a class="show-moore"><span class="shows">Еще <span class="bold">10</span></span><span class="fa fa-chevron-down down"></span><span class="hides">Свернуть</span><span class="fa fa-chevron-up up"></span></a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-15 col-md-3 col-sm-4 col-xsm-6 item visa-boundary">
+                        <div class="inner">
+                            
+                            <div class="img-blk">
+                                <div class="dimmer base-bg-color"></div>
+                                <div class="type-tur-blk">
+                                    <div class="type-tur"><span class="base-second-bg-color">6</span></div>
+                                    <div class="caption">Туров в страну</div>
+                                </div>
+                                <img alt="" title="" src="images/countries2.jpg" />
+                            </div>
+                            <div class="caption">
+                                <h4>Черногория</h4>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Шарм-Эль-Шейх</a></li>
+                                    <li><a class="base-txt-color" href="#">Хургада</a></li>
+                                    <li><a class="base-txt-color" href="#">Макади</a></li>
+                                    <li><a class="base-txt-color" href="#">Сахл Хашиш</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Марса Алам, Эль Кусейр</a></li>
+                                    <li><a class="base-txt-color" href="#">Таба</a></li>
+                                    <li><a class="base-txt-color" href="#">Сома Бей</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a> <span>17</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a> <span>4</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a> <span>1</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a> <span>27</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a> <span>8</span></li>
+                                </ul>
+                                <a class="show-moore"><span class="shows">Еще <span class="bold">10</span></span><span class="fa fa-chevron-down down"></span><span class="hides">Свернуть</span><span class="fa fa-chevron-up up"></span></a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-15 col-md-3 col-sm-4 col-xsm-6 item not-visa">
+                        <div class="inner">
+                            
+                            <div class="img-blk">
+                                <div class="dimmer base-bg-color"></div>
+                                <div class="type-tur-blk">
+                                    <div class="type-tur"><span class="base-second-bg-color">18</span></div>
+                                    <div class="caption">Туров в страну</div>
+                                </div>
+                                <img alt="" title="" src="images/countries1.jpg" />
+                            </div>
+                            <div class="caption">
+                                <h4>Турция</h4>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Кемер</a></li>
+                                    <li><a class="base-txt-color" href="#">Аланья</a></li>
+                                    <li><a class="base-txt-color" href="#">Сиде</a></li>
+                                    <li><a class="base-txt-color" href="#">Белек</a></li>
+                                    <li><a class="base-txt-color" href="#">Анталия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Мармарис</a></li>
+                                    <li><a class="base-txt-color" href="#">Бодрум</a></li>
+                                    <li><a class="base-txt-color" href="#">Кушадасы</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <a class="show-moore"><span class="shows">Еще <span class="bold">10</span></span><span class="fa fa-chevron-down down"></span><span class="hides">Свернуть</span><span class="fa fa-chevron-up up"></span></a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-15 col-md-3 col-sm-4 col-xsm-6 item visa-boundary">
+                        <div class="inner">
+                            
+                            <div class="img-blk">
+                                <div class="dimmer base-bg-color"></div>
+                                <div class="type-tur-blk">
+                                    <div class="type-tur"><span class="base-second-bg-color">6</span></div>
+                                    <div class="caption">Туров в страну</div>
+                                </div>
+                                <img alt="" title="" src="images/countries2.jpg" />
+                            </div>
+                            <div class="caption">
+                                <h4>Черногория</h4>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Шарм-Эль-Шейх</a></li>
+                                    <li><a class="base-txt-color" href="#">Хургада</a></li>
+                                    <li><a class="base-txt-color" href="#">Макади</a></li>
+                                    <li><a class="base-txt-color" href="#">Сахл Хашиш</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Марса Алам, Эль Кусейр</a></li>
+                                    <li><a class="base-txt-color" href="#">Таба</a></li>
+                                    <li><a class="base-txt-color" href="#">Сома Бей</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a> <span>17</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a> <span>4</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a> <span>1</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a> <span>27</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a> <span>8</span></li>
+                                </ul>
+                                <a class="show-moore"><span class="shows">Еще <span class="bold">10</span></span><span class="fa fa-chevron-down down"></span><span class="hides">Свернуть</span><span class="fa fa-chevron-up up"></span></a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-15 col-md-3 col-sm-4 col-xsm-6 item visa">
+                        <div class="inner">
+                            
+                            <div class="img-blk">
+                                <div class="dimmer base-bg-color"></div>
+                                <div class="type-tur-blk">
+                                    <div class="type-tur"><span class="base-second-bg-color">1</span></div>
+                                    <div class="caption">Туров в страну</div>
+                                </div>
+                                <img alt="" title="" src="images/countries3.jpg" />
+                            </div>
+                            <div class="caption">
+                                <h4>Египет</h4>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Кемер</a></li>
+                                    <li><a class="base-txt-color" href="#">Аланья</a></li>
+                                    <li><a class="base-txt-color" href="#">Сиде</a></li>
+                                    <li><a class="base-txt-color" href="#">Белек</a></li>
+                                    <li><a class="base-txt-color" href="#">Анталия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Мармарис</a></li>
+                                    <li><a class="base-txt-color" href="#">Бодрум</a></li>
+                                    <li><a class="base-txt-color" href="#">Кушадасы</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <a class="show-moore"><span class="shows">Еще <span class="bold">10</span></span><span class="fa fa-chevron-down down"></span><span class="hides">Свернуть</span><span class="fa fa-chevron-up up"></span></a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-15 col-md-3 col-sm-4 col-xsm-6 item not-visa">
+                        <div class="inner">
+                            
+                            <div class="img-blk">
+                                <div class="dimmer base-bg-color"></div>
+                                <div class="type-tur-blk">
+                                    <div class="type-tur"><span class="base-second-bg-color">29</span></div>
+                                    <div class="caption">Туров в страну</div>
+                                </div>
+                                <img alt="" title="" src="images/countries4.jpg" />
+                            </div>
+                            <div class="caption">
+                                <h4>Греция</h4>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Шарм-Эль-Шейх</a></li>
+                                    <li><a class="base-txt-color" href="#">Хургада</a></li>
+                                    <li><a class="base-txt-color" href="#">Макади</a></li>
+                                    <li><a class="base-txt-color" href="#">Сахл Хашиш</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Марса Алам, Эль Кусейр</a></li>
+                                    <li><a class="base-txt-color" href="#">Таба</a></li>
+                                    <li><a class="base-txt-color" href="#">Сома Бей</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a> <span>17</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a> <span>4</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a> <span>1</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a> <span>27</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a> <span>8</span></li>
+                                </ul>
+                                <a class="show-moore"><span class="shows">Еще <span class="bold">10</span></span><span class="fa fa-chevron-down down"></span><span class="hides">Свернуть</span><span class="fa fa-chevron-up up"></span></a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-15 col-md-3 col-sm-4 col-xsm-6 item visa">
+                        <div class="inner">
+                            
+                            <div class="img-blk">
+                                <div class="dimmer base-bg-color"></div>
+                                <div class="type-tur-blk">
+                                    <div class="type-tur"><span class="base-second-bg-color">1</span></div>
+                                    <div class="caption">Туров в страну</div>
+                                </div>
+                                <img alt="" title="" src="images/countries3.jpg" />
+                            </div>
+                            <div class="caption">
+                                <h4>Египет</h4>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Кемер</a></li>
+                                    <li><a class="base-txt-color" href="#">Аланья</a></li>
+                                    <li><a class="base-txt-color" href="#">Сиде</a></li>
+                                    <li><a class="base-txt-color" href="#">Белек</a></li>
+                                    <li><a class="base-txt-color" href="#">Анталия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Мармарис</a></li>
+                                    <li><a class="base-txt-color" href="#">Бодрум</a></li>
+                                    <li><a class="base-txt-color" href="#">Кушадасы</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <a class="show-moore"><span class="shows">Еще <span class="bold">10</span></span><span class="fa fa-chevron-down down"></span><span class="hides">Свернуть</span><span class="fa fa-chevron-up up"></span></a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-15 col-md-3 col-sm-4 col-xsm-6 item not-visa">
+                        <div class="inner">
+                            
+                            <div class="img-blk">
+                                <div class="dimmer base-bg-color"></div>
+                                <div class="type-tur-blk">
+                                    <div class="type-tur"><span class="base-second-bg-color">29</span></div>
+                                    <div class="caption">Туров в страну</div>
+                                </div>
+                                <img alt="" title="" src="images/countries4.jpg" />
+                            </div>
+                            <div class="caption">
+                                <h4>Греция</h4>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Шарм-Эль-Шейх</a></li>
+                                    <li><a class="base-txt-color" href="#">Хургада</a></li>
+                                    <li><a class="base-txt-color" href="#">Макади</a></li>
+                                    <li><a class="base-txt-color" href="#">Сахл Хашиш</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Марса Алам, Эль Кусейр</a></li>
+                                    <li><a class="base-txt-color" href="#">Таба</a></li>
+                                    <li><a class="base-txt-color" href="#">Сома Бей</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a> <span>17</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a> <span>4</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a> <span>1</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a> <span>27</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a> <span>8</span></li>
+                                </ul>
+                                <a class="show-moore"><span class="shows">Еще <span class="bold">10</span></span><span class="fa fa-chevron-down down"></span><span class="hides">Свернуть</span><span class="fa fa-chevron-up up"></span></a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-15 col-md-3 col-sm-4 col-xsm-6 item not-visa">
+                        <div class="inner">
+                            
+                            <div class="img-blk">
+                                <div class="dimmer base-bg-color"></div>
+                                <div class="type-tur-blk">
+                                    <div class="type-tur"><span class="base-second-bg-color">18</span></div>
+                                    <div class="caption">Туров в страну</div>
+                                </div>
+                                <img alt="" title="" src="images/countries1.jpg" />
+                            </div>
+                            <div class="caption">
+                                <h4>Турция</h4>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Кемер</a></li>
+                                    <li><a class="base-txt-color" href="#">Аланья</a></li>
+                                    <li><a class="base-txt-color" href="#">Сиде</a></li>
+                                    <li><a class="base-txt-color" href="#">Белек</a></li>
+                                    <li><a class="base-txt-color" href="#">Анталия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Мармарис</a></li>
+                                    <li><a class="base-txt-color" href="#">Бодрум</a></li>
+                                    <li><a class="base-txt-color" href="#">Кушадасы</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <a class="show-moore"><span class="shows">Еще <span class="bold">10</span></span><span class="fa fa-chevron-down down"></span><span class="hides">Свернуть</span><span class="fa fa-chevron-up up"></span></a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-15 col-md-3 col-sm-4 col-xsm-6 item visa-boundary">
+                        <div class="inner">
+                            
+                            <div class="img-blk">
+                                <div class="dimmer base-bg-color"></div>
+                                <div class="type-tur-blk">
+                                    <div class="type-tur"><span class="base-second-bg-color">6</span></div>
+                                    <div class="caption">Туров в страну</div>
+                                </div>
+                                <img alt="" title="" src="images/countries2.jpg" />
+                            </div>
+                            <div class="caption">
+                                <h4>Черногория</h4>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Шарм-Эль-Шейх</a></li>
+                                    <li><a class="base-txt-color" href="#">Хургада</a></li>
+                                    <li><a class="base-txt-color" href="#">Макади</a></li>
+                                    <li><a class="base-txt-color" href="#">Сахл Хашиш</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a></li>
+                                </ul>
+                                <ul class="resttypes-list countries-list col-xs-6">
+                                    <li><a class="base-txt-color" href="#">Марса Алам, Эль Кусейр</a></li>
+                                    <li><a class="base-txt-color" href="#">Таба</a></li>
+                                    <li><a class="base-txt-color" href="#">Сома Бей</a></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Тайланд</a> <span>17</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Филипины</a> <span>4</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Индонезия</a> <span>1</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Словакия</a> <span>27</span></li>
+                                    <li class="hides"><a class="base-txt-color" href="#">Черногория</a> <span>8</span></li>
+                                </ul>
+                                <a class="show-moore"><span class="shows">Еще <span class="bold">10</span></span><span class="fa fa-chevron-down down"></span><span class="hides">Свернуть</span><span class="fa fa-chevron-up up"></span></a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="show-moore-blk text-center"><a class="btn btn-plus btn-brd base-second-bg-color show-moore">еще</a></div>
+                </div>
+              </div>
+            </div>
+        </div><!--/main-->
+      </div><!--/content-wrapper-->
+      <footer id="foot" class="base-bg-color">
+        <div class="container">
+            <div class="footer-center">
+                <div class="col-md-5 feedback">
+                    <form class="base-second-bg-color" action="" method="">
+                      <div class="pull-right inp  base-second-bg-color">
+                        <input type="text" name="" placeholder="ваш email" />
+                        <button type="submit"><span class="subscr-icon"></span></button>
+                      </div>
+                      <div class="pull-left desc">
+                        <span class="check-icon"></span>
+                        <label>Подписаться на наши обновления</label>
+                      </div>
+                      <div class="clearfix"></div>
+                    </form>
+                </div>
+                <div class="col-md-7 contacts">
+                    <div class="col-md-3 col-sm-3">
+                        <label>Адрес:</label>
+                        <div>г.Киев, Украина ул. Ивана Франко, 40-Б</div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <label>Телефоны:</label>
+                        <div>
+                            <p>050 445 25 45</p>
+                            <p>(044) 238 60 20</p>
+                            <p>238 62 31</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 hidden-xs">
+                        <label>E-mail:</label>
+                        <div>
+                            <p><a href="mailto:sale@tursite.com.ua">sale@tursite.com.ua</a></p>
+                            <p><a href="mailto:market@tursite.com.ua">market@tursite.com.ua</a></p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="footer-bottom">
+              <div class="col-md-5 col1">
+                <div class="social">
+       	            <span>Мы в сети:</span>
+                    <ul class="social-footer">
+                        <li><a href="#"><i class="facebook base-second-bg-color"></i></a></li>
+                        <li><a href="#"><i class="twitter base-second-bg-color"></i></a></li>
+                        <li><a href="#"><i class="google base-second-bg-color"></i></a></li>
+                    </ul>
+                </div>
+                <div class="copyright">©  ТурСайт, 2016 Все права защищены.</div>
+                <a href="#" class="rules">Правила использования</a>
+              </div>
+              <div class="col-md-7 col2">
+                    <div class="production">Разработка сайтов на Битриксе: <a href="http://webmediaform.com.ua"><img alt="webmediaform.com.ua" title="webmediaform.com.ua" src="images/webmediaform.png" /></a></div>
+              </div>
+              <div class="clearfix"></div>
+           </div>
+        </div>
+      </footer>
+      <a class="back-to-top base-second-bg-color" href="#"><span class="fa fa-arrow-up"></span></a>
+	<!-- script references -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script>
+            var monthNamesArr=['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь', 'Ноябрь', 'Декабрь' ];
+            var dayNamesMinArr=['','','','','','',''];
+        </script> 
+        <script src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.js"></script>
+        <script src="js/OwlCarousel2Thumbs.min.js"></script>
+        <script src="js/chosen.jquery.js"></script>
+		<script src="js/scripts.js"></script>
+        <div class="clearfix"></div>
+	</body>
+</html>

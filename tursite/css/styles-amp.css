@@ -177,9 +177,10 @@ button:hover,button:focus,.btn:hover,.btn:focus{color: #383d43;}
 #search-tur .extended .per-cost>div{width: 100%;padding-bottom: 18px;}
 #search-tur .extended .perriod.for::after{margin-left: 3px;}
 #search-tur .extended .hot-tur{clear: both;float: left;padding-left: 48px;padding-top: 20px;}
-#search-tur .extended .hot-tur input[type="checkbox"]{display: none;}
-#search-tur .extended .hot-tur input[type="checkbox"] + label{font-weight: bold;font-size: 13px;padding-left: 40px;padding-top: 10px;background: url(../images/icons.png) no-repeat;cursor: pointer;background-position: 8px -370px;}
-#search-tur .extended .hot-tur input[type="checkbox"]:checked + label{background: url(../images/icons.png) no-repeat;background-position: 8px -340px;}
+input[type="checkbox"]{display: none;}
+input[type="checkbox"] + label{font-weight: bold;font-size: 13px;padding-left: 40px;padding-top: 10px;cursor: pointer;}
+input[type="checkbox"] + label:before{content: "";background: url(../images/check_uncheck.png) no-repeat;background-position: 0 -44px;display: inline-block;width: 20px;height: 20px;vertical-align: top;margin-right: 10px;margin-left: -30px;}
+input[type="checkbox"]:checked + label:before{background-position: 0 0;}
 #search-tur .extended .hot-tur .fa{position: relative;top: -4px;}
 #search-tur .extended .action{padding-left: 43px;padding-top: 16px;}
 #search-tur .extended .action button{padding: 10px 44px 10px 17px;}
@@ -333,7 +334,7 @@ footer .social span{display: inline-block;vertical-align: top;}
 .head-res .pull-left li:not(:last-child):after {content: '\f054';padding: 0 3px 0 16px;font-family: FontAwesome;font-size: 11px;display: inline-block;vertical-align: middle;}
 .head-res label{color: rgb(56, 61, 67);font: 12px "Roboto Regular",arial,sans-serif;}
 .head-res .chosen-container-single .chosen-single{border: 1px solid #d1d4d6;border-radius: 30px;box-shadow: none;padding-left: 13px;font-weight: bold;font-family: 'Roboto Bold';font-size: 14px;height: 30px;line-height: 24px !important;}
-.chosen-container-active.chosen-with-drop .chosen-single{border-radius: 15px 15px 0px 0px;background: none;}
+.chosen-container-active.chosen-with-drop .chosen-single{border-radius: 15px 15px 0px 0px;background-image: none;}
 .chosen-container .chosen-results li.highlighted{background: #ebeef0;color: inherit;}
 .head-res .chosen-container-active .chosen-drop{padding-top: 15px;margin-top: -4px;z-index: 2147483647;box-shadow: none;border: 1px solid #d1d4d6;border-top: none;}
 .head-res .chosen-container{min-width: 76px;max-width: 76px; margin: -1px 12px 0px 4px;}
@@ -401,7 +402,7 @@ footer .social span{display: inline-block;vertical-align: top;}
 #search-tur.hotels h5{display: none;margin: 0;text-align: center;padding: 5px 0;}
 #search-tur.hotels h3{text-align: center;margin: 9px 0 0 0;padding: 7px 5px 13px 0;display: block;}
 #search-tur.hotels .country{margin-top: 21px;padding: 0 6px 12px 24px;}
-#search-tur .country > div:not(.inl-blk){float: none;margin: 0;margin-bottom: 1px;}
+#search-tur.hotels .country > div:not(.inl-blk){float: none;margin: 0;margin-bottom: 1px;}
 #search-tur.hotels .resort{padding: 0 6px 10px 24px;}
 #search-tur.hotels .stars{padding: 3px 10px 3px 24px;}
 #search-tur.hotels .action{padding: 27px 1px 35px 20px;text-align: center;margin: 0;}
@@ -471,12 +472,26 @@ li.hides{display: none;}
 /*==================================end-grid-block===================================================*/
 /*==================================end-resttypes-page===================================================*/
 
+/*==================================countries-page===================================================*/
+#search-tur.countries .action {margin-bottom: 15px;}
+/*==================================countries.grid-block===================================================*/
+.countries.grid-block h2{margin-left: 0;padding: 0;}
+.countries.grid-block .result-block{padding-top: 12px;}
+.countries.grid-block .result-block>div:not(.clearfix){/*padding: 0 4px 0 0;*/}
+.countries.grid-block .result-block .inner h4{margin-bottom: 14px;}
+.countries.grid-block .result-block .type-tur-blk{right: 8px;}
+.countries.grid-block .result-block .type-tur-blk .type-tur > span{display: block;width: 27px;height: 27px;text-align: center;line-height: 27px;border-radius: 20px;}
+input[type="checkbox"] + label:before{margin-left: -31px;margin-right: 6px;}
+.countries.grid-block .countries-list li{line-height: 15px;margin-bottom: 5px;padding-right: 15px;}
+.countries.grid-block .result-block>div.show-moore-blk {margin: 16px 0px;}
+/*==================================end-countries.grid-block===================================================*/
+/*==================================end-countries-page===================================================*/
+
 @media (min-width: 580px){
     .hot-items{max-width: 600px;}
 /*==================================resttypes-page===================================================*/
 /*==================================grid-block===================================================*/
-.result-block>div:nth-child(2n+1){clear: both;}
-.collapseds .caption{position: absolute;background: inherit;box-shadow: inherit;width: calc(100% - 15px);z-index: 5;}
+.grid-block .inner.collapseds > .caption{position: absolute;background: inherit;box-shadow: inherit;width: calc(100% - 15px);z-index: 5;padding-bottom: 15px;}
 .resttypes.grid-block .result-block{margin: 0;max-width: none;}
 /*==================================end-grid-block===================================================*/
 /*==================================end-resttypes-page===================================================*/
@@ -763,11 +778,20 @@ footer .copyright,footer .rules{float: left;margin: 0;}
 #search-tur.resttypes .action {margin-bottom: -5px;}
 /*==================================grid-block===================================================*/
 .resttypes.grid-block  .container{padding-left: 1px;padding-right: 15px;}
-.result-block>div:nth-child(2n+1):not(.clearfix) {clear: none;}
-.result-block>div:nth-child(3n+1) {clear: both;}
-
 /*==================================end-grid-block===================================================*/
 /*==================================end-resttypes-page===================================================*/
+
+/*==================================countries-page===================================================*/
+#search-tur.countries .action {margin-bottom: -5px;}
+/*==================================countries.grid-block===================================================*/
+.countries.grid-block h2{margin-top: 25px;}
+.grid-block .filter-block{float: right;padding-top: 17px;}
+.filter-block input[type="checkbox"] + label{padding: 0 0 0 35px;}
+.filter-block input[type="checkbox"] + label>span{display: inline-block;line-height: 14px;color: #9a9da2;}
+.filter-block input[type="checkbox"]:checked + label>span{color: #383d43;}
+.countries.grid-block .result-block {padding-top: 16px;}
+/*==================================end-countries.grid-block===================================================*/
+/*==================================end-countries-page===================================================*/
 
 }
 @media (max-width: 767px){

@@ -10,6 +10,24 @@
 
     }
     
+    var show_moore=function($this){
+        var h='';
+        if($(window).width()>=563){var h=$this.parents('.inner').find('.img-blk + .caption').innerHeight()+'px';}
+        if($this.hasClass('active')){
+            $this.parents('.inner').find('li.hides').hide();
+            $this.parents('.inner').removeClass('collapseds').css('padding-bottom','');
+            $this.removeClass('active');
+        }else{
+            $('li.hides').hide();
+            $('.inner.collapseds').removeClass('collapseds').css('padding-bottom','');
+            $this.parents('.inner').find('li.hides').show();
+            $this.parents('.inner').addClass('collapseds').css('padding-bottom',h);
+            $('.resttypes .show-moore.active').removeClass('active');
+            $this.addClass('active');            
+        }
+
+    }
+    
     var carousel_init=function($index,$parent){
         var content='';
         $parent.find('img').each(function(){
@@ -153,19 +171,7 @@ $(document).ready(function(){
         }
     });
     $('.resttypes .show-moore').click(function(){
-        var h=$(this).parents('.inner').find('.img-blk + .caption').innerHeight();
-        if($(this).hasClass('active')){
-            $(this).parents('.inner').find('li.hides').hide();
-            $(this).parents('.inner').removeClass('collapseds').css('padding-bottom','');
-            $(this).removeClass('active');
-        }else{
-            $('li.hides').hide();
-            $('.inner.collapseds').removeClass('collapseds').css('padding-bottom','');
-            $(this).parents('.inner').find('li.hides').show();
-            $(this).parents('.inner').addClass('collapseds').css('padding-bottom',h);
-            $('.resttypes .show-moore.active').removeClass('active');
-            $(this).addClass('active');            
-        }
+        show_moore($(this));
     });
     $('.abbr_ext').click(function(){
         if($(this).hasClass('open')){
@@ -178,6 +184,16 @@ $(document).ready(function(){
             $('#search-tur-form').addClass('extended').removeClass('abbreviated');
             $('#search-hotels-form').hide();
             $('#search-tur.hotels h5').show();
+        }
+    });
+    $('.grid-block .filter-block input[type="checkbox"]').change(function(){
+        if($('.grid-block .filter-block input[type="checkbox"]:checked').length){
+            $('.grid-block .result-block > .item').hide();
+            $('.grid-block .filter-block input[type="checkbox"]:checked').each(function(){
+                $('.grid-block .result-block > .item.'+$(this).val()).show();
+            });
+        }else{
+            $('.grid-block .result-block > .item').show();
         }
     });
 
@@ -316,6 +332,7 @@ $(document).ready(function(){
         res_img();
         $(window).resize(function(){
             res_img();
+            show_moore($('.resttypes .show-moore.active'));
             //permutation();
             //sorted();
         });
