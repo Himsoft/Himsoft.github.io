@@ -1,0 +1,699 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Tursite</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="/tour.html" rel="canonical" />
+        <link href="/tour-amp.html" rel="amphtml" />
+		<link href="css/jquery-ui.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/owl.carousel.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/chosen.css">
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles-amp.css" rel="stylesheet">
+	</head>
+	<body>
+      <div id="content-wrapper"  class="front-page">
+        <div class="mob-header header hidden-sm hidden-md hidden-lg">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="call text-center">
+                <a href="tel:89007070">Позвонить</a>
+            </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse1">
+                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse1"><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                       <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
+                          <li><a href="#">Поиск туров</a></li>
+                          <li><a href="#">Отели</a></li>
+                          <li><a href="#">Страны</a></li>
+                          <li><a href="#">Авиабилеты</a></li>
+                          <li><a href="#">Виды отдыха</a></li>
+                       </ul>
+                    </div>
+        </div>
+        <nav class="navbar header base-bg-color">
+                <div class="container">
+                  <div class="row">
+                    <div class="navbar-header">
+                      <div class=" col-sm-5 no-pad">
+                          <ul class="nav nav-menu">
+                            <li><a href="#">Новости</a></li>
+           					<li><a href="#">О нас</a></li>
+        					<li><a href="#">Агентам</a></li>
+        					<li><a href="#">Контакты</a></li>
+                          </ul>                      
+    
+                          <div class="call-block hidden-xs">
+                              <div class="phone">8 900 70 70</div>
+                              <a class="call-back" href="#"><span>Обратный звонок</span></a>
+                              <div id="call-back-popup">
+                                <a class="fa fa-close close"></a>
+                                <form action="/" method="POST">
+                                    <div class="head-form text-center">
+                                        <h2 class="upper">Заказать звонок</h2>
+                                        <div>Заполните форму и мы обязательно Вам перезвоним</div>
+                                    </div>
+                                    <input type="text" name="name" placeholder="Ваше имя" />
+                                    <input type="text" name="phone" placeholder="Телефон" />
+                                    <input class="base-bg-color" type="submit" value="Отправить" />
+                                </form>
+                              </div>
+                              <div id="call-back-popup-mask"></div>
+                          </div>
+                      </div>
+                      <div class=" col-sm-3 text-center">
+                        <a href="/" class="navbar-brand"><img alt="img" src="images/logo.png" /><span>ТурСайт</span></a>
+                      </div>
+                      <div class=" col-sm-4 text-center">
+                          <div class="search-form">
+                            <form action="/" method="get">
+                                <input type="text" name="q" placeholder="Поиск..." value=""/>
+                                <button name="s" type="submit"><span class="fa fa-search"></span></button>
+                            </form>
+                          </div>
+                      </div>
+                      
+                      
+
+                    </div>
+                  </div>  
+                </div>
+                <div id="subnav" class="hidden-xs">
+                  <div class="container">
+                    <div class="row">
+                        <ul class="nav nav-menu sub-menu">
+                          <li><a href="#">Поиск туров</a></li>
+                          <li><a href="#">Отели</a></li>
+                          <li><a href="#">Страны</a></li>
+                          <li><a href="#">Авиабилеты</a></li>
+                          <li><a href="#">Виды отдыха</a></li>
+                         </ul>
+                    </div>
+                  </div>
+             </div>
+        </nav>
+	<div id="search-tur" class="countries base-second-bg-color">
+        <div class="container">
+            <button class="abbr_ext base-second-bg-color"><span class="down"></span><span class="up"></span></button>	
+            <form class="abbreviated" action="/" id="search-tur-form">
+        			<h3 class="abbr ">Найти тур</h3>
+        			<h3 class="ext">Расширенный поиск</h3>
+                    <div class=" col-sm-6 country">
+                     <div class=" col-sm-6 no-pad">
+                        <label>Вылет из</label>
+    				    <select class="place-icon" name="city_from" id="city-from-select">
+                            <option value="">(все)</option>
+                            <option value="35627" >Днепропетровск</option>
+                            <option value="35620" >Киев</option>
+                        </select>
+                     </div>
+                     <div class=" col-sm-6 no-pad">
+                        <label>Страна</label>
+                        <select class="place-icon" name="country" id="countires-select">
+                            <option value="">(все)</option>
+                        </select>
+       					<label class="ext">Курорт</label>
+       					<select class="place-icon ext" name="resort" id="resort-select" disabled="disabled">
+                            <option>Выберите страну...</option>
+                        </select>
+                     </div>   
+                    </div>
+        			<div class=" col-sm-6 ext type">
+                        <label>Тип питания</label>
+    				    <select class="no-s"  name="food" id="food-select">
+                            <option value="">(все)</option>
+                            <option value="35366" >AI</option>
+                            <option value="35368" >BB</option>
+                            <option value="35367" >HB</option>
+                            <option value="35365" >RO</option>
+                        </select>
+                        <label>Тип номера</label>
+    				    <select class="no-s" name="room"  id="room-select">
+                            <option value="">(все)</option>
+                            <option value="35597" >Deluxe room</option>
+                            <option value="35596" >Single</option>
+                            <option value="35595" >Standard room</option>
+                        </select>
+                        <label>Вид отдыха</label>
+                        <select class="no-s" name="activity"  id="activity-select">
+                            <option value="">(все)</option>
+                            <option value="35754" >SPA & welness</option>
+                            <option value="35630" >Автобусные туры</option>
+                            <option value="35675" >Альпинизм</option>
+                            <option value="35672" >Дайвинг</option>
+                            <option value="35755" >Молодежный отдых</option>
+                            <option value="35629" >Морские путешествия</option>
+                            <option value="35676" >Пешие переходы</option>
+                            <option value="35757" >Пляжный отдых</option>
+                            <option value="35674" >Рафтинг</option>
+                            <option value="35673" >Сафари</option>
+                            <option value="35756" >Семейный отдых</option>
+                            <option value="35758" >Шоппинг</option>
+                            <option value="35628" >Экзотические страны</option>
+                            <option value="35631" >Экскурсии</option>
+                            <option value="35632" >Экстрим туры</option>    
+                        </select>
+                    </div>
+                    <div class="per-cost   col-sm-12">
+                        <div class="bl  col-sm-6 no-pad">
+                            <label class="block">Период заезда</label>
+                			<div class="perriod for  col-sm-6 no-pad">
+                                    <input class="time_fild" type="text" readonly="readonly" name="date_start" id="datepicker1" value=""/>
+               					    <span></span>
+           					</div>
+           					<div class="perriod  col-sm-6 no-pad">
+                                    <input class="time_fild" type="text" readonly="readonly" name="date_end" id="datepicker2" value=""/>
+           					        <span></span>
+           					</div>			
+                        </div>	
+                        <div class="bl  col-sm-6 no-pad">	
+                			<label class="block">Стоимость</label> 
+           					<div class="cost  col-sm-6 no-pad">
+        	                   <label>от</label>
+        			           <input id="minCost" type="text" name="price_from" value=""/>
+                               <span>$</span>
+        	                </div>
+                			<div class="cost  col-sm-6 no-pad">
+                               <label>до</label>
+                               <input id="maxCost" type="text" name="price_to" value=""/>
+                               <span>$</span>
+                			</div>
+                        </div>
+                    </div>
+                    <div class=" col-sm-6 hot-tur ext">
+                        <span class="fa fa-chevron-right"></span>
+  						<input id="is-hot-tur" type="checkbox" name="ishot" value="Y"/>
+  						<label for="is-hot-tur">Только горящие туры</label>	
+        			</div>
+        			<div class="action  col-sm-12">
+                        <button class="base-bg-color" type="submit">Найти<span class="fa fa-search"></span></button>
+        			</div>
+                    <div class="clearfix"></div>
+            </form>
+        </div>
+	</div>       
+        <!--main-->
+        <div id="main">
+            <div class="breadcrump-bl">
+                <div class="container no-pad">
+                    <ul class="breadcrump">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Поиск туров</a></li>
+                        <li><span class="base-txt-color">Незабываемый отдых в Тайланде.</span></li>
+                    </ul>
+                </div>
+            </div>       
+
+            <div class="tour top-block">
+                <div class="container">
+                    <div class="dimmer base-bg-color"></div>
+                    <div class="btn-galery open base-second-bg-color">
+                        <span class="count">24</span>
+                        <span class="icon"></span>
+                        <div class="descr">Фото</div>
+                    </div>
+                    <div class="col-sm-7 top-content">
+                        <h1>Самый незабываемый отдых в Тайланде в Марте 2013 года</h1>
+                        <div class="text hidden-xs">
+                            <p>Наш портал не только поможет Вам найти интересующий Вас тур, но и предложит горящие туры и путевки оперативнее любого другого</p> 
+                        </div>
+                        <div class="prise-blk ">
+                            <label>Цена за </label>
+                            <select>
+                                <option value="1">1</option>
+                                <option selected="selected" value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                            <span class="after-label">чел.</span>
+                            <div data-val="1" class="res base-second-bg-color">
+                                <span class="old-price">$ 2099</span>
+                                <span class="new-price">$ 1899</span>
+                            </div>
+                            <div data-val="2" class="res active base-second-bg-color">
+                                <span class="old-price">$ 4198</span>
+                                <span class="new-price">$ 3798</span>
+                            </div>
+                            <div data-val="3" class="res base-second-bg-color">
+                                <span class="old-price">$ 6297</span>
+                                <span class="new-price">$ 5697</span>
+                            </div>
+                            <div data-val="4" class="res base-second-bg-color">
+                                <span class="old-price">$ 8396</span>
+                                <span class="new-price">$ 7596</span>
+                            </div>
+                        </div>
+                        <div class="action">
+                            <a class="to-anchor btn btn-plus base-second-bg-color" href="#quick-ask">Хочу поехать!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4  details-tur">
+                        <div class="head base-second-bg-color">
+                            <h4>Вид тура:</h4>
+                            <div class="resttypes pull-right">
+                                <div class="resttype-blk">
+                                        <img class="type-tur" alt="" title="" src="images/resttype1.png" />
+                                        <div class="caption">Пляжный</div>
+                                </div>
+                                <div class="resttype-blk">
+                                        <img class="type-tur" alt="" title="" src="images/resttype2.png" />
+                                        <div class="caption">Активный</div>
+                                </div>
+                                <div class="resttype-blk">
+                                        <img class="type-tur" alt="" title="" src="images/resttype3.png" />
+                                        <div class="caption">Экскурсионный</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="whence">
+                            <label>Откуда:</label>
+                            <div class="capt">вылет из Киева</div>
+                        </div>
+                        <div class="hotel">
+                            <label>Отель:</label>
+                            <div class="capt">Bora-Bora Beach Club</div>
+                            <div class="rating r_5"><span></span></div>
+                        </div>
+                        <div class="room">
+                            <div class=" item no-pad pull-left">
+                                <label>Питание:</label>
+                                <div class="capt">HB, AI <span class="help"><span class="capt">HB, AI</span></span></div>
+                            </div>
+                            <div class=" item no-pad pull-left">
+                                <label>Номер:</label>
+                                <div class="capt">Deluxe Room <span class="help"><span class="capt">Deluxe Room</span></span></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="transport">
+                            <label>Транспорт:</label>
+                            <div class="capt">АВИА + трансфер к отелю</div>
+                        </div>
+                        <div class="perriod">
+                            <label>Начало / Конец тура:</label>
+                            <div class="capt">15.11.2013 - 22.11.2013</div>
+                        </div>
+                        <div class="duration">
+                            <label>Продолжительность:</label>
+                            <div class="capt">14 дней / 15 ночей</div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+    			<div class="galery">
+    				<div class="container">
+                        <div class="controls-galery">
+                            <div class="bottom">
+                                <div class="up"></div>
+                                <div class="down"></div>
+                            </div>
+                        </div>
+                        <div class="scroller">
+                            <div class="content masonry" data-columns>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery1.jpg" src="images/galery1.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery2.jpg" src="images/galery2.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery3.jpg" src="images/galery3.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery4.jpg" src="images/galery4.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery5.jpg" src="images/galery5.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery6.jpg" src="images/galery6.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery7.jpg" src="images/galery7.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery8.jpg" src="images/galery8.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery9.jpg" src="images/galery9.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery6.jpg" src="images/galery6.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery4.jpg" src="images/galery4.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery2.jpg" src="images/galery2.jpg" alt="img"/>
+            				    </div>
+            				</div>
+                        </div>
+                    </div>               
+    			</div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="container">
+                <div class="content-container tour ">
+                    <div class="head-blk">
+                        <div class="col-sm-6 share-socials">
+                             <div class="row">
+                                <script type="text/javascript">
+                                (function() {
+                                  if (window.pluso)if (typeof window.pluso.start == "function") return;
+                                  if (window.ifpluso==undefined) { window.ifpluso = 1;
+                                    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                                    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                                    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + ':share.pluso.ru/pluso-like.js';
+                                    var h=d[g]('body')[0];
+                                    h.appendChild(s);
+                                  }})();
+                                  </script>
+                                <label class="soc-label">Поделиться с друзьями:</label>  
+                                <div class="pluso" data-background="transparent" data-options="medium,round,line,horizontal,nocounter,theme=04" data-services="facebook,twitter,google,moimir"></div>                        
+                             </div> 
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="content">
+                        <h4>Описание:</h4>
+                        <div class="text">
+                            <p>Туристическая компания, объединившая в себе профессионалов различных направлений туристичекой деятельности. Все сотрудники компании имеют многолетний (более 8 лет) опыт, который необходим для обслуживания запросов и желаний своих клиентов на высочайшем уровне. Множество международных и украинских дипломов и сертификатов подтверждают статус и профессионализм наших сотрудников. Мы все преданы одному делу, и мы любим то, чем занимаемся. Попробовав однажды, обслуживание в компании Персей Тревел, Вы навсегда останетесь членами нашей огромной туристической семьи.</p>
+                        </div>
+                        <label class="base-txt-color">Заголовок для абзаца</label>
+                        <div class="text last">
+                            <p>Все предлагаемые нами туристические продукты рассчитаны на потребителей с различным уровнем дохода - от самых экономичных предложений до VIP-обслуживания. Индивидуальный подход к каждому клиенту - отличительная черта нашей компании. Вы всегда будете ощущать особое внимание со стороны сотрудников Персей Тревел, потому что каждый клиент для нас - это VIP клиент. Туристическая компания, объединившая в себе профессионалов различных направлений туристичекой деятельности. Все сотрудники компании имеют многолетний (более 8 лет) опыт, который необходим для обслуживания запросов и желаний своих клиентов на высочайшем уровне. Множество международных и украинских дипломов и сертификатов подтверждают статус и профессионализм наших сотрудников.</p>
+                        </div>
+                        <div class="included col-sm-5 no-pad">
+                            <h4>В стоимость включено:</h4>
+                            <ul class="base-txt-color">
+                                <li>Трансфер</li>
+                                <li>Бронирование авиабилетов</li>
+                                <li>Горящие туры</li>
+                                <li>Оформление загран. паспорта</li>
+                                <li>Создай сам себе путешествие</li>
+                                <li>Бронирование авиабилетов</li>
+                                <li>Горящие туры</li>
+                                <li>Оформление виз</li>
+                            </ul>
+                        </div>
+                        <div class="dop-cost col-sm-6">
+                            <h4>Дополнительно оплачивается:</h4>
+                            <ul class="base-txt-color">
+                                <li>Трансфер</li>
+                                <li>Бронирование авиабилетов</li>
+                                <li>Горящие туры</li>
+                                <li>Оформление загран. паспорта</li>
+                                <li>Создай сам себе путешествие</li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="transport">
+                        <h4>Транспорт:</h4>
+                        <table class="hidden-xs">
+                            <thead>
+                                <tr class="base-second-bg-color">
+                                    <th class="col-sm-6">Направление</th>
+                                    <th>Отбытие</th>
+                                    <th>Прибытие</th>
+                                    <th>В пути</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Киев - Хургада </td>
+                                    <td>12.11  /  18:00</td>
+                                    <td>12.11  /  23:50</td>
+                                    <td>5:50 часов</td>
+                                </tr>
+                                <tr>
+                                    <td>Киев - Шарм-аль-Шейх</td>
+                                    <td>12.11  /  18:00</td>
+                                    <td>12.11  /  23:50</td>
+                                    <td>5:50 часов</td>
+                                </tr>
+                                <tr>
+                                    <td>Киев - Хургада</td>
+                                    <td>12.11  /  18:00</td>
+                                    <td>12.11  /  23:50</td>
+                                    <td>5:50 часов</td>
+                                </tr>
+                                <tr>
+                                    <td>Киев - Шарм-аль-Шейх</td>
+                                    <td>12.11  /  18:00</td>
+                                    <td>12.11  /  23:50</td>
+                                    <td>5:50 часов</td>
+                                </tr>
+                                <tr>
+                                    <td>Киев - Хургада</td>
+                                    <td>12.11  /  18:00</td>
+                                    <td>12.11  /  23:50</td>
+                                    <td>5:50 часов</td>
+                                </tr>
+                                <tr>
+                                    <td>Киев - Шарм-аль-Шейх</td>
+                                    <td>12.11  /  18:00</td>
+                                    <td>12.11  /  23:50</td>
+                                    <td>5:50 часов</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="transp-content hidden-sm hidden-md hidden-lg">
+                            <div class="item">
+                                <p class="lbl">Киев - Хургада</p>
+                                <table>
+                                    <tr class="base-txt-color">
+                                        <td>Отбытие:</td>
+                                        <td>Прибытие:</td>
+                                        <td>В пути:</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12.11  /  18:00</td>
+                                        <td>12.11  /  23:50</td>
+                                        <td>5:50 часов</td>
+                                    </tr>                                    
+                                </table>
+                            </div>
+                            <div class="item">
+                                <p class="lbl">Киев - Коломбо (Шри-Ланка)</p>
+                                <table>
+                                    <tr class="base-txt-color">
+                                        <td>Отбытие:</td>
+                                        <td>Прибытие:</td>
+                                        <td>В пути:</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12.11  /  18:00</td>
+                                        <td>12.11  /  23:50</td>
+                                        <td>5:50 часов</td>
+                                    </tr>                                    
+                                </table>
+                            </div>
+                            <div class="item">
+                                <p class="lbl">Киев - Хургада</p>
+                                <table>
+                                    <tr class="base-txt-color">
+                                        <td>Отбытие:</td>
+                                        <td>Прибытие:</td>
+                                        <td>В пути:</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12.11  /  18:00</td>
+                                        <td>12.11  /  23:50</td>
+                                        <td>5:50 часов</td>
+                                    </tr>                                    
+                                </table>
+                            </div>
+                            <div class="item">
+                                <p class="lbl">Киев - Коломбо (Шри-Ланка)</p>
+                                <table>
+                                    <tr class="base-txt-color">
+                                        <td>Отбытие:</td>
+                                        <td>Прибытие:</td>
+                                        <td>В пути:</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12.11  /  18:00</td>
+                                        <td>12.11  /  23:50</td>
+                                        <td>5:50 часов</td>
+                                    </tr>                                    
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="programm-tour">
+                        <h4>Программа тура:</h4>
+                        <div class="head hidden-xs">
+                            <label class=" text-center">День</label>
+                            <label class="0 no-pad">Описание</label>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="content">
+                            <div class="day-item">
+                                <div class="col col-sm-2 no-pad text-center">
+                                    <div class="n-day base-bg-color">1</div>
+                                    <div class="title hidden-sm hidden-md hidden-lg">День</div>
+                                    <div class="date"><span>Суббота</span><span>12.09</span></div>
+                                    <div class="v-bord hidden-xs"><div class="base-second-bg-color"></div></div>
+                                </div>
+                                <div class="col col-sm-10 text">
+                                    <p>Все предлагаемые нами туристические продукты рассчитаны на потребителей с различным уровнем дохода - от самых экономичных предложений до VIP-обслуживания. Индивидуальный подход к каждому клиенту - отличительная черта нашей компании. Вы всегда будете ощущать особое внимание со стороны сотрудников Персей Тревел, потому что каждый клиент для нас - это VIP клиент.</p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="day-item">
+                                <div class="col col-sm-2 no-pad text-center">
+                                    <div class="n-day base-bg-color">2</div>
+                                    <div class="title hidden-sm hidden-md hidden-lg">День</div>
+                                    <div class="date"><span>Воскресенье</span><span>12.09</span></div>
+                                    <div class="v-bord hidden-xs"><div class="base-second-bg-color"></div></div>
+                                </div>
+                                <div class="col col-sm-10 text">
+                                    <p>Если же Вы не любитель спонтанного отдыха и привыкли заблаговременно выбирать место предстоящего отпуска, наши опытные менеджеры помогут Вам не ошибиться с лучшим выбором.</p>
+                                    <p>Вам просто нужно сообщить все желаемые условия, а сотрудники компании Персей Тревел предложат самые лучшие варианты Вашего будущего незабываемого отдыха. Все предлагаемые нами туристические продукты рассчитаны на потребителей с различным уровнем дохода - от самых экономичных предложений до VIP-обслуживания. Индивидуальный подход к каждому клиенту - отличительная черта нашей компании.</p>
+                                    <p>Вы всегда будете ощущать особое внимание со стороны сотрудников Персей Тревел, потому что каждый клиент для нас - это VIP клиент. Если же Вы не любитель спонтанного отдыха и привыкли заблаговременно выбирать место предстоящего отпуска, наши опытные менеджеры помогут Вам не</p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="day-item">
+                                <div class="col col-sm-2 no-pad text-center">
+                                    <div class="n-day base-bg-color">3</div>
+                                    <div class="title hidden-sm hidden-md hidden-lg">День</div>
+                                    <div class="date"><span>Понедельник</span><span>12.09</span></div>
+                                    <div class="v-bord hidden-xs"><div class="base-second-bg-color"></div></div>
+                                </div>
+                                <div class="col col-sm-10 text">
+                                    <p>Вам просто нужно сообщить все желаемые условия, а сотрудники компании Персей Тревел предложат самые лучшие варианты Вашего будущего незабываемого отдыха. Все предлагаемые нами туристические продукты рассчитаны на потребителей с различным уровнем дохода - от самых экономичных</p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+                <div class="clearfix"></div>
+            </div>
+            <div id="quick-ask" class="order-tour text-center">
+                <div class="container">
+                    <h3 class="text-center">Заказать сейчас</h3>
+                    <div class="descr text-center">Чтобы заказать тур свяжитесь с нашим менеджером по телефону <span class="bold">+7(495)215-52-30*</span> или воспользуйтесь формой заказа.</div>
+                    <form class="text-left" action="" method="post">
+                        <div class="col-sm-4 name">
+                            <label>Ваше имя:</label>
+                            <input type="text" name="name" value="" />
+                        </div>
+                        <div class="col-sm-4 phone">
+                            <label>Телефон**:</label>
+                            <input type="text" name="phone" value="" />
+                            <div class="desc">например +74952222222</div>
+                        </div>
+                        <div class="col-sm-4 mail">
+                            <span class="or">или</span>
+                            <label>Email:</label>
+                            <input type="text" name="mail" value="" />
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="bottom-form">
+                            <div class="col-sm-5 fn">
+                                <p>* Номер телефона берется с мастера установки</p>
+                                <p>** Должен быть заполнен хотя бы одно из полей</p>
+                            </div>
+                            <div class="col-sm-3 action">
+                                <button class="base-second-bg-color" type="submit">Отправить</button>
+                            </div>
+                            <div class="col-sm-4 similar no-pad">
+                                <input type="checkbox" value="" id="similar_offers" />
+                                <label for="similar_offers">Подобрать похожие предложения</label>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>                 
+        </div><!--/main-->
+      </div><!--/content-wrapper-->
+      <footer id="foot" class="base-bg-color">
+        <div class="container">
+            <div class="footer-center">
+                <div class=" feedback">
+                    <form class="base-second-bg-color" action="" method="">
+                      <div class="pull-right inp  base-second-bg-color">
+                        <input type="text" name="" placeholder="ваш email" />
+                        <button type="submit"><span class="subscr-icon"></span></button>
+                      </div>
+                      <div class="pull-left desc">
+                        <span class="check-icon"></span>
+                        <label>Подписаться на наши обновления</label>
+                      </div>
+                      <div class="clearfix"></div>
+                    </form>
+                </div>
+                <div class=" contacts">
+                    <div class=" col-sm-3">
+                        <label>Адрес:</label>
+                        <div>г.Киев, Украина ул. Ивана Франко, 40-Б</div>
+                    </div>
+                    <div class=" col-sm-3">
+                        <label>Телефоны:</label>
+                        <div>
+                            <p>050 445 25 45</p>
+                            <p>(044) 238 60 20</p>
+                            <p>238 62 31</p>
+                        </div>
+                    </div>
+                    <div class=" col-sm-3 hidden-xs">
+                        <label>E-mail:</label>
+                        <div>
+                            <p><a href="mailto:sale@tursite.com.ua">sale@tursite.com.ua</a></p>
+                            <p><a href="mailto:market@tursite.com.ua">market@tursite.com.ua</a></p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="footer-bottom">
+              <div class=" col1">
+                <div class="social">
+       	            <span>Мы в сети:</span>
+                    <ul class="social-footer">
+                        <li><a href="#"><i class="facebook base-second-bg-color"></i></a></li>
+                        <li><a href="#"><i class="twitter base-second-bg-color"></i></a></li>
+                        <li><a href="#"><i class="google base-second-bg-color"></i></a></li>
+                    </ul>
+                </div>
+                <div class="copyright">©  ТурСайт, 2016 Все права защищены.</div>
+                <a href="#" class="rules">Правила использования</a>
+              </div>
+              <div class=" col2">
+                    <div class="production">Разработка сайтов на Битриксе: <a href="http://webmediaform.com.ua"><img alt="webmediaform.com.ua" title="webmediaform.com.ua" src="images/webmediaform.png" /></a></div>
+              </div>
+              <div class="clearfix"></div>
+           </div>
+        </div>
+      </footer>
+      <a class="back-to-top base-second-bg-color" href="#"><span class="fa fa-arrow-up"></span></a>
+	<!-- script references -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script>
+            var monthNamesArr=['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь', 'Ноябрь', 'Декабрь' ];
+            var dayNamesMinArr=['','','','','','',''];
+        </script> 
+        <script src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.js"></script>
+        <script src="js/OwlCarousel2Thumbs.min.js"></script>
+        <script src="js/salvattore.min.js"></script>
+        <script src="js/chosen.jquery.js"></script>
+		<script src="js/scripts-amp.js"></script>
+        <div class="clearfix"></div>
+	</body>
+</html>
