@@ -127,6 +127,19 @@ $(document).ready(function(){
         $('.main-video-container').fadeOut(500);       
     });
     
+
+    $(document).keyup(function(e){
+        if(e.which==27){
+        $('.top-video-container').fadeIn(500);
+        $('.main-video-container').fadeOut(500);   
+        setTimeout(function(){
+         video.get(0).currentTime=0;
+         video.get(0).pause();
+        }, 1100);
+            
+        }
+    });
+
     $('.call-back').click(function(){
        $('#call-back-popup').fadeIn();
        $('#call-back-popup-mask').fadeIn();
