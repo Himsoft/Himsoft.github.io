@@ -191,7 +191,7 @@ video#top-video{display: none;}
 .project-item .caption-item{position: relative;display: inline-block;vertical-align: middle;width: 100%;z-index: 1;padding-left: 15px;padding-right: 15px;}
 .project-item .image-item{vertical-align: middle;display: inline-block;width: 100%;}
 .project-item .image-item img{width: 100%;}
-.project-item .caption-item h1.big-title{margin-top: 13px;margin-bottom: 0;}
+.project-item .caption-item h1.big-title{margin-top: 13px;margin-bottom: 25px;}
 .project-item .caption-item h4{margin: 8px 0px 0px;font-size: 29px;}
 .project-item .caption-item .text{margin-top: 5px;width: auto;padding-right: 10px;}
 .project-item .caption-item .btn,.project-item .caption-item .btn:hover,.project-item .caption-item .btn:focus{margin-top: 26px;float: none;}
