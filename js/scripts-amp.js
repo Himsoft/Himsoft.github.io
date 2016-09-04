@@ -113,8 +113,8 @@ $(document).ready(function(){
         var video = $("#main-video");
 
     $('.show-video').click(function(){
-        $('.top-video-container').fadeOut(500);
-        $('.main-video-container').fadeIn(500);
+        $('.top-video-container').hide();
+        $('.main-video-container').show();
 
         setTimeout(function(){
          video.get(0).play();
