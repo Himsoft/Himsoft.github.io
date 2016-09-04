@@ -56,7 +56,7 @@ a,a:hover,a:focus{color: #39363f;}
 .call-back > span{border-bottom: 1px dotted #daa7a9;padding-bottom: 6px;}
 .call-block .phone{font-size: 16px;letter-spacing: 1px;display: none;}
 .header {background-color:#ffffff;border-width:0;}
-.header .navbar-collapse {background-color: rgba(0, 0, 0, 0.8);position: absolute;top: 0;width: 100%;left: 0;text-align: center;color: #ffffff;z-index: 1;}
+.header .navbar-collapse {background-color: rgba(0, 0, 0, 0.8);position: absolute;top: 0;width: 100%;left: 0;text-align: center;color: #ffffff;z-index: 99;}
 .navbar-collapse .navbar-toggle{top: 16px;left: 17px;margin: 0;}
 .navbar-collapse .navbar-toggle .icon-bar{background: #ffffff!important;height: 3px;bottom: 0;position: absolute;transform: rotate(45deg);left: 0;top: 50%;margin: 0;}
 .navbar-collapse .navbar-toggle .icon-bar+.icon-bar{transform: rotate(-45deg);}
