@@ -334,8 +334,8 @@ video#top-video{display: none;}
 /*==============================p-destinations-block==================================================*/
 .p-destinations-block{padding-bottom: 96px;}
 .p-destinations-block h2{font-size: 20px;margin-bottom: 30px;}
-.destinations-item.project-item:not(:first-of-type){margin-top: 80px;}
-.destinations-item.project-item .caption-item .btn, .destinations-item.project-item .caption-item .btn:hover, .destinations-item.project-item .caption-item .btn:focus{margin-top: 52px;}
+.destinations-item.project-item:not(:first-of-type){margin-top: 20px;}
+.destinations-item.project-item .caption-item .btn, .destinations-item.project-item .caption-item .btn:hover, .destinations-item.project-item .caption-item .btn:focus{margin-top: 20px;}
 /*==============================end-p-destinations-block==================================================*/
 /*==============================part-world-afrika.dream-block==================================================*/
 .part-world-afrika.dream-block{background: url('../images/afrika_dream_bg.jpg') center center no-repeat;height: 403px;background-size: auto 100%;color: #39363f;position: relative;}
