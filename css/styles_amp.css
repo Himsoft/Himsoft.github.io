@@ -102,7 +102,7 @@ a,a:hover,a:focus{color: #39363f;}
 /*====================================footer=========================================================*/
 footer{background: url('../images/footer_bg.jpg') bottom center no-repeat;}
 footer h1,.caption-item h1.big-title{margin-top: 0;line-height: 40px;}
-footer h1>span,.caption-item h1.big-title>span{font: italic 59px 'Aizel-Accent',arial,sans-serif;color: #f0b5b8;line-height: 20px;}
+footer h1>span,.caption-item h1.big-title>span{font: italic 59px 'Aizel-Accent',arial,sans-serif;color: #f0b5b8;line-height: 20px!important;}
 footer h3{font: italic 22px 'Aizel-Accent',arial,sans-serif;color: #39363f;margin: 0 auto;padding: 0 25px;max-width: 290px;}
 .copyright,.production,.production a{font: 300 14px 'HelveticaNeueCyr',arial,sans-serif;color: #ffffff;}
 .social-footer{text-align: center;padding: 0;margin: 0;margin-bottom: -4px;}
