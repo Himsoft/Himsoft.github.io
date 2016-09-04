@@ -110,7 +110,7 @@ a,a:hover,a:focus{color: #39363f;}
 
 /*====================================footer=========================================================*/
 footer{background: url('../images/footer_bg.jpg') bottom center no-repeat;}
-footer h1,.caption-item h1.big-title{margin-top: 0;line-height: 85px;}
+footer h1,.caption-item h1.big-title{margin-top: 0;line-height: 40px;}
 footer h1>span,.caption-item h1.big-title>span{font: italic 59px 'Aizel-Accent',arial,sans-serif;color: #f0b5b8;}
 footer h3{font: italic 22px 'Aizel-Accent',arial,sans-serif;color: #39363f;margin: 0 auto;padding: 0 25px;max-width: 290px;}
 .copyright,.production,.production a{font: 300 14px 'HelveticaNeueCyr',arial,sans-serif;color: #ffffff;}
@@ -156,7 +156,7 @@ video#top-video{display: none;}
 .why-we-item .caption-item.righted h1{margin-top: -12px;}
 .caption-item h1.big-title{margin-top: 5px;}
 .caption-item h1{margin-top: 9px;}
-.caption-item h1>span{font: italic 100px 'Aizel-Accent',arial,sans-serif;color: #f0b5b8;margin-top: -5px;line-height: 50px;}
+.caption-item h1>span{font: italic 100px 'Aizel-Accent',arial,sans-serif;color: #f0b5b8;margin-top: -5px;line-height: 20px;}
 .caption-item h4{font: normal 24px 'Aizel-Accent',arial,sans-serif;color: #39363f;padding-bottom: 6px;}
 .caption-item .text{font: 300 12px 'HelveticaNeueCyr',arial,sans-serif;color: #878392;margin-top: 10px;line-height: 18px;height: 70px;overflow: hidden;padding-right: 25px;}
 .caption-item .btn,.caption-item .btn:hover,.caption-item .btn:focus{font: 800 10.34px 'HelveticaNeueCyr',arial,sans-serif;color: #39363f!important;display: inline-block;border: 3px solid #8ecea5;background: none!important;margin-top: 25px;padding: 10px 26px 10px 28px;float: right;}
