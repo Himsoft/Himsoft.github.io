@@ -211,6 +211,7 @@ video#top-video{display: none;}
 /*========================================end-header=================================================*/
 /*==============================top-block==================================================*/
 .top-block{background: url('../images/about_top_bg.jpg') 65% bottom no-repeat;height: 496px;background-size: auto 70%;}
+.top-block:before {content: "";background: rgba(0, 0, 0, 0.15);height: 100%;width: 100%;position: absolute;top: 0;left: 0;}
 .top-block h1{font: normal 42px 'Aizel-Accent',arial,sans-serif;margin-top: 8px;margin-bottom: 14px;}
 .top-block h1:after{content: "";border: 2px solid #f0b5b8;width: 60px;display: block;margin: 5px auto 0px auto;border-radius: 5px;}
 .top-block .text{font: 300 12px HelveticaNeueCyr,arial,sans-serif;}
@@ -273,7 +274,7 @@ video#top-video{display: none;}
 /*==================================contacts-page===================================================*/
 /*==============================contacts.top-block==================================================*/
 .contacts.top-block{background: url('../images/contacts_top_bg.jpg') 86% bottom no-repeat;height: 400px;background-size: cover;position: relative;}
-.contacts.top-block:before{content: "";background: rgba(255, 255, 255, 0.65);height: 100%;width: 100%;position: absolute;top: 0;left: 0;}
+.contacts.top-block:before{content: "";/*background: rgba(255, 255, 255, 0.65);*/height: 100%;width: 100%;position: absolute;top: 0;left: 0;}
 .contacts.top-block>.container{position: relative;}
 .contacts.top-block h1{margin-top: 60px;margin-bottom: 29px;font-size: 32px;}
 .contacts.top-block h1::after {width: 110px;margin-top: 12px;}
@@ -301,7 +302,7 @@ video#top-video{display: none;}
 /*==================================part-world-page===================================================*/
 /*==============================part-world.top-block==================================================*/
 .part-world.top-block{background: url('../images/part_world_top_bg.jpg') 19% bottom no-repeat;height: 310px;background-size: cover;position: relative;}
-.part-world.top-block:before{content: "";background: rgba(255, 255, 255, 0.65);height: 100%;width: 100%;position: absolute;top: 0;left: 0;}
+.part-world.top-block:before{content: "";/*background: rgba(255, 255, 255, 0.65);*/height: 100%;width: 100%;position: absolute;top: 0;left: 0;}
 .part-world.top-block>.container{position: relative;}
 .part-world.top-block .text {font: italic 24px 'Aizel-Accent',arial,sans-serif;}
 .part-world.top-block .text p {margin-bottom: 0px;}
@@ -325,7 +326,7 @@ video#top-video{display: none;}
 /*==================================part-world-afrika-page===================================================*/
 /*==============================part-world-afrika.top-block==================================================*/
 .part-world-afrika.top-block{background: url('../images/africa_top_bg.jpg') center bottom no-repeat;height: 305px;background-size: cover;position: relative;}
-.part-world-afrika.top-block:before{content: "";background: rgba(255, 255, 255, 0.65);height: 100%;width: 100%;position: absolute;top: 0;left: 0;}
+.part-world-afrika.top-block:before{content: "";/*background: rgba(255, 255, 255, 0.65);*/height: 100%;width: 100%;position: absolute;top: 0;left: 0;}
 .part-world-afrika.top-block>.container{position: relative;}
 .part-world-afrika.top-block h1:after{border-color: #c1cbe2;}
 .part-world-afrika.top-block .text {font: italic 24px 'Aizel-Accent',arial,sans-serif;}
@@ -366,7 +367,7 @@ video#top-video{display: none;}
 /*==================================country-page===================================================*/
 /*==============================country.top-block==================================================*/
 .country.top-block{background: url('../images/country_top_bg.jpg') 19% bottom no-repeat;height: 310px;background-size: cover;position: relative;}
-.country.top-block:before{content: "";background: rgba(255, 255, 255, 0.65);height: 100%;width: 100%;position: absolute;top: 0;left: 0;}
+.country.top-block:before{content: "";/*background: rgba(255, 255, 255, 0.65);*/height: 100%;width: 100%;position: absolute;top: 0;left: 0;}
 .country.top-block>.container{position: relative;}
 .country.top-block .text {font: italic 24px 'Aizel-Accent',arial,sans-serif;}
 .country.top-block .text p {margin-bottom: 0px;}
