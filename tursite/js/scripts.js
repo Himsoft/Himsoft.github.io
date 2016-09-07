@@ -153,21 +153,23 @@ $(document).ready(function(){
         if($('.map-contacts-block .contacts-feedback-block:visible').length) $('.map-contacts-block .contacts-feedback-block,.map-contacts-block .mask').fadeOut(500);
         else $('.map-contacts-block .contacts-feedback-block,.map-contacts-block .mask').fadeIn(500);
     });
-    $('#search-tur select,.head-res select,.prise-blk select,.chos').chosen({disable_search_threshold: 10});
-    $( "#datepicker1").datepicker({
+    $('#search-tur select,.head-res select,.prise-blk select,.chos').chosen({disable_search_threshold: 15});
+    $( "#datepicker1,#ord_datepicker1").datepicker({
         minDate: 0,
         changeMonth: true,
         changeYear: true,
         onClose: function( selectedDate ) {
             $( "#datepicker2" ).datepicker( "option", "minDate", selectedDate||0 );
+            $( "#ord_datepicker2" ).datepicker( "option", "minDate", selectedDate||0 );
         }
     });
-    $( "#datepicker2").datepicker({
+    $( "#datepicker2,#ord_datepicker2").datepicker({
         minDate: 0,
         changeMonth: true,
         changeYear: true,
         onClose: function( selectedDate ) {
             $( "#datepicker1" ).datepicker( "option", "maxDate", selectedDate );
+            $( "#ord_datepicker1" ).datepicker( "option", "maxDate", selectedDate );
         }
     });
     $('.resttypes .show-moore').click(function(){
@@ -211,7 +213,91 @@ $(document).ready(function(){
 			top = $(id).offset().top;
 		$('body,html').animate({scrollTop: (top)}, 800);
 	});
-
+    $('a.add-comment').click(function(e){
+        e.preventDefault();
+        $('.comments-wrapper').fadeOut(800);
+        $('.add-comment-wrapper').fadeIn(800);
+    });
+    var wrapper = $( ".file_upload" ),
+            inp = wrapper.find( "input" ),
+            btn = wrapper.find( ".button" ),
+            lbl = wrapper.find( "mark" );
+    
+        wrapper.click(function(){
+            lbl.text( '' );
+        });
+        // Crutches for the :focus style:
+        inp.focus(function(){
+            wrapper.addClass( "focus" );
+        }).blur(function(){
+            wrapper.removeClass( "focus" );
+        });
+    
+        var file_api = ( window.File && window.FileReader && window.FileList && window.Blob ) ? true : false;
+    
+        inp.change(function(){
+            var file_name;
+            if( file_api && inp[ 0 ].files[ 0 ] )
+                file_name = inp[ 0 ].files[ 0 ].name;
+            else
+                file_name = inp.val().replace( "C:\\fakepath\\", '' );
+    
+            if( ! file_name.length )
+                return;
+            lbl.text( file_name );
+        }).change();
+        
+        $('.ratings-stars.ev .rating-star').hover(
+            function(){
+                var index=$(this).index();
+                $(this).parent().find('.rating-star').removeClass('hov1 hov2 hov3 base-bg-color base-second-bg-color');
+                if(index<2){
+                     $(this).parent().find('.rating-star').each(function(){if($(this).index()<=index) $(this).addClass('hov1 base-second-bg-color')});
+                }
+                if(index==2){
+                     $(this).parent().find('.rating-star').each(function(){if($(this).index()<=index) $(this).addClass('hov2')});
+                }
+                if(index>2){
+                     $(this).parent().find('.rating-star').each(function(){if($(this).index()<=index) $(this).addClass('hov3 base-bg-color')});
+                }
+            },
+            function(){
+                $(this).parent().find('.rating-star').removeClass('hov1 hov2 hov3 base-bg-color base-second-bg-color');
+                $(this).parent().find('.rating-star.sel1').addClass('base-second-bg-color');
+                $(this).parent().find('.rating-star.sel3').addClass('base-bg-color');
+            }
+        );
+        $('.ratings-stars.ev .rating-star').click(function(){
+            var index=$(this).index();
+            $(this).parent().find('.rating-star').removeClass('sel1 sel2 sel3 hov1 hov2 hov3 base-bg-color base-second-bg-color');
+            if(index<2){
+                $(this).parent().find('.rating-star').each(function(){if($(this).index()<=index) $(this).addClass('sel1 base-second-bg-color')});
+            }
+            if(index==2){
+                $(this).parent().find('.rating-star').each(function(){if($(this).index()<=index) $(this).addClass('sel2')});
+            }
+            if(index>2){
+                $(this).parent().find('.rating-star').each(function(){if($(this).index()<=index) $(this).addClass('sel3 base-bg-color')});
+            }
+            $(this).parent().parent().find('input[type="hidden"]').val(index+1);
+        });
+        
+        $('.map-block .view-map .show-map').click(function(e){
+            e.preventDefault();
+            $('.map-block .view-map .show-map,.map-block .view-map .dimmer').fadeOut(800);
+            $('.map-block .view-map .hide-map').fadeIn(800);
+        });
+        
+        $('.map-block .view-map .hide-map').click(function(e){
+            e.preventDefault();
+            $('.map-block .view-map .hide-map').fadeOut(800);
+            $('.map-block .view-map .show-map,.map-block .view-map .dimmer').fadeIn(800);
+        });
+        
+    $( window ).resize(function(){
+        $( ".file_upload input" ).triggerHandler( "change" );
+    });
+    
     //permutation();
     //sorted();        
     $('body').on('click','.slider-popup .close',function(){$('body').find('.slider-popup').remove();});

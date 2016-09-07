@@ -1,0 +1,510 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Tursite</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="/countries-in.html" rel="canonical" />
+		<link href="css/jquery-ui.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/owl.carousel.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/chosen.css">
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles-amp.css" rel="stylesheet">
+	</head>
+	<body>
+      <div id="content-wrapper"  class="front-page">
+        <div class="mob-header header hidden-sm hidden-md hidden-lg">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="call text-center">
+                <a href="tel:89007070">Позвонить</a>
+            </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse1">
+                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse1"><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                       <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
+                          <li><a href="#">Поиск туров</a></li>
+                          <li><a href="#">Отели</a></li>
+                          <li><a href="#">Страны</a></li>
+                          <li><a href="#">Авиабилеты</a></li>
+                          <li><a href="#">Виды отдыха</a></li>
+                       </ul>
+                    </div>
+        </div>
+        <nav class="navbar header base-bg-color">
+                <div class="container">
+                  <div class="row">
+                    <div class="navbar-header">
+                      <div class=" col-sm-5 no-pad">
+                          <ul class="nav nav-menu">
+                            <li><a href="#">Новости</a></li>
+           					<li><a href="#">О нас</a></li>
+        					<li><a href="#">Агентам</a></li>
+        					<li><a href="#">Контакты</a></li>
+                          </ul>                      
+    
+                          <div class="call-block hidden-xs">
+                              <div class="phone">8 900 70 70</div>
+                              <a class="call-back" href="#"><span>Обратный звонок</span></a>
+                              <div id="call-back-popup">
+                                <a class="fa fa-close close"></a>
+                                <form action="/" method="POST">
+                                    <div class="head-form text-center">
+                                        <h2 class="upper">Заказать звонок</h2>
+                                        <div>Заполните форму и мы обязательно Вам перезвоним</div>
+                                    </div>
+                                    <input type="text" name="name" placeholder="Ваше имя" />
+                                    <input type="text" name="phone" placeholder="Телефон" />
+                                    <input class="base-bg-color" type="submit" value="Отправить" />
+                                </form>
+                              </div>
+                              <div id="call-back-popup-mask"></div>
+                          </div>
+                      </div>
+                      <div class=" col-sm-3 text-center">
+                        <a href="/" class="navbar-brand"><img alt="img" src="images/logo.png" /><span>ТурСайт</span></a>
+                      </div>
+                      <div class=" col-sm-4 text-center">
+                          <div class="search-form">
+                            <form action="/" method="get">
+                                <input type="text" name="q" placeholder="Поиск..." value=""/>
+                                <button name="s" type="submit"><span class="fa fa-search"></span></button>
+                            </form>
+                          </div>
+                      </div>
+                      
+                      
+
+                    </div>
+                  </div>  
+                </div>
+                <div id="subnav" class="hidden-xs">
+                  <div class="container">
+                    <div class="row">
+                        <ul class="nav nav-menu sub-menu">
+                          <li><a href="#">Поиск туров</a></li>
+                          <li><a href="#">Отели</a></li>
+                          <li><a href="#">Страны</a></li>
+                          <li><a href="#">Авиабилеты</a></li>
+                          <li><a href="#">Виды отдыха</a></li>
+                         </ul>
+                    </div>
+                  </div>
+             </div>
+        </nav>
+	<div id="search-tur" class="countries base-second-bg-color">
+        <div class="container">
+            <button class="abbr_ext base-second-bg-color"><span class="down"></span><span class="up"></span></button>	
+            <form class="abbreviated" action="/" id="search-tur-form">
+        			<h3 class="abbr ">Найти тур</h3>
+        			<h3 class="ext">Расширенный поиск</h3>
+                    <div class=" col-sm-6 country">
+                     <div class=" col-sm-6 no-pad">
+                        <label>Вылет из</label>
+    				    <select class="place-icon" name="city_from" id="city-from-select">
+                            <option value="">(все)</option>
+                            <option value="35627" >Днепропетровск</option>
+                            <option value="35620" >Киев</option>
+                        </select>
+                     </div>
+                     <div class=" col-sm-6 no-pad">
+                        <label>Страна</label>
+                        <select class="place-icon" name="country" id="countires-select">
+                            <option value="">(все)</option>
+                        </select>
+       					<label class="ext">Курорт</label>
+       					<select class="place-icon ext" name="resort" id="resort-select" disabled="disabled">
+                            <option>Выберите страну...</option>
+                        </select>
+                     </div>   
+                    </div>
+        			<div class=" col-sm-6 ext type">
+                        <label>Тип питания</label>
+    				    <select class="no-s"  name="food" id="food-select">
+                            <option value="">(все)</option>
+                            <option value="35366" >AI</option>
+                            <option value="35368" >BB</option>
+                            <option value="35367" >HB</option>
+                            <option value="35365" >RO</option>
+                        </select>
+                        <label>Тип номера</label>
+    				    <select class="no-s" name="room"  id="room-select">
+                            <option value="">(все)</option>
+                            <option value="35597" >Deluxe room</option>
+                            <option value="35596" >Single</option>
+                            <option value="35595" >Standard room</option>
+                        </select>
+                        <label>Вид отдыха</label>
+                        <select class="no-s" name="activity"  id="activity-select">
+                            <option value="">(все)</option>
+                            <option value="35754" >SPA & welness</option>
+                            <option value="35630" >Автобусные туры</option>
+                            <option value="35675" >Альпинизм</option>
+                            <option value="35672" >Дайвинг</option>
+                            <option value="35755" >Молодежный отдых</option>
+                            <option value="35629" >Морские путешествия</option>
+                            <option value="35676" >Пешие переходы</option>
+                            <option value="35757" >Пляжный отдых</option>
+                            <option value="35674" >Рафтинг</option>
+                            <option value="35673" >Сафари</option>
+                            <option value="35756" >Семейный отдых</option>
+                            <option value="35758" >Шоппинг</option>
+                            <option value="35628" >Экзотические страны</option>
+                            <option value="35631" >Экскурсии</option>
+                            <option value="35632" >Экстрим туры</option>    
+                        </select>
+                    </div>
+                    <div class="per-cost   col-sm-12">
+                        <div class="bl  col-sm-6 no-pad">
+                            <label class="block">Период заезда</label>
+                			<div class="perriod for  col-sm-6 no-pad">
+                                    <input class="time_fild" type="text" readonly="readonly" name="date_start" id="datepicker1" value=""/>
+               					    <span></span>
+           					</div>
+           					<div class="perriod  col-sm-6 no-pad">
+                                    <input class="time_fild" type="text" readonly="readonly" name="date_end" id="datepicker2" value=""/>
+           					        <span></span>
+           					</div>			
+                        </div>	
+                        <div class="bl  col-sm-6 no-pad">	
+                			<label class="block">Стоимость</label> 
+           					<div class="cost  col-sm-6 no-pad">
+        	                   <label>от</label>
+        			           <input id="minCost" type="text" name="price_from" value=""/>
+                               <span>$</span>
+        	                </div>
+                			<div class="cost  col-sm-6 no-pad">
+                               <label>до</label>
+                               <input id="maxCost" type="text" name="price_to" value=""/>
+                               <span>$</span>
+                			</div>
+                        </div>
+                    </div>
+                    <div class=" col-sm-6 hot-tur ext">
+                        <span class="fa fa-chevron-right"></span>
+  						<input id="is-hot-tur" type="checkbox" name="ishot" value="Y"/>
+  						<label for="is-hot-tur">Только горящие туры</label>	
+        			</div>
+        			<div class="action  col-sm-12">
+                        <button class="base-bg-color" type="submit">Найти<span class="fa fa-search"></span></button>
+        			</div>
+                    <div class="clearfix"></div>
+            </form>
+        </div>
+	</div>       
+        <!--main-->
+        <div id="main" class="countries-in">
+            <div class="breadcrump-bl">
+                <div class="container no-pad">
+                    <ul class="breadcrump">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Поиск туров</a></li>
+                        <li><span class="base-txt-color">Незабываемый отдых в Тайланде.</span></li>
+                    </ul>
+                </div>
+            </div>       
+
+            <div class="tour kurort countries-in top-block">
+                <div class="container">
+                    <div class="dimmer base-bg-color"></div>
+                    <div class="btn-galery open base-second-bg-color">
+                        <span class="count">24</span>
+                        <span class="icon"></span>
+                        <div class="descr">Фото</div>
+                    </div>
+                    <div class="col-sm-7 top-content">
+                        <h1>Тайланд</h1>
+                        <div class="text">
+                            <p>Таиланд (или как нередко говорят у нас, Тайланд или даже просто Тай) не случайно входит в число стран, наиболее популярных для проведения отпуска. Тайланд в значительной степени уникален по своему географическому расположению: берега Тайланда омываются двумя морями разных океанов: Южно-Китайским Тихого океана и Андаманским морем Индийского океана.</p> 
+                        </div>
+                        <div class="action">
+                            <a class="btn btn-plus base-second-bg-color" href="#">Хочу поехать!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4  details-tur">
+                        <div class="head base-second-bg-color">
+                            <h4>О стране:</h4>
+                        </div>
+                        <div class="valuta">
+                            <label>Валюта:</label>
+                            <div class="capt">
+                                <select class="chos">
+                                    <option>1$</option>
+                                    <option>1EUR</option>
+                                </select>
+                                <span class="eq">≈</span>
+                                <span class="val base-txt-color">33 Бат</span>
+                            </div>
+                        </div>
+                        <div class="timezone">
+                            <div>
+                                <label>Время:</label>
+                                <span class="tmzon">Часовой пояс:<span class="bold base-txt-color">G+10</span></span>
+                            </div>
+                            <div class="time_my col-xs-6">
+                                <div class="analog"></div>
+                                <div class="clock">Киев<span class="base-txt-color">12:30</span></div>
+                            </div>
+                            <div class="time_kurort col-xs-6">
+                                <div class="analog"></div>
+                                <div class="clock">Бангкок<span class="base-txt-color">22:30</span></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="sinopt">
+                            <div class="col-xs-6 item no-pad">
+                                <label>Погода:</label>
+                                <div class="capt">+27 °</div>
+                            </div>
+                            <div class="col-xs-6 item no-pad">
+                                <span>Ясно, Безветренно</span>
+                                <div class="sinopt-icon"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+    			<div class="galery">
+    				<div class="container">
+                        <div class="controls-galery">
+                            <div class="bottom">
+                                <div class="up"></div>
+                                <div class="down"></div>
+                            </div>
+                        </div>
+                        <div class="scroller">
+                            <div class="content masonry" data-columns>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery1.jpg" src="images/galery1.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery2.jpg" src="images/galery2.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery3.jpg" src="images/galery3.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery4.jpg" src="images/galery4.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery5.jpg" src="images/galery5.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery6.jpg" src="images/galery6.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery7.jpg" src="images/galery7.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery8.jpg" src="images/galery8.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery9.jpg" src="images/galery9.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery6.jpg" src="images/galery6.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery4.jpg" src="images/galery4.jpg" alt="img"/>
+            				    </div>
+            				    <div class="galery-item">
+            				        <img data-src="images/galery2.jpg" src="images/galery2.jpg" alt="img"/>
+            				    </div>
+            				</div>
+                        </div>
+                    </div>               
+    			</div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="container">
+                <div class="kurort content-container tour ">
+                    <div class="head-blk">
+                        <div class="col-sm-6 share-socials">
+                             <div class="row">
+                                <script type="text/javascript">
+                                (function() {
+                                  if (window.pluso)if (typeof window.pluso.start == "function") return;
+                                  if (window.ifpluso==undefined) { window.ifpluso = 1;
+                                    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                                    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                                    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + ':share.pluso.ru/pluso-like.js';
+                                    var h=d[g]('body')[0];
+                                    h.appendChild(s);
+                                  }})();
+                                  </script>
+                                <label class="soc-label">Поделиться с друзьями:</label>  
+                                <div class="pluso" data-background="transparent" data-options="medium,round,line,horizontal,nocounter,theme=04" data-services="facebook,twitter,google,moimir"></div>                        
+                             </div> 
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="content">
+                    
+                        <div class="tabs-wrapper">
+                            <div class="kurort-list-container">
+                                <h4>Курорты:</h4>
+                                <ul>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Мармарис</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Кемер</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Мармарис</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Кемер</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Бодрум</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Аланья</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Бодрум</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Аланья</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Кушадасы</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Сиде</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Кушадасы</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Сиде</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Шарм-Эль-Шейх</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Сахл Хашиш</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Шарм-Эль-Шейх</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Сахл Хашиш</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Хургада</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Белек</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Хургада</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Макади</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Анталия</a></li>
+                                    <li class="col-xs-6 col-sm-3"><a class="base-txt-color" href="#">Макади</a></li>
+                                    <li class="clearfix"></li>
+                                </ul>
+                            </div>
+                            <h4>Информация о курорте:</h4>
+                            <div class="text">
+                                <p>Туристическая компания, объединившая в себе профессионалов различных направлений туристичекой деятельности. Все сотрудники компании имеют многолетний (более 8 лет) опыт, который необходим для обслуживания запросов и желаний своих клиентов на высочайшем уровне. Множество международных и украинских дипломов и сертификатов подтверждают статус и профессионализм наших сотрудников. Мы все преданы одному делу, и мы любим то, чем занимаемся. Попробовав однажды, обслуживание в компании Персей Тревел, Вы навсегда останетесь членами нашей огромной туристической семьи.</p>
+                                <p>Все предлагаемые нами туристические продукты рассчитаны на потребителей с различным уровнем дохода - от самых экономичных предложений до VIP-обслуживания. Индивидуальный подход к каждому клиенту - отличительная черта нашей компании. Вы всегда будете ощущать особое внимание со стороны сотрудников Персей Тревел, потому что каждый клиент для нас - это VIP клиент.</p>
+                            </div>
+                            <div class="masonry in-tab-pane"  data-columns>
+                                <div class="polytycs">
+                                    <h4>Политическое устройство:</h4>
+                                    <div class="text">
+                                        <p>Тайланд отлично подойдет и семейным парам, и родителям с маленькими детьми, и любителям шумных развлечений. Отпуск в Тайланде можно спланировать таким образом, чтобы не досаждали ни субэкваториальные ливни, ни жара, ни сильные ветра, ни прочие природные особенности. Это по достоинству уже сумели оценить многие туристы, и сегодня путевки в Тайланд популярны у граждан со всех концов страны.</p>
+                                    </div>
+                                </div>
+                                <div class="peoples">
+                                    <h4>Население:</h4>
+                                    <div class="text">
+                                        <p>Оказавшись в Тайланде, ограничиться исключительно блаженной дремой на пляже — это верх беспечности, ведь вокруг столько интересного, волшебного, незабываемого! Вот почему, планируя отдых, непременно нужно позаботиться о программе развлечений.</p>
+                                    </div>
+                                </div>
+                                <div class="lang">
+                                    <h4>Язык:</h4>
+                                    <div class="text">
+                                        <p>Тайланд — это боевые искусства и знаменитый тайский массаж. Все это удивительным образом перемешано и рождает гамму незабываемых впечатлений!</p>
+                                    </div>
+                                </div>
+                                <div class="worship">
+                                    <h4>Вероисповедание:</h4>
+                                    <div class="text">
+                                        <p>Тайланд — настоящая Мекка как для фанатов созерцательного отдыха, так и для неугомонных охотников за экзотическими развлечениями. Любителей острых ощущений ждут крокодиловые фермы, более тонким натурам Тайланд подарит незабываемое знакомство с парком бабочек и садом орхидей. Даже ради того чтобы покачаться на спине неторопливо шествующего слона, стоит побывать в Тайланде!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>   
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="map-block">
+	           <div class="container">
+                    <div class="row">
+                       <h4>На карте:</h4>
+    	               <div class="view-map">
+                        <a class="btn btn-plus btn-brd hide-map base-second-bg-color" href="#"><span class="fa fa-chevron-up"></span></a>
+                        <div class="map"><img alt="map" src="images/map_kurort.jpg"/></div>
+                        <div class="dimmer base-bg-color"></div>
+                        <a class="btn btn-plus btn-brd show-map base-second-bg-color" href="#">Смотреть на карте!</a>
+                       </div>
+                    </div>
+           	    </div>
+            </div>
+        </div><!--/main-->
+      </div><!--/content-wrapper-->
+      <footer id="foot" class="base-bg-color">
+        <div class="container">
+            <div class="footer-center">
+                <div class=" feedback">
+                    <form class="base-second-bg-color" action="" method="">
+                      <div class="pull-right inp  base-second-bg-color">
+                        <input type="text" name="" placeholder="ваш email" />
+                        <button type="submit"><span class="subscr-icon"></span></button>
+                      </div>
+                      <div class="pull-left desc">
+                        <span class="check-icon"></span>
+                        <label>Подписаться на наши обновления</label>
+                      </div>
+                      <div class="clearfix"></div>
+                    </form>
+                </div>
+                <div class=" contacts">
+                    <div class=" col-sm-3">
+                        <label>Адрес:</label>
+                        <div>г.Киев, Украина ул. Ивана Франко, 40-Б</div>
+                    </div>
+                    <div class=" col-sm-3">
+                        <label>Телефоны:</label>
+                        <div>
+                            <p>050 445 25 45</p>
+                            <p>(044) 238 60 20</p>
+                            <p>238 62 31</p>
+                        </div>
+                    </div>
+                    <div class=" col-sm-3 hidden-xs">
+                        <label>E-mail:</label>
+                        <div>
+                            <p><a href="mailto:sale@tursite.com.ua">sale@tursite.com.ua</a></p>
+                            <p><a href="mailto:market@tursite.com.ua">market@tursite.com.ua</a></p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="footer-bottom">
+              <div class=" col1">
+                <div class="social">
+       	            <span>Мы в сети:</span>
+                    <ul class="social-footer">
+                        <li><a href="#"><i class="facebook base-second-bg-color"></i></a></li>
+                        <li><a href="#"><i class="twitter base-second-bg-color"></i></a></li>
+                        <li><a href="#"><i class="google base-second-bg-color"></i></a></li>
+                    </ul>
+                </div>
+                <div class="copyright">©  ТурСайт, 2016 Все права защищены.</div>
+                <a href="#" class="rules">Правила использования</a>
+              </div>
+              <div class=" col2">
+                    <div class="production">Разработка сайтов на Битриксе: <a href="http://webmediaform.com.ua"><img alt="webmediaform.com.ua" title="webmediaform.com.ua" src="images/webmediaform.png" /></a></div>
+              </div>
+              <div class="clearfix"></div>
+           </div>
+        </div>
+      </footer>
+      <a class="back-to-top base-second-bg-color" href="#"><span class="fa fa-arrow-up"></span></a>
+	<!-- script references -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script>
+            var monthNamesArr=['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь', 'Ноябрь', 'Декабрь' ];
+            var dayNamesMinArr=['','','','','','',''];
+        </script> 
+        <script src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.js"></script>
+        <script src="js/OwlCarousel2Thumbs.min.js"></script>
+        <script src="js/salvattore.min.js"></script>
+        <script src="js/chosen.jquery.js"></script>
+		<script src="js/scripts-amp.js"></script>
+        <div class="clearfix"></div>
+	</body>
+</html>
