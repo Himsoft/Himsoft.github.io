@@ -142,7 +142,7 @@
     });
 
 $(document).ready(function(){
-    $('#ui-datepicker-div').append('<a href="#" class="close" data-handler="hide" data-event="click"></a>');
+    //$('#ui-datepicker-div').append('<span class="close" data-handler="hide" data-event="click"></span>');
     $('.perriod .time_fild + span').click(function(){
         $(this).prev().focus();
     });

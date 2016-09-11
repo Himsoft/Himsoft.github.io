@@ -7893,7 +7893,7 @@ $.extend(Datepicker.prototype, {
 					}
 					calender += "'>";
 				}
-				calender += "<a href='#' class='close' data-handler='hide' data-event='click'></a><div class='ui-datepicker-header ui-widget-header ui-helper-clearfix" + cornerClass + "'>" +
+				calender += "<span class='close' data-handler='hide' data-event='click'></span><div class='ui-datepicker-header ui-widget-header ui-helper-clearfix" + cornerClass + "'>" +
 					(/all|left/.test(cornerClass) && row === 0 ? (isRTL ? next : prev) : "") +
 					(/all|right/.test(cornerClass) && row === 0 ? (isRTL ? prev : next) : "") +
 					this._generateMonthYearHeader(inst, drawMonth, drawYear, minDate, maxDate,
