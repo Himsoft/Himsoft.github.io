@@ -284,7 +284,7 @@ video#top-video{display: none;}
 /*==================================contacts-page===================================================*/
 /*==============================contacts.top-block==================================================*/
 .contacts.top-block{background: url('../images/contacts_top_bg.jpg') 86% bottom no-repeat;height: 400px;background-size: cover;position: relative;}
-.contacts.top-block:before{content: "";background: rgba(255, 255, 255, 0.65);height: 100%;width: 100%;position: absolute;top: 0;left: 0;}
+/*.contacts.top-block:before{content: "";background: rgba(255, 255, 255, 0.65);height: 100%;width: 100%;position: absolute;top: 0;left: 0;}*/
 .contacts.top-block>.container{position: relative;}
 .contacts.top-block h1{margin-top: 60px;margin-bottom: 29px;font-size: 32px;}
 .contacts.top-block h1::after {width: 110px;margin-top: 12px;}
@@ -312,7 +312,6 @@ video#top-video{display: none;}
 /*==================================part-world-page===================================================*/
 /*==============================part-world.top-block==================================================*/
 .part-world.top-block{background: url('../images/part_world_top_bg.jpg') 19% bottom no-repeat;height: 310px;background-size: cover;position: relative;}
-.part-world.top-block:before{content: "";background: rgba(255, 255, 255, 0.65);height: 100%;width: 100%;position: absolute;top: 0;left: 0;}
 .part-world.top-block>.container{position: relative;}
 .part-world.top-block .text {font: italic 24px 'Aizel-Accent',arial,sans-serif;}
 .part-world.top-block .text p {margin-bottom: 0px;}
@@ -377,7 +376,7 @@ video#top-video{display: none;}
 /*==================================country-page===================================================*/
 /*==============================country.top-block==================================================*/
 .country.top-block{background: url('../images/country_top_bg.jpg') 19% bottom no-repeat;height: 310px;background-size: cover;position: relative;}
-.country.top-block:before{content: "";background: rgba(255, 255, 255, 0.65);height: 100%;width: 100%;position: absolute;top: 0;left: 0;}
+/*.country.top-block:before{content: "";background: rgba(255, 255, 255, 0.65);height: 100%;width: 100%;position: absolute;top: 0;left: 0;}*/
 .country.top-block>.container{position: relative;}
 .country.top-block .text {font: italic 24px 'Aizel-Accent',arial,sans-serif;}
 .country.top-block .text p {margin-bottom: 0px;}
@@ -1465,7 +1464,7 @@ a.pluso-moimir{background-position: -113px 0!important;margin-right: 0 !importan
 /*==============================end-contacts.top-block==================================================*/
 /*==================================contact-block===================================================*/
 .contact-block h1,.contact-block h4,.contacts-list{padding-left: 0;}
-.contacts.top-block:before{display: none;}
+/*.contacts.top-block:before{display: none;}*/
 .contact-block h1{margin-top: 40px;line-height: 85px;margin-left: -5px;margin-bottom: 0;}
 .contact-block h1>span{font-size: 100px;}
 .contact-block h4 {font-size: 48px;margin-left: -11px;margin-top: 8px;}
