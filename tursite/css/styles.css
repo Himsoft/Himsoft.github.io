@@ -24,7 +24,7 @@ h5{font-size: 14px;font-weight: normal;font-family: 'Roboto Slab Bold';}
 .clearfix{clear: both;}
 .prices{display: inline-block;}
 .old-price{text-decoration: line-through;display: block;text-align: right;}
-.no-pad{padding: 0;}
+.no-pad{padding: 0!important;}
 .bold{font-weight: bold;}
 .block{display: block!important;}
 button{outline: 0;}
