@@ -197,6 +197,7 @@ input[type="checkbox"]:checked + label:before{background-position: 0 0;}
 /*==================================footer=======================================================*/
 footer{padding-top: 23px;padding-bottom: 20px;}
 .back-to-top,.back-to-top:hover,.back-to-top:focus{display: none;position: fixed;color: #ffffff;bottom: 145px;right: 25px;width: 47px;height: 47px;text-align: center;line-height: 47px;border-radius: 30px;font-size: 23px;outline: none;z-index: 999;}
+.back-to-top .fa{line-height: inherit;}
 footer .feedback{padding: 0 4px;}
 footer .feedback form{width: 100%;margin: 0 auto;max-width: 350px;}
 footer .feedback label{font-size: 11px;line-height: 13px;display: inline-block;vertical-align: middle;margin: 0;}
