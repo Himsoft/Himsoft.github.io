@@ -537,7 +537,7 @@ input[type="checkbox"] + label:before{margin-left: -31px;margin-right: 6px;}
 .prise-blk .chosen-single div b{background: url(../images/select-icon.png) no-repeat;background-position: 90% center;}
 .tour.top-block .action{text-align: center;margin-top: 42px;margin-bottom: 39px;}
 .tour.top-block .btn{clear: both;margin: 0;position: relative;padding: 9px 22px 11px 21px;font-size: 18.7px;}
-.tour.top-block .text {font: normal 14px 'Roboto Regular',arial,sans-serif;max-width: 330px;line-height: 17px;}
+.tour.top-block .text {font: normal 14px 'Roboto Regular',arial,sans-serif;width: 70%;line-height: 17px;}
 .tour.top-block .text p {margin-bottom: 0px;}
 .tour.top-block h1 {margin-top: 43px;margin-bottom: 13px;padding: 0;line-height: 36px;font-family: 'Roboto Slab Bold';font-weight: bold;font-size: 30px;text-align: center;}
 .tour.top-block h1:after{border-color: #39363f;}
