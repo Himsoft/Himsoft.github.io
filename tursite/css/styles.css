@@ -848,7 +848,8 @@ input[type="checkbox"] + label:before{margin-left: -31px;margin-right: 6px;}
 .avia-in .top-block .dimmer{height: 100%;}
 .avia-in .top-block .container.top-header{background: none;}
 .avia-in .top-block .container.top-header h3{color: #383d43;font-weight: bold;font-family: 'Roboto Slab Bold';margin: 7px 0 13px 0;text-align: center;}
-.avia-in .top-block .container.top-header .mau{background: url('../images/mau_icon.png') 4px center no-repeat;margin: 0 auto 22px auto;color: #383d43;font: bold 14px/17px 'Roboto Slab Bold';max-width: 265px;padding: 3px 0 0 109px;}
+.avia-in .top-block .container.top-header .mau{background: url('../images/mau_icon.png') 4px center no-repeat;margin: 0 auto 22px auto;color: #383d43;font: bold 14px/17px 'Roboto Slab Bold';max-width: 265px;padding: 3px 0 0 109px;min-height: 37px;line-height: 34px;}
+.avia-in .top-block .container.top-header .mau .capt{line-height: 17px;}
 .avia-in .top-block .top-content{float: none;margin: 0 auto;padding: 0;}
 .avia-in .top-block .top-clock{display: block;position: relative;z-index: 5;font: bold 14px 'Roboto Slab Bold';margin: 21px auto 0 auto;max-width: 300px;;}
 .avia-in .top-block .top-clock:before,.avia-in .top-block .top-clock:after{content: "";display: block;position: absolute;z-index: 5;border-bottom: 1px solid #ffffff;width: 45px;left: -7px;top: 50%;}
