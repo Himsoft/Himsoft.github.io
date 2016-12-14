@@ -382,6 +382,8 @@ footer .social span{display: inline-block;vertical-align: top;}
 .row-result a:not(.lnk){position: relative;z-index: 1;}
 .row-result h5{margin: -4px 0px 4px 5px;padding-right: 0;}
 .search-turs .row-result .prc,.search-turs .row-result .resttype{padding-left: 5px;}
+.search-turs .row-result .resttype>.base-bg-color{display: inline-block;width: 28px;height: 28px;border-radius: 20px;position: relative;}
+.search-turs .row-result .resttype>.base-bg-color img{position: absolute;left: 50%;top: 50%;-moz-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);-o-transform: translate(-50%,-50%);transform: translate(-50%,-50%);}
 .search-turs .row-result .dates {padding-left: 0;}
 .search-turs .row-result .dates .dsc{display: block;color: #959b9e;}
 .search-turs .row-result .room{color: #7e8588;font-size: 12px;line-height: 12px;}
@@ -513,6 +515,7 @@ input[type="checkbox"] + label:before{margin-left: -31px;margin-right: 6px;}
 .details-tur .room .item:first-child{margin-right: 7px;}
 .details-tur .room .help,
 .details-tur .resttype-blk{position: relative;display: inline-block;cursor: pointer;vertical-align: top;margin-top: 5px;}
+.details-tur .resttype-blk>div.base-bg-color{display: inline-block;width: 28px;height: 28px;border-radius: 20px;text-align: center;line-height: 24px;}
 .rating-star .star_description,
 .details-tur .room .help .capt,
 .details-tur .resttype-blk .caption{display: block;position: absolute;max-width: 150px;right: 0;margin-top: 6px;line-height: 15px;padding: 6px 10px;font-size: 12px;color: #383d43;border-radius: 0;opacity: 0;z-index: -1;text-align: center;}
