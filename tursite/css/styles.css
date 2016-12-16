@@ -27,6 +27,7 @@ h5{font-size: 14px;font-weight: normal;font-family: 'Roboto Slab Bold';}
 .no-pad{padding: 0!important;}
 .bold{font-weight: bold;}
 .block{display: block!important;}
+.container > .content{padding: 0 28px;line-height: 17px;}
 button{outline: 0;}
 textarea{resize: none;outline: 0; }
 label{font-weight: bold;font-family: 'Roboto Bold';}
