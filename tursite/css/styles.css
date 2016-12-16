@@ -687,7 +687,7 @@ input[type="checkbox"] + label:before{margin-left: -31px;margin-right: 6px;}
 .clock span{margin-left: 5px;} 
 .details-tur .time_kurort{padding-left: 18px;padding-right: 0;}
 .details-tur .time_kurort .analog{background: url(../images/time_kurort.png) center center no-repeat;}
-.details-tur .sinopt{padding: 0 10px 15px 0;} 
+.details-tur .sinopt{padding: 5px 10px 7px 19px;} 
 .kurort.tour.top-block .details-tur .sinopt label{margin-top: 9px;}
 .details-tur .sinopt .item:first-child{padding-left: 18px;} 
 .details-tur .sinopt .item span{margin-top: 9px;display: block;}
