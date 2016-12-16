@@ -308,7 +308,7 @@ footer .social span{display: inline-block;vertical-align: top;}
 .map-contacts-block{overflow: hidden;}
 .map-contacts-block .container .row{position: relative;}
 .mask{position: absolute;top: 0;left: 0;opacity: 0.7;right: 0;bottom: 0;background: #335575;}
-.map-contacts-block .view-map>.btn,.map-contacts-block .contacts-feedback-block>.btn{position: absolute;bottom: 39px;right: calc(50% - 75px);width: 150px;}
+.map-contacts-block .view-map>.btn,.map-contacts-block .contacts-feedback-block>.btn{position: absolute;bottom: 39px;right: calc(50% - 75px);width: 150px;z-index:100;}
 .view-map{position: relative;text-align: center;}
 .contacts-feedback-block{position: absolute;top: 0;padding: 47px 0 0 0;height: 100%;width: 100%;text-align: center;}
 .contacts-map{color: #383d43;background: #ffffff;width: 86.6%;padding: 0 21px 23px 21px;text-align: left;max-width: 250px;margin: 0 auto;}
