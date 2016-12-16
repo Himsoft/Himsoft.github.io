@@ -1124,7 +1124,7 @@ footer .copyright,footer .rules{float: left;margin: 0;}
 .result-block .head{color: #959b9e;font-size: 12px;padding: 13px 0 7px 0;}
 .row-result{padding: 20px 12px;border-top: 1px solid #e1e5e8;padding-left: 150px;}
 .row-result h5{font-size: 16px;margin: 3px 0px 8px 18px;line-height: 19px;padding-right: 30px;}
-.row-result .text{margin-left: 18px;}
+.row-result .text{margin-left: 18px;line-height: 17px;}
 .row-result .desc{margin: 0px 0px 0px 18px;font-size: 12px;}
 .row-result .dates{font-size: 12px;padding-left: 0;display: table-cell;vertical-align: top;padding-top: 7px;}
 .row-result .prc{display: table-cell;padding-left: 50px;}
