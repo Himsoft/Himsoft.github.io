@@ -1276,7 +1276,8 @@ footer .copyright,footer .rules{float: left;margin: 0;}
 /*==============================end-transport==================================================*/
 /*==============================programm-tour==================================================*/
 .programm-tour h4{margin: 23px 0 32px 4px;}
-.programm-tour .content{padding: 0;}
+.programm-tour .content{padding: 0;display: table;}
+.programm-tour .content .day-item {display: table-row;}
 .programm-tour h4{font-family: 'Roboto Slab Regular';margin-bottom: 31px;}
 .programm-tour .head > label{padding-right: 24px;padding-left: 44px;}
 .programm-tour .day-item>.col{position: relative;display: table-cell;float: none;border-bottom: 1px solid #e1e5e8;padding: 10px 0;vertical-align: top;}
