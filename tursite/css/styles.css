@@ -683,10 +683,10 @@ input[type="checkbox"] + label:before{margin-left: -31px;margin-right: 6px;}
 .details-tur .tmzon span{padding-left: 5px;}
 .details-tur .analog{display: block;width: 51px;height: 51px;margin: 11px auto;}
 .details-tur .time_my{padding-left: 14px;border-right: 1px solid #e1e5e8;margin-left: -11px;}
-.details-tur .time_my .analog{background: url(../images/time_my.png) center center no-repeat;margin-left: 6px;}
+.details-tur .time_my .analog{background: url(../images/time.png) center center no-repeat;margin-left: 6px;}
 .clock span{margin-left: 5px;} 
 .details-tur .time_kurort{padding-left: 18px;padding-right: 0;}
-.details-tur .time_kurort .analog{background: url(../images/time_kurort.png) center center no-repeat;}
+.details-tur .time_kurort .analog{background: url(../images/time.png) center center no-repeat;}
 .details-tur .sinopt{padding: 5px 10px 7px 19px;} 
 .kurort.tour.top-block .details-tur .sinopt label{margin-top: 9px;}
 .details-tur .sinopt .item:first-child{padding-left: 18px;} 
