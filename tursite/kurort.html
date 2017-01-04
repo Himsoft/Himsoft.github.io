@@ -1085,8 +1085,8 @@
                 if (hours_diff < 10) hours_diff = "0" + hours_diff;
                 if (minutes_diff < 10) minutes_diff = "0" + minutes_diff;
                 if (seconds_diff < 10) seconds_diff = "0" + seconds_diff;
-                clock1.html(hours + ":" + minutes+ ":" + seconds);
-                clock2.html(hours_diff + ":" + minutes_diff+ ":" + seconds_diff);
+                clock1.html(hours + ":" + minutes);
+                clock2.html(hours_diff + ":" + minutes_diff);
                 var newdiff = +date + 1000;
                 var newdate = new Date(newdiff);
                 setTimeout(function(){digitalWatch(clock1,clock2,newdate,rozn);}, 1000);
