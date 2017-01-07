@@ -716,8 +716,12 @@ input[type="checkbox"] + label:before{margin-left: -31px;margin-right: 6px;}
 .comments > .item .text{margin-bottom: 20px;}
 .comments > .item:last-child .text{margin-bottom: 3px;}
 .comments > .item .text p{display: inline;}
-.comments > .item .show-moore{font-size: 11px;}
-.comments > .item .show-moore .fa {margin-left: 1px;font-size: 7px;vertical-align: middle;margin-bottom: 4px;}
+.comments > .item .show-moore{font-size: 11px;text-decoration: none;}
+.comments > .item .show-moore.active{padding-left: 7px;}
+.comments > .item .show-moore .fa {margin-left: 1px;font-size: 7px;vertical-align: middle;margin-bottom: 4px;text-decoration: none!important;}
+.show-moore .shows:hover, .show-moore .down:hover{text-decoration: underline;cursor: pointer;}
+.show-moore{text-decoration: none;cursor: pointer;}
+
 .comments > .item h4{margin: -3px 0 14px 0;}
 .tour .content .nav-tabs>li>a h4{margin: 2px 0 4px 0;height: 22px;font-size: 14px;}
 .tour .content .nav-tabs>li>a h4 span{font: bold 11px "Roboto Slab Bold";margin-left: 10px;padding: 2px 7px;display: inline-block;vertical-align: middle;margin-bottom: 2px;border-radius: 10px;}
@@ -823,6 +827,7 @@ input[type="checkbox"] + label:before{margin-left: -31px;margin-right: 6px;}
 .rates-block .ratings label{margin: 0;padding-left: 0;}
 .hotels-in .comments > .item:last-child{padding-bottom: 3px;}
 .ellipsis,.tailorMe{height: 36px;display: block!important;overflow: hidden;}
+
 /*==================================end-hotels-in.content-container===================================================*/
 /*==================================end-hotels-in-page===================================================*/
 

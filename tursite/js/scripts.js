@@ -143,14 +143,53 @@
 
 $(document).ready(function(){
     
-    if($('.tailorMe').length)$('.tailorMe').textTailor();
-    if($('.ellipsis').length){
-        $(".ellipsis").dotdotdot({
-    		after: "a.readmore"
-    	});
-        console.log('ellipsis.length='+$('.ellipsis').length);
-     }
     
+    if($('.comments > .item .ellipsis').length&&$('.comments > .item .ellipsis').is(":visible")){
+        $(".comments > .item .ellipsis").dotdotdot({
+    		after: "a.show-moore"
+    	});
+        //console.log('ellipsis.length='+$('.ellipsis').length);
+     }
+     $('.nav.nav-tabs a').click(function(){
+
+        setTimeout(function(){
+         //if($('.comments > .item .ellipsis').is(":visible")){
+            $('.comments > .item .text > p').each(function(){
+                console.log($(this).attr('class'));
+                if($(this).hasClass('is-truncated')){
+                    $(this).trigger("update");
+                }else{
+                    if($(this).hasClass('ellipsis')){
+                        $(this).dotdotdot({
+                    		after: "a.show-moore"
+                    	});
+                    }else{
+                        $(this).attr('realH',$(this).height()).addClass('ellipsis').dotdotdot({
+                    		after: "a.show-moore"
+                    	});
+                    }
+                }
+            });
+            //console.log('ellipsis.length='+$('.ellipsis').length);
+         //}    
+         console.log('ellipsis.length='+$('.comments > .item .ellipsis').length);    
+            
+        }, 3)
+
+     });
+     $('.comments > .item .show-moore').click(function(){
+        console.log($(this).parent().css('height'));
+        var $parent=$(this).parent();
+        var realH=$parent.attr('realH')+'px';
+        console.log(realH);
+        if($parent.css('height')!=realH){
+            $parent.css('height',realH).trigger("update").find('.show-moore').addClass('active');
+        }else{
+            $parent.css('height','36px').trigger("update").find('.show-moore').removeClass('active');
+        }
+        
+     });
+        
     //$('#ui-datepicker-div').append('<span class="close" data-handler="hide" data-event="click"></span>');
     $('.perriod .time_fild + span').click(function(){
         $(this).prev().focus();
