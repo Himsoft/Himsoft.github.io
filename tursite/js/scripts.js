@@ -142,6 +142,15 @@
     });
 
 $(document).ready(function(){
+    
+    if($('.tailorMe').length)$('.tailorMe').textTailor();
+    if($('.ellipsis').length){
+        $(".ellipsis").dotdotdot({
+    		after: "a.readmore"
+    	});
+     }
+    console.log('ellipsis.length='+$('.ellipsis').length);
+    
     //$('#ui-datepicker-div').append('<span class="close" data-handler="hide" data-event="click"></span>');
     $('.perriod .time_fild + span').click(function(){
         $(this).prev().focus();
