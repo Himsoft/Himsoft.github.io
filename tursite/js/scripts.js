@@ -29,22 +29,25 @@
     }
     
     var carousel_init=function($index,$parent){
-        var content='';
-        $parent.find('img').each(function(){
+        var content='',i=0;
+        $parent.parent().find('img').each(function(){
             content+='<div><img src="'+$(this).attr('data-src')+'" title="img" /></div>';
+            i++;
         });
         $('body').prepend('<div class="slider-popup"><div class="close base-second-bg-color"><span></span></div><div class="slider-carousel">'+content+'</div></div>');
-        $('.slider-carousel').owlCarousel({
-            loop: true,
-            nav: true,
-            navText:["",""],
-            items: 1,
-            startPosition: $index,
-            thumbs: false,
-            thumbImage: false,
-            thumbContainerClass: 'owl-thumbs',
-            thumbItemClass: 'owl-thumb-item',
-        });
+        if(i>1){
+            $('.slider-carousel').owlCarousel({
+                loop: true,
+                nav: true,
+                navText:["",""],
+                items: 1,
+                startPosition: $index,
+                thumbs: false,
+                thumbImage: false,
+                thumbContainerClass: 'owl-thumbs',
+                thumbItemClass: 'owl-thumb-item',
+            });
+        }
 
     }
     
@@ -454,7 +457,7 @@ $(document).ready(function(){
     
     $('.btn-galery').click(function(){
         if($(this).hasClass('open')){
-            $('.galery').animate({'opacity':1},600).css('z-index',3);
+            $('.galery').animate({'opacity':1},600).css('z-index',4);
             $(this).removeClass('open');
         }else{
             $('.galery').animate({'opacity':0},600,function(){$(this).css('z-index',-3);});

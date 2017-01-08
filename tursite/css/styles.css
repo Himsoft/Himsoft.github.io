@@ -693,6 +693,8 @@ input[type="checkbox"] + label:before{margin-left: -31px;margin-right: 6px;}
 .details-tur .sinopt .item span{margin-top: 9px;display: block;}
 .details-tur .sinopt .item .capt{font: 30px 'Roboto Slab Bold';line-height: 30px;}
 .sinopt-icon{background: url(../images/sinopt-icon.png) left center no-repeat;display: block;height: 29px;margin-top: 12px;} 
+.slider-carousel:not(.owl-carousel){position: relative;}
+.slider-carousel:not(.owl-carousel) img{max-width: 100%;max-height: 100%;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
 /*==================================end-kurort.top-block===================================================*/
 /*==================================kurort.content-container===================================================*/
 .kurort.content-container .content {padding: 13px 0 3px 0;}
