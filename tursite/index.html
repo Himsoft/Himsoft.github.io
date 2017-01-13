@@ -669,7 +669,7 @@ $.cssHooks.backgroundColor = {
                   {
                     
                     var all = color.val('all');
-                    
+                    if($('.controls-picker.bg input[type="radio"]:checked').val()=='base-second') $('.owl-dot').attr('data-bg',(all && '#' + all.hex || ''));
                     $('.'+$('.controls-picker.bg input[type="radio"]:checked').val()+'-bg-color').css('background-color',(all && '#' + all.hex || ''));
                     $('.'+$('.controls-picker.bg input[type="radio"]:checked').val()+'-txt-color,.'+$('.controls-picker.bg input[type="radio"]:checked').val()+'-txt-color:hover,.'+$('.controls-picker.bg input[type="radio"]:checked').val()+'-txt-color:focus').css('color',(all && '#' + all.hex || ''));
                     $('.'+$('.controls-picker.bg input[type="radio"]:checked').val()+'bord').css('border-color',(all && '#' + all.hex || ''));
@@ -681,6 +681,7 @@ $.cssHooks.backgroundColor = {
                   },
                   function(color, context)
                   {
+                    $.jPicker.List[0].color.active.val('hex', $('.controls-picker.bg input[type="radio"]:checked').data('def'), this);
                     console.log('"Cancel" Button Clicked');
                   });
                 $('#LiveButton').click(

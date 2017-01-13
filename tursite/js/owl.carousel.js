@@ -2870,8 +2870,11 @@
 				this._controls.$indicators.children().slice(difference).remove();
 			}
 
-			this._controls.$indicators.find('.active').removeClass('active base-second-bg-color');
-			this._controls.$indicators.children().eq($.inArray(this.current(), this._pages)).addClass('active base-second-bg-color');
+			this._controls.$indicators.find('.active').removeClass('active base-second-bg-color').css('background-color','');
+            if(this._controls.$indicators.children().eq($.inArray(this.current(), this._pages)).data('bg'))
+			 this._controls.$indicators.children().eq($.inArray(this.current(), this._pages)).addClass('active base-second-bg-color').css('background-color',this._controls.$indicators.children().eq($.inArray(this.current(), this._pages)).data('bg'));
+            else
+			 this._controls.$indicators.children().eq($.inArray(this.current(), this._pages)).addClass('active base-second-bg-color').css('background-color','');
 		}
 
 		this._controls.$indicators.toggle(options.dots);
