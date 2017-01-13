@@ -11,6 +11,8 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/owl.carousel.css" rel="stylesheet">
         <link rel="stylesheet" href="css/chosen.css">
+        <link rel="Stylesheet" type="text/css" href="css/jpicker-1.1.6.min.css" />
+        <link rel="Stylesheet" type="text/css" href="css/jPicker.css" />
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -202,6 +204,23 @@
 	</div>       
         <!--main-->
         <div id="main">
+<div class="picker-container">
+
+    <div class="controls-picker bg">
+        <input type="radio" checked="checked" name="bg" value="base" id="base-bg" data-def="00adc7" /><label for="base-bg">Основной цвет</label>
+        <input type="radio" name="bg" value="base-second" id="base-second-bg" data-def="ffd200" /><label for="base-second-bg">Вторичный цвет</label>
+    </div>
+
+
+    <div id="Inline"></div>
+    <p>
+      <span id="Commit" style="background-color: #00adc7; display: block; float: left; height: 50px; margin: 10px; width: 50px;">Commit</span>
+      <span id="Live" style="display: block; float: left; height: 50px; margin: 10px; width: 50px;">Live</span>
+      <input id="LiveButton" type="button" value="Set To #00adc7" />
+    </p>
+
+</div>
+
             <div class="top-block">
               <div class="container no-pad">
                 <div class="owl-carousel-no-thumb carousel">
@@ -594,6 +613,92 @@
         <script src="js/owl.carousel.js"></script>
         <script src="js/OwlCarousel2Thumbs.min.js"></script>
         <script src="js/chosen.jquery.js"></script>
+        <script src="js/jpicker-1.1.6.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(function()
+              {
+                
+$.cssHooks.backgroundColor = {
+    get: function(elem) {
+        if (elem.currentStyle)
+            var bg = elem.currentStyle["backgroundColor"];
+        else if (window.getComputedStyle)
+            var bg = document.defaultView.getComputedStyle(elem,
+                null).getPropertyValue("background-color");
+        if (bg.search("rgb") == -1)
+            return bg;
+        else {
+            bg = bg.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+            function hex(x) {
+                return ("0" + parseInt(x).toString(16)).slice(-2);
+            }
+            return hex(bg[1]) + hex(bg[2]) + hex(bg[3]);
+        }
+    }
+}                
+                
+                
+                $.fn.jPicker.defaults.images.clientPath='images/';
+                var LiveCallbackElement = $('#Live'),
+                    LiveCallbackButton = $('#LiveButton');
+                
+            /*
+            
+.base-bg-color{background-color: #00adc7;}
+.base-txt-color,.base-txt-color:hover,.base-txt-color:focus{color: #00adc7;}
+.basebord{border-color: #00adc7;}
+.base-second-bg-color{background-color: #ffd200;}
+.base-second-txt-color,.base-second-txt-color:hover,.base-second-txt-color:focus{color: #ffd200;}
+
+            
+            
+            */
+
+
+                $('#Inline').jPicker(
+                  { 
+                      window:{/*expandable: true,*/title:'Inline Example',alphaSupport:true},
+                      color:{active:new $.jPicker.Color({ahex:'00adc7'})}
+                  },
+                  function(color, context)
+                  {
+                    var all = color.val('all');
+                    console.log('Color chosen - hex: ' + (all && '#' + all.hex || 'none') + ' - alpha: ' + (all && all.a + '%' || 'none'));
+                    $('#Commit').css({ backgroundColor: all && '#' + all.hex || 'transparent' });
+                  },
+                  function(color, context)
+                  {
+                    
+                    var all = color.val('all');
+                    
+                    $('.'+$('.controls-picker.bg input[type="radio"]:checked').val()+'-bg-color').css('background-color',(all && '#' + all.hex || ''));
+                    $('.'+$('.controls-picker.bg input[type="radio"]:checked').val()+'-txt-color,.'+$('.controls-picker.bg input[type="radio"]:checked').val()+'-txt-color:hover,.'+$('.controls-picker.bg input[type="radio"]:checked').val()+'-txt-color:focus').css('color',(all && '#' + all.hex || ''));
+                    $('.'+$('.controls-picker.bg input[type="radio"]:checked').val()+'bord').css('border-color',(all && '#' + all.hex || ''));
+
+                    
+                    if (context == LiveCallbackButton.get(0)) console.log('Color set from button');
+                    var hex = color.val('hex');
+                    LiveCallbackElement.css({ backgroundColor: hex && '#' + hex || 'transparent' });
+                  },
+                  function(color, context)
+                  {
+                    console.log('"Cancel" Button Clicked');
+                  });
+                $('#LiveButton').click(
+                  function()
+                  {
+                    $.jPicker.List[0].color.active.val('hex', '00adc7', this);
+                  });
+                $('.controls-picker.bg input[type="radio"]').change(function(){
+                    if($('.'+$('.controls-picker.bg input[type="radio"]:checked').val()+'-bg-color').css('background-color')!=$('.controls-picker.bg input[type="radio"]:checked').data('def')){
+                        $.jPicker.List[0].color.active.val('hex', $('.'+$('.controls-picker.bg input[type="radio"]:checked').val()+'-bg-color').css('background-color'), this);
+                    }else{
+                        $.jPicker.List[0].color.active.val('hex', $('.controls-picker.bg input[type="radio"]:checked').data('def'), this);
+                    }
+                    console.log($('.'+$(this).val()+'-bg-color').css('background-color'));
+                });
+              });
+          </script>        
 		<script src="js/scripts.js"></script>
         <div class="clearfix"></div>
 	</body>
