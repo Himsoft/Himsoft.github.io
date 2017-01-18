@@ -203,12 +203,19 @@
 	</div>       
         <!--main-->
         <div id="main">
+<!-- -------------------------------------------------------------picker------------------------------------------------------------------------------------------- -->        
 <div class="picker-container">
 
     <div class="controls-picker bg">
         <input type="radio" checked="checked" name="bg" value="base" id="base-bg" data-def="00adc7" /><label for="base-bg">Основной цвет</label>
         <input type="radio" name="bg" value="base-second" id="base-second-bg" data-def="ffd200" /><label for="base-second-bg">Вторичный цвет</label>
     </div>
+    
+    <div class="controls-picker color-bg">
+        <input type="radio" checked="checked" name="color_bg" value="background-color" id="color-bg" /><label for="color-bg">Фон</label>
+        <input type="radio" name="color_bg" value="color" id="color-bgc" /><label for="color-bgc">Текст</label>
+    </div>
+    
 
 
     <div id="Inline"></div>
@@ -670,7 +677,7 @@ $.cssHooks.backgroundColor = {
                     
                     var all = color.val('all');
                     if($('.controls-picker.bg input[type="radio"]:checked').val()=='base-second') $('.owl-dot').attr('data-bg',(all && '#' + all.hex || ''));
-                    $('.'+$('.controls-picker.bg input[type="radio"]:checked').val()+'-bg-color').css('background-color',(all && '#' + all.hex || ''));
+                    $('.'+$('.controls-picker.bg input[type="radio"]:checked').val()+'-bg-color').css($('.controls-picker.color-bg input[type="radio"]:checked').val(),(all && '#' + all.hex || ''));
                     $('.'+$('.controls-picker.bg input[type="radio"]:checked').val()+'-txt-color,.'+$('.controls-picker.bg input[type="radio"]:checked').val()+'-txt-color:hover,.'+$('.controls-picker.bg input[type="radio"]:checked').val()+'-txt-color:focus').css('color',(all && '#' + all.hex || ''));
                     $('.'+$('.controls-picker.bg input[type="radio"]:checked').val()+'bord').css('border-color',(all && '#' + all.hex || ''));
 
